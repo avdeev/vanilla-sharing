@@ -4,11 +4,11 @@ const vk = (options = {}) => {
   const { url, image, isVkParse } = options;
   let { description, title } = options;
 
-  if (description.length > 80) {
+  if (description && description.length > 80) {
     description = `${description.substr(0, 80)}...`;
   }
 
-  if (title.length > 80) {
+  if (title && title.length > 80) {
     title = `${title.substr(0, 80)}...`;
   }
 

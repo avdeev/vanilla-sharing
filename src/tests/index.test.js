@@ -1,7 +1,78 @@
-import { vk } from '../index';
+import faker from 'faker';
 
-describe('vk', () => {
-  it('should existe', () => {
-    expect(vk).toBeDefined();
+import { vk, ok, fb, gp, tw, mail } from '../index';
+
+describe('tests', () => {
+  beforeEach(() => {
+    window.open = jest.fn();
+  });
+
+  afterEach(() => {
+    window.open.mockReset();
+  });
+
+  describe('vk', () => {
+    it('should call', () => {
+      vk(faker.lorem.sentence());
+      expect(window.open.mock.calls[0][0]).toBe('https://vk.com/share.php?url=undefined&title=undefined&description=undefined&image=undefined&noparse=true');
+    });
+
+    it('should call with very lond description', () => {
+      const fixture = faker.lorem.sentence(81);
+
+      vk({ description: fixture });
+      expect(window.open.mock.calls[0][0]).toBe(`https://vk.com/share.php?url=undefined&title=undefined&description=${fixture.substr(0, 80)}...&image=undefined&noparse=true`);
+    });
+
+    it('should call with very lond title', () => {
+      const fixture = faker.lorem.sentence(81);
+
+      vk({ title: fixture });
+      expect(window.open.mock.calls[0][0]).toBe(`https://vk.com/share.php?url=undefined&title=${fixture.substr(0, 80)}...&description=undefined&image=undefined&noparse=true`);
+    });
+
+    it('should call with isVkParse true', () => {
+      vk({ isVkParse: true });
+      expect(window.open.mock.calls[0][0]).toBe('https://vk.com/share.php?url=undefined');
+    });
+  });
+
+  describe('ok', () => {
+    it('should call', () => {
+      ok();
+      expect(window.open.mock.calls[0][0]).toBe('https://ok.ru/dk?st.cmd=addShare&st._surl=undefined&title=undefined');
+    });
+  });
+
+  describe('fb', () => {
+    it('should throw', () => {
+      expect(fb).toThrow('fbAppId is not defined');
+    });
+
+    it('should call', () => {
+      fb({ fbAppId: 'foo' });
+      expect(window.open.mock.calls[0][0]).toBe('https://www.facebook.com/dialog/feed?app_id=foo&display=popup&redirect_uri=undefined&link=undefined&name=undefined&description=undefined&picture=undefined');
+    });
+  });
+
+  describe('gp', () => {
+    it('should call', () => {
+      gp();
+      expect(window.open.mock.calls[0][0]).toBe('https://plus.google.com/share?url=undefined');
+    });
+  });
+
+  describe('tw', () => {
+    it('should call', () => {
+      tw();
+      expect(window.open.mock.calls[0][0]).toBe('https://twitter.com/intent/tweet?text=undefined&url=undefined');
+    });
+  });
+
+  describe('mail', () => {
+    it('should call', () => {
+      mail();
+      expect(window.open.mock.calls[0][0]).toBe('http://connect.mail.ru/share?share_url=undefined&title=undefined&description=undefined&imageurl=undefined');
+    });
   });
 });
