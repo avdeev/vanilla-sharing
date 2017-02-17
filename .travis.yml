@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+  - 7
+  - 6
+  - 5
+
+script:
+  - npm run test
+  - npm run build
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
