@@ -6,7 +6,7 @@ const encodeParams = obj =>
     .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(obj[k])}`)
     .join('&');
 
-const vk = (options = {}) => {
+export const vk = (options = {}) => {
   const { url, image, isVkParse } = options;
   let { description, title } = options;
 
@@ -26,14 +26,13 @@ const vk = (options = {}) => {
   return window.open(`https://vk.com/share.php?${params}`, '_blank', WIN_PARAMS);
 };
 
-
-const ok = (options = {}) => {
+export const ok = (options = {}) => {
   const { url, title } = options;
 
   return window.open(`https://ok.ru/dk?st.cmd=addShare&st._surl=${url}&title=${title}`, '_blank', WIN_PARAMS);
 };
 
-const fb = (options = {}) => {
+export const fb = (options = {}) => {
   const { fbAppId, description, title, url, image, redirectUri } = options;
 
   if (!fbAppId) {
@@ -46,29 +45,20 @@ const fb = (options = {}) => {
   return window.open(`https://www.facebook.com/dialog/feed?${params}`, '_blank', WIN_PARAMS);
 };
 
-const gp = (options = {}) => {
+export const gp = (options = {}) => {
   const { url } = options;
 
   return window.open(`https://plus.google.com/share?url=${url}`, '_blank', WIN_PARAMS);
 };
 
-const tw = (options = {}) => {
+export const tw = (options = {}) => {
   const { title, url } = options;
 
   return window.open(`https://twitter.com/intent/tweet?text=${title}&url=${url}`, '_blank', WIN_PARAMS);
 };
 
-const mail = (options = {}) => {
+export const mail = (options = {}) => {
   const { url, title, description, image } = options;
 
   return window.open(`http://connect.mail.ru/share?share_url=${url}&title=${title}&description=${description}&imageurl=${image}`, '_blank', WIN_PARAMS);
-};
-
-export {
-  vk,
-  ok,
-  fb,
-  gp,
-  tw,
-  mail,
 };
