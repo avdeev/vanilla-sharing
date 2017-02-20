@@ -1,10 +1,10 @@
 const WIN_PARAMS = 'scrollbars=0, resizable=1, menubar=0, left=100, top=100, width=550, height=440, toolbar=0, status=0';
 
-const encodeParams = (obj) =>
+const encodeParams = obj =>
   Object.keys(obj)
-  .filter(k => typeof(obj[k]) != 'undefined')
-  .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(obj[k])}`)
-  .join('&');
+    .filter(k => typeof obj[k] !== 'undefined')
+    .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(obj[k])}`)
+    .join('&');
 
 const vk = (options = {}) => {
   const { url, image, isVkParse } = options;
