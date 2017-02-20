@@ -18,9 +18,11 @@ export const vk = (options = {}) => {
     title = `${title.substr(0, 80)}...`;
   }
 
-  let params = encodeParams({ url, title, description, image, noparse: true });
+  let params;
   if (isVkParse) {
     params = encodeParams({ url });
+  } else {
+    params = encodeParams({ url, title, description, image, noparse: true });
   }
 
   return window.open(`https://vk.com/share.php?${params}`, '_blank', WIN_PARAMS);
@@ -29,7 +31,13 @@ export const vk = (options = {}) => {
 export const ok = (options = {}) => {
   const { url, title } = options;
 
-  return window.open(`https://ok.ru/dk?st.cmd=addShare&st._surl=${url}&title=${title}`, '_blank', WIN_PARAMS);
+  const params = encodeParams({
+    'st.cmd': 'addShare',
+    'st._surl': url,
+    title,
+  });
+
+  return window.open(`https://ok.ru/dk?${params}`, '_blank', WIN_PARAMS);
 };
 
 export const fb = (options = {}) => {
@@ -39,8 +47,15 @@ export const fb = (options = {}) => {
     throw new Error('fbAppId is not defined');
   }
 
-  let params = `app_id=${fbAppId}&display=popup&redirect_uri=${redirectUri}`;
-  params = `${params}&link=${url}&name=${title}&description=${description}&picture=${image}`;
+  const params = encodeParams({
+    app_id: fbAppId,
+    display: 'popup',
+    redirect_uri: redirectUri,
+    link: url,
+    name: title,
+    description,
+    picture: image,
+  });
 
   return window.open(`https://www.facebook.com/dialog/feed?${params}`, '_blank', WIN_PARAMS);
 };
@@ -48,17 +63,31 @@ export const fb = (options = {}) => {
 export const gp = (options = {}) => {
   const { url } = options;
 
-  return window.open(`https://plus.google.com/share?url=${url}`, '_blank', WIN_PARAMS);
+  const params = encodeParams({ url });
+
+  return window.open(`https://plus.google.com/share?${params}`, '_blank', WIN_PARAMS);
 };
 
 export const tw = (options = {}) => {
   const { title, url } = options;
 
-  return window.open(`https://twitter.com/intent/tweet?text=${title}&url=${url}`, '_blank', WIN_PARAMS);
+  const params = encodeParams({
+    text: title,
+    url,
+  });
+
+  return window.open(`https://twitter.com/intent/tweet?${params}`, '_blank', WIN_PARAMS);
 };
 
 export const mail = (options = {}) => {
   const { url, title, description, image } = options;
 
-  return window.open(`http://connect.mail.ru/share?share_url=${url}&title=${title}&description=${description}&imageurl=${image}`, '_blank', WIN_PARAMS);
+  const params = encodeParams({
+    share_url: url,
+    title,
+    description,
+    imageurl: image,
+  });
+
+  return window.open(`http://connect.mail.ru/share?${params}`, '_blank', WIN_PARAMS);
 };

@@ -40,7 +40,7 @@ describe('tests', () => {
   describe('ok', () => {
     it('should call', () => {
       ok();
-      expect(window.open.mock.calls[0][0]).toBe('https://ok.ru/dk?st.cmd=addShare&st._surl=undefined&title=undefined');
+      expect(window.open.mock.calls[0][0]).toBe('https://ok.ru/dk?st.cmd=addShare');
     });
   });
 
@@ -51,28 +51,28 @@ describe('tests', () => {
 
     it('should call', () => {
       fb({ fbAppId: 'foo' });
-      expect(window.open.mock.calls[0][0]).toBe('https://www.facebook.com/dialog/feed?app_id=foo&display=popup&redirect_uri=undefined&link=undefined&name=undefined&description=undefined&picture=undefined');
+      expect(window.open.mock.calls[0][0]).toBe('https://www.facebook.com/dialog/feed?app_id=foo&display=popup');
     });
   });
 
   describe('gp', () => {
     it('should call', () => {
       gp();
-      expect(window.open.mock.calls[0][0]).toBe('https://plus.google.com/share?url=undefined');
+      expect(window.open.mock.calls[0][0]).toBe('https://plus.google.com/share?');
     });
   });
 
   describe('tw', () => {
     it('should call', () => {
       tw();
-      expect(window.open.mock.calls[0][0]).toBe('https://twitter.com/intent/tweet?text=undefined&url=undefined');
+      expect(window.open.mock.calls[0][0]).toBe('https://twitter.com/intent/tweet?');
     });
   });
 
   describe('mail', () => {
     it('should call', () => {
       mail();
-      expect(window.open.mock.calls[0][0]).toBe('http://connect.mail.ru/share?share_url=undefined&title=undefined&description=undefined&imageurl=undefined');
+      expect(window.open.mock.calls[0][0]).toBe('http://connect.mail.ru/share?');
     });
   });
 });

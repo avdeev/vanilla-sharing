@@ -7,6 +7,7 @@
     "build": "webpack",
     "build:clean": "rimraf ./build",
     "lint": "eslint --ignore-path .gitignore .",
+    "lint:staged": "lint-staged",
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
     "test": "jest --coverage",
@@ -15,6 +16,10 @@
   "repository": "git@github.com:avdeev/vanilla-sharing.git",
   "author": "Alexey Avdeev <aad.jerry@gmail.com>",
   "license": "MIT",
+  "lint-staged": {
+    "*.js": "lint"
+  },
+  "pre-commit": "lint:staged",
   "babel": {
     "presets": [
       "latest"
@@ -51,6 +56,8 @@
     "eslint-plugin-import": "2.2.0",
     "faker": "3.1.0",
     "jest": "18.1.0",
+    "lint-staged": "3.3.1",
+    "pre-commit": "1.2.2",
     "rimraf": "2.6.0",
     "webpack": "2.2.1"
   }
