@@ -14,26 +14,26 @@ describe('tests', () => {
   describe('vk', () => {
     it('should call', () => {
       vk(faker.lorem.sentence());
-      expect(window.open.mock.calls[0][0]).toBe('https://vk.com/share.php?url=undefined&title=undefined&description=undefined&image=undefined&noparse=true');
+      expect(window.open.mock.calls[0][0]).toBe('https://vk.com/share.php?noparse=true');
     });
 
     it('should call with very lond description', () => {
       const fixture = faker.lorem.sentence(81);
 
       vk({ description: fixture });
-      expect(window.open.mock.calls[0][0]).toBe(`https://vk.com/share.php?url=undefined&title=undefined&description=${fixture.substr(0, 80)}...&image=undefined&noparse=true`);
+      expect(window.open.mock.calls[0][0]).toBe(`https://vk.com/share.php?description=${encodeURIComponent(fixture.substr(0, 80))}...&noparse=true`);
     });
 
     it('should call with very lond title', () => {
       const fixture = faker.lorem.sentence(81);
 
       vk({ title: fixture });
-      expect(window.open.mock.calls[0][0]).toBe(`https://vk.com/share.php?url=undefined&title=${fixture.substr(0, 80)}...&description=undefined&image=undefined&noparse=true`);
+      expect(window.open.mock.calls[0][0]).toBe(`https://vk.com/share.php?title=${encodeURIComponent(fixture.substr(0, 80))}...&noparse=true`);
     });
 
     it('should call with isVkParse true', () => {
       vk({ isVkParse: true });
-      expect(window.open.mock.calls[0][0]).toBe('https://vk.com/share.php?url=undefined');
+      expect(window.open.mock.calls[0][0]).toBe('https://vk.com/share.php?');
     });
   });
 

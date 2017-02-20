@@ -1,5 +1,11 @@
 const WIN_PARAMS = 'scrollbars=0, resizable=1, menubar=0, left=100, top=100, width=550, height=440, toolbar=0, status=0';
 
+const encodeParams = (obj) =>
+  Object.keys(obj)
+  .filter(k => typeof(obj[k]) != 'undefined')
+  .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(obj[k])}`)
+  .join('&');
+
 const vk = (options = {}) => {
   const { url, image, isVkParse } = options;
   let { description, title } = options;
@@ -12,9 +18,9 @@ const vk = (options = {}) => {
     title = `${title.substr(0, 80)}...`;
   }
 
-  let params = `url=${url}&title=${title}&description=${description}&image=${image}&noparse=true`;
+  let params = encodeParams({ url, title, description, image, noparse: true });
   if (isVkParse) {
-    params = `url=${url}`;
+    params = encodeParams({ url });
   }
 
   return window.open(`https://vk.com/share.php?${params}`, '_blank', WIN_PARAMS);
