@@ -1,12 +1,13 @@
 {
   "name": "vanilla-sharing",
-  "version": "0.2.0",
+  "description": "Small simple tool for sharing url, title, description and image to VK, Facebook, OK, G+, Twitter and Mail",
+  "version": "0.3.0",
   "main": "src/index.js",
   "scripts": {
     "prebuild": "npm run build:clean",
     "build": "webpack",
     "build:clean": "rimraf ./build",
-    "lint": "eslint --ignore-path .gitignore .",
+    "lint": "eslint --ignore-path .gitignore . --ignore-pattern build",
     "lint:staged": "lint-staged",
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
@@ -16,6 +17,10 @@
   "repository": "git@github.com:avdeev/vanilla-sharing.git",
   "author": "Alexey Avdeev <aad.jerry@gmail.com>",
   "license": "MIT",
+  "files": [
+    "build",
+    "src"
+  ],
   "lint-staged": {
     "*.js": "lint"
   },
