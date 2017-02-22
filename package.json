@@ -1,10 +1,18 @@
 {
   "name": "vanilla-sharing",
   "description": "Small simple tool for sharing url, title, description and image to VK, Facebook, OK, G+, Twitter and Mail",
-  "keywords": ["sharing", "vk", "facebook", "g+", "twiiter", "socials", "mail"],
+  "keywords": [
+    "sharing",
+    "vk",
+    "facebook",
+    "g+",
+    "twiiter",
+    "socials",
+    "mail"
+  ],
   "homepage": "https://github.com/avdeev/vanilla-sharing",
   "bugs": "https://github.com/avdeev/vanilla-sharing/issues",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "main": "src/index.js",
   "scripts": {
     "prebuild": "npm run build:clean",
