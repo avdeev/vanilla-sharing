@@ -1,7 +1,7 @@
 {
   "name": "vanilla-sharing",
   "description": "Small simple tool for sharing url, title, description and image to VK, Facebook, OK, G+, Twitter and Mail",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "src/index.js",
   "scripts": {
     "prebuild": "npm run build:clean",
