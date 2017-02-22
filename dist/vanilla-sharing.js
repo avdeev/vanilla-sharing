@@ -1,5 +1,14 @@
-var VanillaSharing =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["VanillaSharing"] = factory();
+	else
+		root["VanillaSharing"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -200,3 +209,4 @@ var mail = exports.mail = function mail() {
 
 /***/ })
 /******/ ]);
+});

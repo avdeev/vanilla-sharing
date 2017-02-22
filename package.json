@@ -13,12 +13,12 @@
   "homepage": "https://github.com/avdeev/vanilla-sharing",
   "bugs": "https://github.com/avdeev/vanilla-sharing/issues",
   "version": "0.4.2",
-  "main": "src/index.js",
+  "main": "dist/vanilla-sharing.js",
   "scripts": {
     "prebuild": "npm run build:clean",
     "build": "webpack",
-    "build:clean": "rimraf ./build",
-    "lint": "eslint --ignore-path .gitignore . --ignore-pattern build",
+    "build:clean": "rimraf ./dist",
+    "lint": "eslint --ignore-path .gitignore . --ignore-pattern dist",
     "lint:staged": "lint-staged",
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
@@ -29,8 +29,7 @@
   "author": "Alexey Avdeev <aad.jerry@gmail.com>",
   "license": "MIT",
   "files": [
-    "build",
-    "src"
+    "dist"
   ],
   "lint-staged": {
     "*.js": "lint"
