@@ -3,6 +3,7 @@
 Small simple tool for sharing url, title, description and image to VK, Facebook, OK, G+, Twitter and Mail
 
 [![Build Status](https://travis-ci.org/avdeev/vanilla-sharing.svg?branch=master)](https://travis-ci.org/avdeev/vanilla-sharing)
+[![Coverage Status](https://coveralls.io/repos/github/avdeev/vanilla-sharing/badge.svg?branch=master)](https://coveralls.io/github/avdeev/vanilla-sharing?branch=master)
 
 # Installation
 
