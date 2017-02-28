@@ -23,7 +23,8 @@
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
     "test": "jest --coverage",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": "git@github.com:avdeev/vanilla-sharing.git",
   "author": "Alexey Avdeev <aad.jerry@gmail.com>",
@@ -66,6 +67,7 @@
     "babel-loader": "6.3.2",
     "babel-polyfill": "6.23.0",
     "babel-preset-latest": "6.22.0",
+    "coveralls": "2.11.16",
     "eslint": "3.15.0",
     "eslint-config-airbnb-base": "11.1.0",
     "eslint-plugin-import": "2.2.0",
