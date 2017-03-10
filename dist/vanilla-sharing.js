@@ -352,8 +352,18 @@ function viber() {
       title = options.title;
 
 
+  var arr = [];
+
+  if (title) {
+    arr.push(title);
+  }
+
+  if (url) {
+    arr.push(url);
+  }
+
   var params = (0, _encodeParams2.default)({
-    text: title + ' ' + url
+    text: arr.join(' ')
   });
 
   // TODO: check for mobile ?
