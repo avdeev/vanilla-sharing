@@ -1,0 +1,35 @@
+import faker from 'faker';
+
+import whatsapp from '../whatsapp';
+
+describe('whatsapp', () => {
+  beforeEach(() => {
+    window.open = jest.fn();
+  });
+
+  afterEach(() => {
+    window.open.mockReset();
+  });
+
+  it('should call without params', () => {
+    whatsapp();
+
+    expect(window.open.mock.calls[0][0]).toBe('whatsapp://send?');
+  });
+
+  it('should call with url', () => {
+    const fixture = faker.internet.url();
+
+    whatsapp({ url: fixture });
+
+    expect(window.open.mock.calls[0][0]).toBe(`whatsapp://send?href=${encodeURIComponent(fixture)}`);
+  });
+
+  it('should call with title', () => {
+    const fixture = faker.lorem.sentence();
+
+    whatsapp({ title: fixture });
+
+    expect(window.open.mock.calls[0][0]).toBe(`whatsapp://send?text=${encodeURIComponent(fixture)}`);
+  });
+});
