@@ -4,18 +4,9 @@ import encodeParams from 'utils/encodeParams';
 export default function viber(options = {}) {
   const { url, title } = options;
 
-  const arr = [];
-
-  if (title) {
-    arr.push(title);
-  }
-
-  if (url) {
-    arr.push(url);
-  }
-
   const params = encodeParams({
-    text: arr.join(' '),
+    text: [title, url].filter(item => item).join(' '),
+    fallback: 'https://viber.com',
   });
 
   // TODO: check for mobile ?
