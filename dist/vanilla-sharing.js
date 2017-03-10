@@ -207,6 +207,49 @@ var mail = exports.mail = function mail() {
   return window.open('http://connect.mail.ru/share?' + params, '_blank', WIN_PARAMS);
 };
 
+var telegram = exports.telegram = function telegram() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var url = options.url,
+      title = options.title;
+
+
+  var params = encodeParams({
+    url: url,
+    text: title
+  });
+
+  return window.open('https://t.me/share/url?' + params, '_blank', WIN_PARAMS);
+};
+
+var viber = exports.viber = function viber() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var url = options.url,
+      title = options.title;
+
+
+  var params = encodeParams({
+    text: title + ' ' + url
+  });
+
+  // TODO: check for mobile ?
+  return window.open('viber://forward?' + params, '_blank', WIN_PARAMS);
+};
+
+var whatsapp = exports.whatsapp = function whatsapp() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var url = options.url,
+      title = options.title;
+
+
+  var params = encodeParams({
+    href: url,
+    text: title
+  });
+
+  // TODO: check for mobile ?
+  return window.open('whatsapp://send?' + params, '_blank', WIN_PARAMS);
+};
+
 /***/ })
 /******/ ]);
 });

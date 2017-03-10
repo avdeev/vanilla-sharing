@@ -91,3 +91,37 @@ export const mail = (options = {}) => {
 
   return window.open(`http://connect.mail.ru/share?${params}`, '_blank', WIN_PARAMS);
 };
+
+export const telegram = (options = {}) => {
+  const { url, title } = options;
+
+  const params = encodeParams({
+    url,
+    text: title,
+  });
+
+  return window.open(`https://t.me/share/url?${params}`, '_blank', WIN_PARAMS);
+};
+
+export const viber = (options = {}) => {
+  const { url, title } = options;
+
+  const params = encodeParams({
+    text: `${title} ${url}`,
+  });
+
+  // TODO: check for mobile ?
+  return window.open(`viber://forward?${params}`, '_blank', WIN_PARAMS);
+};
+
+export const whatsapp = (options = {}) => {
+  const { url, title } = options;
+
+  const params = encodeParams({
+    href: url,
+    text: title,
+  });
+
+  // TODO: check for mobile ?
+  return window.open(`whatsapp://send?${params}`, '_blank', WIN_PARAMS);
+};
