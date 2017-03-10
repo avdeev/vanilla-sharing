@@ -2,7 +2,7 @@ import faker from 'faker';
 
 import tw from '../tw';
 
-describe('tests', () => {
+describe('tw', () => {
   beforeEach(() => {
     window.open = jest.fn();
   });
@@ -11,27 +11,25 @@ describe('tests', () => {
     window.open.mockReset();
   });
 
-  describe('tw', () => {
-    it('should call without params', () => {
-      tw();
+  it('should call without params', () => {
+    tw();
 
-      expect(window.open.mock.calls[0][0]).toBe('https://twitter.com/intent/tweet?');
-    });
+    expect(window.open.mock.calls[0][0]).toBe('https://twitter.com/intent/tweet?');
+  });
 
-    it('should call with url', () => {
-      const fixture = faker.internet.url();
+  it('should call with url', () => {
+    const fixture = faker.internet.url();
 
-      tw({ url: fixture });
+    tw({ url: fixture });
 
-      expect(window.open.mock.calls[0][0]).toBe(`https://twitter.com/intent/tweet?url=${encodeURIComponent(fixture)}`);
-    });
+    expect(window.open.mock.calls[0][0]).toBe(`https://twitter.com/intent/tweet?url=${encodeURIComponent(fixture)}`);
+  });
 
-    it('should call with title', () => {
-      const fixture = faker.lorem.sentence();
+  it('should call with title', () => {
+    const fixture = faker.lorem.sentence();
 
-      tw({ title: fixture });
+    tw({ title: fixture });
 
-      expect(window.open.mock.calls[0][0]).toBe(`https://twitter.com/intent/tweet?text=${encodeURIComponent(fixture)}`);
-    });
+    expect(window.open.mock.calls[0][0]).toBe(`https://twitter.com/intent/tweet?text=${encodeURIComponent(fixture)}`);
   });
 });

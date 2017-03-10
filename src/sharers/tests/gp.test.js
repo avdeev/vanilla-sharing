@@ -2,7 +2,7 @@ import faker from 'faker';
 
 import gp from '../gp';
 
-describe('tests', () => {
+describe('gp', () => {
   beforeEach(() => {
     window.open = jest.fn();
   });
@@ -11,19 +11,17 @@ describe('tests', () => {
     window.open.mockReset();
   });
 
-  describe('gp', () => {
-    it('should call without params', () => {
-      gp();
+  it('should call without params', () => {
+    gp();
 
-      expect(window.open.mock.calls[0][0]).toBe('https://plus.google.com/share?');
-    });
+    expect(window.open.mock.calls[0][0]).toBe('https://plus.google.com/share?');
+  });
 
-    it('should call with url', () => {
-      const fixture = faker.internet.url();
+  it('should call with url', () => {
+    const fixture = faker.internet.url();
 
-      gp({ url: fixture });
+    gp({ url: fixture });
 
-      expect(window.open.mock.calls[0][0]).toBe(`https://plus.google.com/share?url=${encodeURIComponent(fixture)}`);
-    });
+    expect(window.open.mock.calls[0][0]).toBe(`https://plus.google.com/share?url=${encodeURIComponent(fixture)}`);
   });
 });

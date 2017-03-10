@@ -2,7 +2,7 @@ import faker from 'faker';
 
 import mail from '../mail';
 
-describe('tests', () => {
+describe('mail', () => {
   beforeEach(() => {
     window.open = jest.fn();
   });
@@ -11,43 +11,41 @@ describe('tests', () => {
     window.open.mockReset();
   });
 
-  describe('mail', () => {
-    it('should call without params', () => {
-      mail();
+  it('should call without params', () => {
+    mail();
 
-      expect(window.open.mock.calls[0][0]).toBe('http://connect.mail.ru/share?');
-    });
+    expect(window.open.mock.calls[0][0]).toBe('http://connect.mail.ru/share?');
+  });
 
-    it('should call with url', () => {
-      const fixture = faker.internet.url();
+  it('should call with url', () => {
+    const fixture = faker.internet.url();
 
-      mail({ url: fixture });
+    mail({ url: fixture });
 
-      expect(window.open.mock.calls[0][0]).toBe(`http://connect.mail.ru/share?share_url=${encodeURIComponent(fixture)}`);
-    });
+    expect(window.open.mock.calls[0][0]).toBe(`http://connect.mail.ru/share?share_url=${encodeURIComponent(fixture)}`);
+  });
 
-    it('should call with title', () => {
-      const fixture = faker.lorem.sentence();
+  it('should call with title', () => {
+    const fixture = faker.lorem.sentence();
 
-      mail({ title: fixture });
+    mail({ title: fixture });
 
-      expect(window.open.mock.calls[0][0]).toBe(`http://connect.mail.ru/share?title=${encodeURIComponent(fixture)}`);
-    });
+    expect(window.open.mock.calls[0][0]).toBe(`http://connect.mail.ru/share?title=${encodeURIComponent(fixture)}`);
+  });
 
-    it('should call with description', () => {
-      const fixture = faker.lorem.sentences();
+  it('should call with description', () => {
+    const fixture = faker.lorem.sentences();
 
-      mail({ description: fixture });
+    mail({ description: fixture });
 
-      expect(window.open.mock.calls[0][0]).toBe(`http://connect.mail.ru/share?description=${encodeURIComponent(fixture)}`);
-    });
+    expect(window.open.mock.calls[0][0]).toBe(`http://connect.mail.ru/share?description=${encodeURIComponent(fixture)}`);
+  });
 
-    it('should call with image', () => {
-      const fixture = faker.image.imageUrl();
+  it('should call with image', () => {
+    const fixture = faker.image.imageUrl();
 
-      mail({ image: fixture });
+    mail({ image: fixture });
 
-      expect(window.open.mock.calls[0][0]).toBe(`http://connect.mail.ru/share?imageurl=${encodeURIComponent(fixture)}`);
-    });
+    expect(window.open.mock.calls[0][0]).toBe(`http://connect.mail.ru/share?imageurl=${encodeURIComponent(fixture)}`);
   });
 });

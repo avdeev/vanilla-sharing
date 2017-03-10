@@ -2,7 +2,7 @@ import faker from 'faker';
 
 import vk from '../vk';
 
-describe('tests', () => {
+describe('vk', () => {
   beforeEach(() => {
     window.open = jest.fn();
   });
@@ -11,33 +11,31 @@ describe('tests', () => {
     window.open.mockReset();
   });
 
-  describe('vk', () => {
-    it('should call without params', () => {
-      vk(faker.lorem.sentence());
+  it('should call without params', () => {
+    vk();
 
-      expect(window.open.mock.calls[0][0]).toBe('https://vk.com/share.php?noparse=true');
-    });
+    expect(window.open.mock.calls[0][0]).toBe('https://vk.com/share.php?noparse=true');
+  });
 
-    it('should call with very lond description', () => {
-      const fixture = faker.lorem.sentence(81);
+  it('should call with very lond description', () => {
+    const fixture = faker.lorem.sentence(81);
 
-      vk({ description: fixture });
+    vk({ description: fixture });
 
-      expect(window.open.mock.calls[0][0]).toBe(`https://vk.com/share.php?description=${encodeURIComponent(fixture.substr(0, 80))}...&noparse=true`);
-    });
+    expect(window.open.mock.calls[0][0]).toBe(`https://vk.com/share.php?description=${encodeURIComponent(fixture.substr(0, 80))}...&noparse=true`);
+  });
 
-    it('should call with very lond title', () => {
-      const fixture = faker.lorem.sentence(81);
+  it('should call with very lond title', () => {
+    const fixture = faker.lorem.sentence(81);
 
-      vk({ title: fixture });
+    vk({ title: fixture });
 
-      expect(window.open.mock.calls[0][0]).toBe(`https://vk.com/share.php?title=${encodeURIComponent(fixture.substr(0, 80))}...&noparse=true`);
-    });
+    expect(window.open.mock.calls[0][0]).toBe(`https://vk.com/share.php?title=${encodeURIComponent(fixture.substr(0, 80))}...&noparse=true`);
+  });
 
-    it('should call with isVkParse true', () => {
-      vk({ isVkParse: true });
+  it('should call with isVkParse true', () => {
+    vk({ isVkParse: true });
 
-      expect(window.open.mock.calls[0][0]).toBe('https://vk.com/share.php?');
-    });
+    expect(window.open.mock.calls[0][0]).toBe('https://vk.com/share.php?');
   });
 });
