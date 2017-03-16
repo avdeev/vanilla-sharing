@@ -42,7 +42,7 @@ vk(options);
 
 ### `vk(options)`
 
-Share to vk.com
+Share to vk.com.
 
 ```js
 vk({
@@ -56,7 +56,7 @@ vk({
 
 ### `fb(options)`
 
-Share to facebook.com
+Share to facebook.com.
 
 ```js
 fb({
@@ -71,7 +71,7 @@ fb({
 
 ### `tw(options)`
 
-Share to Twitter
+Share to Twitter.
 
 ```js
 tw({
@@ -82,7 +82,7 @@ tw({
 
 ### `ok(options)`
 
-Share to ok.ru
+Share to ok.ru.
 
 ```js
 ok({
@@ -93,7 +93,7 @@ ok({
 
 ### `mail(options)`
 
-Share to mail.ru
+Share to mail.ru.
 
 ```js
 mail({
@@ -106,7 +106,7 @@ mail({
 
 ### `telegram(options)`
 
-Share to Telegram
+Share to Telegram.
 
 ```js
 telegram({
@@ -117,7 +117,8 @@ telegram({
 
 ### `viber(options)`
 
-Share to Viber. Share method from [Viber Share Button](https://developers.viber.com/tools/share-button/index.html).
+Share to Viber.
+Share method from [Viber Share Button](https://developers.viber.com/tools/share-button/index.html).
 
 ```js
 viber({
@@ -128,7 +129,8 @@ viber({
 
 ### `whatsapp(options)`
 
-Share to Whatsapp
+Share to Whatsapp.
+Share method from [kriskbx/whatsapp-sharing](https://github.com/kriskbx/whatsapp-sharing).
 
 ```js
 whatsapp({
@@ -139,7 +141,7 @@ whatsapp({
 
 ### `gp(options)`
 
-Share to Google+
+Share to Google+.
 
 ```js
 gp({
