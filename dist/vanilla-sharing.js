@@ -352,22 +352,14 @@ function viber() {
       title = options.title;
 
 
-  var arr = [];
-
-  if (title) {
-    arr.push(title);
-  }
-
-  if (url) {
-    arr.push(url);
-  }
-
   var params = (0, _encodeParams2.default)({
-    text: arr.join(' ')
+    text: [title, url].filter(function (item) {
+      return item;
+    }).join(' '),
+    fallback: 'https://viber.com'
   });
 
-  // TODO: check for mobile ?
-  return window.open('viber://forward?' + params, '_blank', _config.WIN_PARAMS);
+  return window.open('https://app.adjust.com/u783g1_kw9yml?' + params, '_blank', _config.WIN_PARAMS);
 }
 
 /***/ }),
