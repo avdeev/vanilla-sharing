@@ -436,8 +436,9 @@ function whatsapp() {
 
 
   var params = (0, _encodeParams2.default)({
-    href: url,
-    text: title
+    text: [title, url].filter(function (item) {
+      return item;
+    }).join(' ')
   });
 
   // TODO: check for mobile ?
