@@ -9,6 +9,5 @@ export default function viber(options = {}) {
     fallback: 'https://viber.com',
   });
 
-  // TODO: check for mobile ?
-  return window.open(`viber://forward?${params}`, '_blank', WIN_PARAMS);
+  return window.open(`https://app.adjust.com/u783g1_kw9yml?${params}`, '_blank', WIN_PARAMS);
 }
