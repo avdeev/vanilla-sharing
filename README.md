@@ -26,26 +26,123 @@ yard add vanilla-sharing
 
 1. From build folder. Include file build/vanilla-sharing.js to your project
 
+```
+VanillaSharing.vk(options);
+```
+
 2. From ES6 modules.
 
 ```js
-import { vk, ok, fb, gp, tw, mail } from 'vanilla-sharing';
+import { vk } from 'vanilla-sharing';
+
+vk(options);
 ```
 
 # API
 
-For install from build folder as global library
+### `vk(options)`
+
+Share to vk.com
 
 ```js
-VanillaSharing.vk({ url: 'https://google.com' });
+vk({
+  url: string,
+  title: string,
+  description: string,
+  image: string,
+  isVkParse: boolean,
+})
+```
 
-VanillaSharing.fb({ fbAppId: '123', url: 'https://google.com' });
+### `fb(options)`
 
-VanillaSharing.ok({ url: 'https://google.com' });
+Share to facebook.com
 
-VanillaSharing.gp({ url: 'https://google.com' });
+```js
+fb({
+  url: string,
+  title: string,
+  description: string,
+  image: string,
+  redirectUri: string,
+  fbAppId: string,
+})
+```
 
-VanillaSharing.tw({ url: 'https://google.com' });
+### `tw(options)`
 
-VanillaSharing.mail({ url: 'https://google.com' });
+Share to Twitter
+
+```js
+tw({
+  url: string,
+  title: string,
+})
+```
+
+### `ok(options)`
+
+Share to ok.ru
+
+```js
+ok({
+  url: string,
+  title: string,
+})
+```
+
+### `mail(options)`
+
+Share to mail.ru
+
+```js
+mail({
+  url: string,
+  title: string,
+  description: string,
+  image: string,
+})
+```
+
+### `telegram(options)`
+
+Share to Telegram
+
+```js
+telegram({
+  url: string,
+  title: string,
+})
+```
+
+### `viber(options)`
+
+Share to Viber
+
+```js
+viber({
+  url: string,
+  title: string,
+})
+```
+
+### `whatsapp(options)`
+
+Share to Whatsapp
+
+```js
+whatsapp({
+  url: string,
+  title: string,
+})
+```
+
+### `gp(options)`
+
+Share to Google+
+
+```js
+gp({
+  url: string,
+})
 ```
