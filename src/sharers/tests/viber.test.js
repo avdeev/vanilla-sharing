@@ -32,4 +32,13 @@ describe('viber', () => {
 
     expect(window.open.mock.calls[0][0]).toBe(`https://app.adjust.com/u783g1_kw9yml?text=${encodeURIComponent(fixture)}&fallback=https%3A%2F%2Fviber.com`);
   });
+
+  it('should call with title and url', () => {
+    const title = faker.lorem.sentence();
+    const url = faker.internet.url();
+
+    viber({ title, url });
+
+    expect(window.open.mock.calls[0][0]).toBe(`https://app.adjust.com/u783g1_kw9yml?text=${encodeURIComponent(`${title} ${url}`)}&fallback=https%3A%2F%2Fviber.com`);
+  });
 });
