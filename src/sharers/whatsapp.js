@@ -5,8 +5,7 @@ export default function whatsapp(options = {}) {
   const { url, title } = options;
 
   const params = encodeParams({
-    href: url,
-    text: title,
+    text: [title, url].filter(item => item).join(' '),
   });
 
   // TODO: check for mobile ?
