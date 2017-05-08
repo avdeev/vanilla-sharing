@@ -148,3 +148,14 @@ gp({
   url: string,
 })
 ```
+
+### `messenger(options)`
+
+Share to Facebook Messenger.
+Share method from [Sharing for Messenger](https://developers.facebook.com/docs/sharing/messenger).
+```js
+messenger({
+  url: string,
+  fbAppId: string,
+})
+```
