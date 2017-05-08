@@ -148,3 +148,15 @@ gp({
   url: string,
 })
 ```
+
+### `linkedin(options)`
+
+Share to LinkedIn.
+Share method from [Share on LinkedIn](https://developer.linkedin.com/docs/share-on-linkedin#).
+```js
+linkedin({
+  url: string,
+  title: string,
+  description: string,
+})
+```
