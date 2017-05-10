@@ -1,6 +1,6 @@
 # vanilla-sharing
 
-Small simple tool for sharing url, title, description and image to VK, Facebook, OK, G+, Twitter and Mail
+Small simple tool for sharing url, title, description and image to VK, Facebook (Messenger), OK, G+, Twitter, Mail, LinkedIn
 
 [![Build Status](https://travis-ci.org/avdeev/vanilla-sharing.svg?branch=master)](https://travis-ci.org/avdeev/vanilla-sharing)
 [![Build status](https://ci.appveyor.com/api/projects/status/4mmgunpsan58m0ol?svg=true)](https://ci.appveyor.com/project/avdeev/vanilla-sharing)
