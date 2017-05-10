@@ -12,7 +12,7 @@
   ],
   "homepage": "https://github.com/avdeev/vanilla-sharing",
   "bugs": "https://github.com/avdeev/vanilla-sharing/issues",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "dist/vanilla-sharing.js",
   "scripts": {
     "prebuild": "npm run build:clean",
