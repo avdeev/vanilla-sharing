@@ -149,10 +149,24 @@ gp({
 })
 ```
 
+### `linkedin(options)`
+
+Share to LinkedIn.
+Share method from [Share on LinkedIn](https://developer.linkedin.com/docs/share-on-linkedin#).
+
+```js
+linkedin({
+  url: string,
+  title: string,
+  description: string,
+})
+```
+
 ### `messenger(options)`
 
 Share to Facebook Messenger.
 Share method from [Sharing for Messenger](https://developers.facebook.com/docs/sharing/messenger).
+
 ```js
 messenger({
   url: string,

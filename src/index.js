@@ -7,6 +7,7 @@ import tw from 'sharers/tw';
 import viber from 'sharers/viber';
 import vk from 'sharers/vk';
 import whatsapp from 'sharers/whatsapp';
+import linkedin from 'sharers/linkedin';
 import messenger from 'sharers/messenger';
 
 export {
@@ -19,5 +20,6 @@ export {
   viber,
   vk,
   whatsapp,
+  linkedin,
   messenger,
 };
