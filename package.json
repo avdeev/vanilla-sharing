@@ -31,7 +31,7 @@
   "author": "Alexey Avdeev <aad.jerry@gmail.com>",
   "license": "MIT",
   "files": [
-    "dist",
+    "dist"
   ],
   "lint-staged": {
     "*.js": "lint"
