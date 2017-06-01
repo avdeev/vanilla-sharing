@@ -19,7 +19,7 @@ npm install --save vanilla-sharing
 or
 
 ```sh
-yard add vanilla-sharing
+yarn add vanilla-sharing
 ```
 
 # Usage
