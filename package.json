@@ -26,6 +26,7 @@
     "test:clean": "rimraf ./coverage",
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
+    "prepublish": "npm run build",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": "git@github.com:avdeev/vanilla-sharing.git",
