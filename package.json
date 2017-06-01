@@ -14,8 +14,6 @@
   "bugs": "https://github.com/avdeev/vanilla-sharing/issues",
   "version": "1.3.0",
   "main": "dist/vanilla-sharing.js",
-  "module": "src/index.js",
-  "modules.root": "src/sharers",
   "scripts": {
     "prebuild": "npm run build:clean",
     "build": "webpack",
@@ -34,7 +32,6 @@
   "license": "MIT",
   "files": [
     "dist",
-    "src"
   ],
   "lint-staged": {
     "*.js": "lint"
