@@ -117,8 +117,8 @@ telegram({
 
 ### `viber(options)`
 
-Share to Viber.
-Share method from [Viber Share Button](https://developers.viber.com/tools/share-button/index.html).
+Share via a Viber message.
+[Viber Share Button docs](https://developers.viber.com/docs/tools/share-button/).
 
 ```js
 viber({

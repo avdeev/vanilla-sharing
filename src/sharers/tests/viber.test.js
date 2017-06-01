@@ -11,10 +11,8 @@ describe('viber', () => {
     window.open.mockReset();
   });
 
-  it('should call without params', () => {
-    viber();
-
-    expect(window.open.mock.calls[0][0]).toBe('https://app.adjust.com/u783g1_kw9yml?text=&fallback=https%3A%2F%2Fviber.com');
+  it('should throw if title and url are empty', () => {
+    expect(viber).toThrow();
   });
 
   it('should call with url', () => {
@@ -22,7 +20,7 @@ describe('viber', () => {
 
     viber({ url: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://app.adjust.com/u783g1_kw9yml?text=${encodeURIComponent(fixture)}&fallback=https%3A%2F%2Fviber.com`);
+    expect(window.open.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title', () => {
@@ -30,7 +28,7 @@ describe('viber', () => {
 
     viber({ title: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://app.adjust.com/u783g1_kw9yml?text=${encodeURIComponent(fixture)}&fallback=https%3A%2F%2Fviber.com`);
+    expect(window.open.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title and url', () => {
@@ -39,6 +37,6 @@ describe('viber', () => {
 
     viber({ title, url });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://app.adjust.com/u783g1_kw9yml?text=${encodeURIComponent(`${title} ${url}`)}&fallback=https%3A%2F%2Fviber.com`);
+    expect(window.open.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(`${title} ${url}`)}`);
   });
 });

@@ -423,15 +423,17 @@ function viber() {
   var url = options.url,
       title = options.title;
 
+  if (!url && !title) {
+    throw new Error('url and title not specified');
+  }
 
   var params = (0, _encodeParams2.default)({
     text: [title, url].filter(function (item) {
       return item;
-    }).join(' '),
-    fallback: 'https://viber.com'
+    }).join(' ')
   });
 
-  return window.open('https://app.adjust.com/u783g1_kw9yml?' + params, '_blank', _config.WIN_PARAMS);
+  return window.open('viber://forward?' + params, '_blank', _config.WIN_PARAMS);
 }
 
 /***/ }),
