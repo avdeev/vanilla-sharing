@@ -11,9 +11,9 @@ environment:
 
   matrix:
     # Node versions to run
+    - nodejs_version: 8
     - nodejs_version: 7
     - nodejs_version: 6
-    - nodejs_version: 5
 
 # Fix line endings in Windows. (runs before repo cloning)
 init:
@@ -23,8 +23,7 @@ init:
 install:
   # Install the latest stable version of Node
   - ps: Install-Product node $env:nodejs_version
-  - set PATH=%APPDATA%\yarn;%PATH%
-  - yarn
+  - npm install
 
 # Disable automatic builds
 build: off
@@ -34,12 +33,11 @@ test_script:
   # Output debugging info
   - node --version
   # run tests and run build
-  - yarn run test
-  - yarn run build
+  - npm run test
+  - npm run build
 
 # Cache node_modules for faster builds
 cache:
-  - "%LOCALAPPDATA%\\Yarn"
   - node_modules -> package.json
 
 # remove, as appveyor doesn't support secure variables on pr builds
