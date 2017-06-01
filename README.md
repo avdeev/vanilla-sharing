@@ -16,15 +16,9 @@ Small simple tool for sharing url, title, description and image to VK, Facebook 
 npm install --save vanilla-sharing
 ```
 
-or
-
-```sh
-yarn add vanilla-sharing
-```
-
 # Usage
 
-1. From build folder. Include file build/vanilla-sharing.js to your project
+1. From dist folder. Include file dist/vanilla-sharing.js to your project
 
 ```
 VanillaSharing.vk(options);
