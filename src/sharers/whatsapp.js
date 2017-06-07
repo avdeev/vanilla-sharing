@@ -7,5 +7,5 @@ export default function whatsapp(options = {}) {
     text: [title, url].filter(item => item).join(' '),
   });
 
-  window.location.assign(`whatsapp://send?${params}`);
+  return window.location.assign(`whatsapp://send?${params}`);
 }

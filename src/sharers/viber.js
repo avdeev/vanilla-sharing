@@ -10,5 +10,5 @@ export default function viber(options = {}) {
     text: [title, url].filter(item => item).join(' '),
   });
 
-  window.location.assign(`viber://forward?${params}`);
+  return window.location.assign(`viber://forward?${params}`);
 }

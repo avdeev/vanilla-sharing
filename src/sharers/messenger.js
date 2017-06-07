@@ -12,5 +12,5 @@ export default function messenger(options = {}) {
     link: url,
   });
 
-  window.location.assign(`fb-messenger://share?${params}`);
+  return window.location.assign(`fb-messenger://share?${params}`);
 }
