@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>vanilla-sharing demo</title>
+
+  <style type="text/css">
+    .item {
+      margin-bottom: 2em;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><a href="https://github.com/avdeev/vanilla-sharing">vanilla-sharing</a> demo</h1>
+
+  <ul>
+    <li class="item" data-social="fb">Share on Facebook</li>
+    <li class="item" data-social="tw">Share on Twitter</li>
+    <li class="item" data-social="gp">Share on Google</li>
+    <li class="item" data-social="vk">Share on VK</li>
+    <li class="item" data-social="ok">Share on Odnoklassniki</li>
+    <li class="item" data-social="mail">Share on Mail.ru</li>
+    <li class="item" data-social="linkedin">Share on Linkedin</li>
+    <li class="item" data-social="messenger">Share via Messenger</li>
+    <li class="item" data-social="whatsapp">Share via Whatsapp message</li>
+    <li class="item" data-social="viber">Share via Viber message</li>
+    <li class="item" data-social="telegram">Share via Telegram message</li>
+  </ul>
+
+  <script src="https://unpkg.com/vanilla-sharing@1.3.1/dist/vanilla-sharing.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <script>
+    var options = {
+      url: 'https://github.com/avdeev/vanilla-sharing',
+      title: 'vanilla-sharing demo',
+      description: 'vanilla-sharing is an awesome lib',
+      image: 'https://dummyimage.com/1200x630/000/fff.jpg&text=vanilla-sharing',
+      fbAppId: '123'
+    };
+
+    $('.item').on('click', function() {
+      var social = $(this).data('social');
+      VanillaSharing[social](options);
+    });
+  </script>
+</body>
+
+</html>
