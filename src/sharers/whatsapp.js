@@ -1,4 +1,3 @@
-import { WIN_PARAMS } from 'config';
 import encodeParams from 'utils/encodeParams';
 
 export default function whatsapp(options = {}) {
@@ -8,6 +7,5 @@ export default function whatsapp(options = {}) {
     text: [title, url].filter(item => item).join(' '),
   });
 
-  // TODO: check for mobile ?
-  return window.open(`whatsapp://send?${params}`, '_blank', WIN_PARAMS);
+  window.location.assign(`whatsapp://send?${params}`);
 }
