@@ -1,4 +1,3 @@
-import { WIN_PARAMS } from 'config';
 import encodeParams from 'utils/encodeParams';
 
 export default function viber(options = {}) {
@@ -11,5 +10,5 @@ export default function viber(options = {}) {
     text: [title, url].filter(item => item).join(' '),
   });
 
-  return window.open(`viber://forward?${params}`, '_blank', WIN_PARAMS);
+  return window.location.assign(`viber://forward?${params}`);
 }

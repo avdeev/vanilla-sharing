@@ -4,11 +4,11 @@ import viber from '../viber';
 
 describe('viber', () => {
   beforeEach(() => {
-    window.open = jest.fn();
+    window.location.assign = jest.fn();
   });
 
   afterEach(() => {
-    window.open.mockReset();
+    window.location.assign.mockReset();
   });
 
   it('should throw if title and url are empty', () => {
@@ -20,7 +20,7 @@ describe('viber', () => {
 
     viber({ url: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(fixture)}`);
+    expect(window.location.assign.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title', () => {
@@ -28,7 +28,7 @@ describe('viber', () => {
 
     viber({ title: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(fixture)}`);
+    expect(window.location.assign.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title and url', () => {
@@ -37,6 +37,6 @@ describe('viber', () => {
 
     viber({ title, url });
 
-    expect(window.open.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(`${title} ${url}`)}`);
+    expect(window.location.assign.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(`${title} ${url}`)}`);
   });
 });

@@ -4,17 +4,17 @@ import whatsapp from '../whatsapp';
 
 describe('whatsapp', () => {
   beforeEach(() => {
-    window.open = jest.fn();
+    window.location.assign = jest.fn();
   });
 
   afterEach(() => {
-    window.open.mockReset();
+    window.location.assign.mockReset();
   });
 
   it('should call without params', () => {
     whatsapp();
 
-    expect(window.open.mock.calls[0][0]).toBe('whatsapp://send?text=');
+    expect(window.location.assign.mock.calls[0][0]).toBe('whatsapp://send?text=');
   });
 
   it('should call with url', () => {
@@ -22,7 +22,7 @@ describe('whatsapp', () => {
 
     whatsapp({ url: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`whatsapp://send?text=${encodeURIComponent(fixture)}`);
+    expect(window.location.assign.mock.calls[0][0]).toBe(`whatsapp://send?text=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title', () => {
@@ -30,7 +30,7 @@ describe('whatsapp', () => {
 
     whatsapp({ title: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`whatsapp://send?text=${encodeURIComponent(fixture)}`);
+    expect(window.location.assign.mock.calls[0][0]).toBe(`whatsapp://send?text=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title and url', () => {
@@ -39,6 +39,6 @@ describe('whatsapp', () => {
 
     whatsapp({ title, url });
 
-    expect(window.open.mock.calls[0][0]).toBe(`whatsapp://send?text=${encodeURIComponent(`${title} ${url}`)}`);
+    expect(window.location.assign.mock.calls[0][0]).toBe(`whatsapp://send?text=${encodeURIComponent(`${title} ${url}`)}`);
   });
 });
