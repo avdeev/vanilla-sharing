@@ -1,4 +1,5 @@
 import encodeParams from 'utils/encodeParams';
+import mobileShare from 'utils/mobileShare';
 
 export default function whatsapp(options = {}) {
   const { url, title } = options;
@@ -7,5 +8,5 @@ export default function whatsapp(options = {}) {
     text: [title, url].filter(item => item).join(' '),
   });
 
-  return window.location.assign(`whatsapp://send?${params}`);
+  return mobileShare(`whatsapp://send?${params}`);
 }
