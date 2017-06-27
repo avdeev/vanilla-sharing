@@ -1,4 +1,5 @@
 import encodeParams from 'utils/encodeParams';
+import mobileShare from 'utils/mobileShare';
 
 export default function viber(options = {}) {
   const { url, title } = options;
@@ -10,5 +11,5 @@ export default function viber(options = {}) {
     text: [title, url].filter(item => item).join(' '),
   });
 
-  return window.location.assign(`viber://forward?${params}`);
+  return mobileShare(`viber://forward?${params}`);
 }
