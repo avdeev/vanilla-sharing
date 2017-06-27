@@ -1,14 +1,13 @@
 import faker from 'faker';
 
+import mobileShare from 'utils/mobileShare';
 import viber from '../viber';
 
-describe('viber', () => {
-  beforeEach(() => {
-    window.location.assign = jest.fn();
-  });
+jest.mock('utils/mobileShare');
 
+describe('viber', () => {
   afterEach(() => {
-    window.location.assign.mockReset();
+    mobileShare.mockReset();
   });
 
   it('should throw if title and url are empty', () => {
@@ -20,7 +19,7 @@ describe('viber', () => {
 
     viber({ url: fixture });
 
-    expect(window.location.assign.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(fixture)}`);
+    expect(mobileShare.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title', () => {
@@ -28,7 +27,7 @@ describe('viber', () => {
 
     viber({ title: fixture });
 
-    expect(window.location.assign.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(fixture)}`);
+    expect(mobileShare.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title and url', () => {
@@ -37,6 +36,6 @@ describe('viber', () => {
 
     viber({ title, url });
 
-    expect(window.location.assign.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(`${title} ${url}`)}`);
+    expect(mobileShare.mock.calls[0][0]).toBe(`viber://forward?text=${encodeURIComponent(`${title} ${url}`)}`);
   });
 });
