@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 16);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -120,7 +120,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = mobileShare;
 
-var _isMobileSafari = __webpack_require__(15);
+var _isMobileSafari = __webpack_require__(17);
 
 var _isMobileSafari2 = _interopRequireDefault(_isMobileSafari);
 
@@ -187,6 +187,32 @@ function fb() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = fbbutton;
+
+var _config = __webpack_require__(1);
+
+function fbbutton() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var url = options.url;
+
+
+  if (!url) {
+    throw new Error('url is not defined');
+  }
+
+  return window.open('https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=' + url + '&display=popup&ref=plugin&src=share_button', '_blank', _config.WIN_PARAMS);
+}
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.default = gp;
 
 var _config = __webpack_require__(1);
@@ -208,7 +234,40 @@ function gp() {
 }
 
 /***/ }),
-/* 5 */
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = line;
+
+var _config = __webpack_require__(1);
+
+function line() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var title = options.title,
+      url = options.url;
+
+
+  if (!url) {
+    throw new Error('url is not defined');
+  }
+
+  var params = encodeURIComponent('' + url);
+
+  if (title) {
+    params = '' + encodeURIComponent(title + ' ') + params;
+  }
+
+  return window.open('https://line.me/R/msg/text/?' + params, '_blank', _config.WIN_PARAMS);
+}
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -244,7 +303,7 @@ function linkedin() {
 }
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -282,7 +341,7 @@ function mail() {
 }
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -318,7 +377,7 @@ function messenger() {
 }
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -353,7 +412,7 @@ function ok() {
 }
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -387,7 +446,7 @@ function telegram() {
 }
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -421,7 +480,7 @@ function tw() {
 }
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -461,7 +520,7 @@ function viber() {
 }
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -508,7 +567,7 @@ function vk() {
 }
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -545,7 +604,7 @@ function whatsapp() {
 }
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -554,51 +613,59 @@ function whatsapp() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.messenger = exports.linkedin = exports.whatsapp = exports.vk = exports.viber = exports.tw = exports.telegram = exports.ok = exports.mail = exports.gp = exports.fb = undefined;
+exports.fbbutton = exports.line = exports.messenger = exports.linkedin = exports.whatsapp = exports.vk = exports.viber = exports.tw = exports.telegram = exports.ok = exports.mail = exports.gp = exports.fb = undefined;
 
 var _fb = __webpack_require__(3);
 
 var _fb2 = _interopRequireDefault(_fb);
 
-var _gp = __webpack_require__(4);
+var _gp = __webpack_require__(5);
 
 var _gp2 = _interopRequireDefault(_gp);
 
-var _mail = __webpack_require__(6);
+var _mail = __webpack_require__(8);
 
 var _mail2 = _interopRequireDefault(_mail);
 
-var _ok = __webpack_require__(8);
+var _ok = __webpack_require__(10);
 
 var _ok2 = _interopRequireDefault(_ok);
 
-var _telegram = __webpack_require__(9);
+var _telegram = __webpack_require__(11);
 
 var _telegram2 = _interopRequireDefault(_telegram);
 
-var _tw = __webpack_require__(10);
+var _tw = __webpack_require__(12);
 
 var _tw2 = _interopRequireDefault(_tw);
 
-var _viber = __webpack_require__(11);
+var _viber = __webpack_require__(13);
 
 var _viber2 = _interopRequireDefault(_viber);
 
-var _vk = __webpack_require__(12);
+var _vk = __webpack_require__(14);
 
 var _vk2 = _interopRequireDefault(_vk);
 
-var _whatsapp = __webpack_require__(13);
+var _whatsapp = __webpack_require__(15);
 
 var _whatsapp2 = _interopRequireDefault(_whatsapp);
 
-var _linkedin = __webpack_require__(5);
+var _linkedin = __webpack_require__(7);
 
 var _linkedin2 = _interopRequireDefault(_linkedin);
 
-var _messenger = __webpack_require__(7);
+var _messenger = __webpack_require__(9);
 
 var _messenger2 = _interopRequireDefault(_messenger);
+
+var _line = __webpack_require__(6);
+
+var _line2 = _interopRequireDefault(_line);
+
+var _fbbutton = __webpack_require__(4);
+
+var _fbbutton2 = _interopRequireDefault(_fbbutton);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -613,9 +680,11 @@ exports.vk = _vk2.default;
 exports.whatsapp = _whatsapp2.default;
 exports.linkedin = _linkedin2.default;
 exports.messenger = _messenger2.default;
+exports.line = _line2.default;
+exports.fbbutton = _fbbutton2.default;
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
