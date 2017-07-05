@@ -10,6 +10,7 @@ import whatsapp from 'sharers/whatsapp';
 import linkedin from 'sharers/linkedin';
 import messenger from 'sharers/messenger';
 import line from 'sharers/line';
+import fbbutton from 'sharers/fbbutton';
 
 export {
   fb,
@@ -24,4 +25,5 @@ export {
   linkedin,
   messenger,
   line,
+  fbbutton,
 };
