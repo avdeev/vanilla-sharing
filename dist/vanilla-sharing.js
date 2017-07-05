@@ -43,9 +43,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -73,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -120,7 +117,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = mobileShare;
 
-var _isMobileSafari = __webpack_require__(15);
+var _isMobileSafari = __webpack_require__(11);
 
 var _isMobileSafari2 = _interopRequireDefault(_isMobileSafari);
 
@@ -132,6 +129,76 @@ function mobileShare(link) {
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.messenger = exports.linkedin = exports.whatsapp = exports.vk = exports.viber = exports.tw = exports.telegram = exports.ok = exports.mail = exports.gp = exports.fb = undefined;
+
+var _fb = __webpack_require__(4);
+
+var _fb2 = _interopRequireDefault(_fb);
+
+var _gp = __webpack_require__(5);
+
+var _gp2 = _interopRequireDefault(_gp);
+
+var _mail = __webpack_require__(6);
+
+var _mail2 = _interopRequireDefault(_mail);
+
+var _ok = __webpack_require__(7);
+
+var _ok2 = _interopRequireDefault(_ok);
+
+var _telegram = __webpack_require__(8);
+
+var _telegram2 = _interopRequireDefault(_telegram);
+
+var _tw = __webpack_require__(9);
+
+var _tw2 = _interopRequireDefault(_tw);
+
+var _viber = __webpack_require__(10);
+
+var _viber2 = _interopRequireDefault(_viber);
+
+var _vk = __webpack_require__(12);
+
+var _vk2 = _interopRequireDefault(_vk);
+
+var _whatsapp = __webpack_require__(13);
+
+var _whatsapp2 = _interopRequireDefault(_whatsapp);
+
+var _linkedin = __webpack_require__(14);
+
+var _linkedin2 = _interopRequireDefault(_linkedin);
+
+var _messenger = __webpack_require__(15);
+
+var _messenger2 = _interopRequireDefault(_messenger);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.fb = _fb2.default;
+exports.gp = _gp2.default;
+exports.mail = _mail2.default;
+exports.ok = _ok2.default;
+exports.telegram = _telegram2.default;
+exports.tw = _tw2.default;
+exports.viber = _viber2.default;
+exports.vk = _vk2.default;
+exports.whatsapp = _whatsapp2.default;
+exports.linkedin = _linkedin2.default;
+exports.messenger = _messenger2.default;
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -178,7 +245,7 @@ function fb() {
 }
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -205,42 +272,6 @@ function gp() {
   var params = (0, _encodeParams2.default)({ url: url });
 
   return window.open('https://plus.google.com/share?' + params, '_blank', _config.WIN_PARAMS);
-}
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = linkedin;
-
-var _config = __webpack_require__(1);
-
-var _encodeParams = __webpack_require__(0);
-
-var _encodeParams2 = _interopRequireDefault(_encodeParams);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function linkedin() {
-  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var title = options.title,
-      url = options.url,
-      description = options.description;
-
-
-  var params = (0, _encodeParams2.default)({
-    title: title,
-    summary: description,
-    url: url
-  });
-
-  return window.open('https://www.linkedin.com/shareArticle?mini=true&' + params, '_blank', _config.WIN_PARAMS);
 }
 
 /***/ }),
@@ -291,42 +322,6 @@ function mail() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = messenger;
-
-var _encodeParams = __webpack_require__(0);
-
-var _encodeParams2 = _interopRequireDefault(_encodeParams);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function messenger() {
-  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var fbAppId = options.fbAppId,
-      url = options.url;
-
-
-  if (!fbAppId) {
-    throw new Error('fbAppId is not defined');
-  }
-
-  var params = (0, _encodeParams2.default)({
-    app_id: fbAppId,
-    link: url
-  });
-
-  return window.location.assign('fb-messenger://share?' + params);
-}
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 exports.default = ok;
 
 var _config = __webpack_require__(1);
@@ -353,7 +348,7 @@ function ok() {
 }
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -387,7 +382,7 @@ function telegram() {
 }
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -421,7 +416,7 @@ function tw() {
 }
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -458,6 +453,21 @@ function viber() {
   });
 
   return (0, _mobileShare2.default)('viber://forward?' + params);
+}
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = isMobileSafari;
+function isMobileSafari() {
+  return !!window.navigator.userAgent.match(/Version\/[\d.]+.*Safari/);
 }
 
 /***/ }),
@@ -554,65 +564,31 @@ function whatsapp() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.messenger = exports.linkedin = exports.whatsapp = exports.vk = exports.viber = exports.tw = exports.telegram = exports.ok = exports.mail = exports.gp = exports.fb = undefined;
+exports.default = linkedin;
 
-var _fb = __webpack_require__(3);
+var _config = __webpack_require__(1);
 
-var _fb2 = _interopRequireDefault(_fb);
+var _encodeParams = __webpack_require__(0);
 
-var _gp = __webpack_require__(4);
-
-var _gp2 = _interopRequireDefault(_gp);
-
-var _mail = __webpack_require__(6);
-
-var _mail2 = _interopRequireDefault(_mail);
-
-var _ok = __webpack_require__(8);
-
-var _ok2 = _interopRequireDefault(_ok);
-
-var _telegram = __webpack_require__(9);
-
-var _telegram2 = _interopRequireDefault(_telegram);
-
-var _tw = __webpack_require__(10);
-
-var _tw2 = _interopRequireDefault(_tw);
-
-var _viber = __webpack_require__(11);
-
-var _viber2 = _interopRequireDefault(_viber);
-
-var _vk = __webpack_require__(12);
-
-var _vk2 = _interopRequireDefault(_vk);
-
-var _whatsapp = __webpack_require__(13);
-
-var _whatsapp2 = _interopRequireDefault(_whatsapp);
-
-var _linkedin = __webpack_require__(5);
-
-var _linkedin2 = _interopRequireDefault(_linkedin);
-
-var _messenger = __webpack_require__(7);
-
-var _messenger2 = _interopRequireDefault(_messenger);
+var _encodeParams2 = _interopRequireDefault(_encodeParams);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.fb = _fb2.default;
-exports.gp = _gp2.default;
-exports.mail = _mail2.default;
-exports.ok = _ok2.default;
-exports.telegram = _telegram2.default;
-exports.tw = _tw2.default;
-exports.viber = _viber2.default;
-exports.vk = _vk2.default;
-exports.whatsapp = _whatsapp2.default;
-exports.linkedin = _linkedin2.default;
-exports.messenger = _messenger2.default;
+function linkedin() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var title = options.title,
+      url = options.url,
+      description = options.description;
+
+
+  var params = (0, _encodeParams2.default)({
+    title: title,
+    summary: description,
+    url: url
+  });
+
+  return window.open('https://www.linkedin.com/shareArticle?mini=true&' + params, '_blank', _config.WIN_PARAMS);
+}
 
 /***/ }),
 /* 15 */
@@ -624,9 +600,30 @@ exports.messenger = _messenger2.default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = isMobileSafari;
-function isMobileSafari() {
-  return !!window.navigator.userAgent.match(/Version\/[\d.]+.*Safari/);
+exports.default = messenger;
+
+var _encodeParams = __webpack_require__(0);
+
+var _encodeParams2 = _interopRequireDefault(_encodeParams);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function messenger() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var fbAppId = options.fbAppId,
+      url = options.url;
+
+
+  if (!fbAppId) {
+    throw new Error('fbAppId is not defined');
+  }
+
+  var params = (0, _encodeParams2.default)({
+    app_id: fbAppId,
+    link: url
+  });
+
+  return window.location.assign('fb-messenger://share?' + params);
 }
 
 /***/ })

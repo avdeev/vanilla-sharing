@@ -51,11 +51,7 @@
       "es6": true
     },
     "settings": {
-      "import/resolver": {
-        "webpack": {
-          "config": "webpack.config.js"
-        }
-      }
+      "import/resolver": "webpack"
     }
   },
   "jest": {
@@ -71,21 +67,21 @@
     "testRegex": "tests/.*\\.test\\.js$"
   },
   "devDependencies": {
-    "babel-core": "6.24.1",
+    "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
-    "babel-loader": "7.0.0",
+    "babel-loader": "7.1.1",
     "babel-polyfill": "6.23.0",
-    "babel-preset-env": "1.5.1",
+    "babel-preset-env": "1.6.0",
     "coveralls": "2.13.1",
-    "eslint": "3.19.0",
+    "eslint": "4.1.1",
     "eslint-config-airbnb-base": "11.2.0",
-    "eslint-import-resolver-webpack": "0.8.1",
-    "eslint-plugin-import": "2.3.0",
+    "eslint-import-resolver-webpack": "0.8.3",
+    "eslint-plugin-import": "2.6.1",
     "faker": "4.1.0",
     "jest": "20.0.4",
-    "lint-staged": "3.5.1",
+    "lint-staged": "4.0.0",
     "pre-commit": "1.2.2",
     "rimraf": "2.6.1",
-    "webpack": "2.6.1"
+    "webpack": "3.0.0"
   }
 }
