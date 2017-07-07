@@ -65,6 +65,16 @@ fb({
 })
 ```
 
+### `fbbutton(options)`
+
+Share to facebook.com using facebook share button.
+
+```js
+fbbutton({
+  url: string,
+})
+```
+
 ### `tw(options)`
 
 Share to Twitter.
@@ -167,5 +177,16 @@ Share method from [Sharing for Messenger](https://developers.facebook.com/docs/s
 messenger({
   url: string,
   fbAppId: string,
+})
+```
+
+### `line(options)`
+
+Share to Line.
+
+```js
+line({
+  url: string,
+  title: string,
 })
 ```
