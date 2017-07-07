@@ -1,6 +1,6 @@
 # vanilla-sharing
 
-Small simple tool for sharing url, title, description and image to VK, Facebook (Messenger), OK, G+, Twitter, Mail, LinkedIn.
+Small simple tool for sharing url, title, description and image to VK, Facebook (Dialog, Messenger, Button), OK, G+, Twitter, Mail, LinkedIn, Line.
 
 [DEMO](https://avdeev.github.io/vanilla-sharing/demo)
 
