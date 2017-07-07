@@ -20,6 +20,6 @@ describe('fbbutton', () => {
 
     fbbutton({ url: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=${fixture}&display=popup&ref=plugin&src=share_button`);
+    expect(window.open.mock.calls[0][0]).toBe(`https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=${encodeURIComponent(fixture)}&display=popup&ref=plugin&src=share_button`);
   });
 });
