@@ -17,7 +17,9 @@ export default function vk(options = {}) {
   if (isVkParse) {
     params = encodeParams({ url });
   } else {
-    params = encodeParams({ url, title, description, image, noparse: true });
+    params = encodeParams({
+      url, title, description, image, noparse: true,
+    });
   }
 
   return window.open(`https://vk.com/share.php?${params}`, '_blank', WIN_PARAMS);

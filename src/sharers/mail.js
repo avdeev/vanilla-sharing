@@ -2,7 +2,9 @@ import { WIN_PARAMS } from 'config';
 import encodeParams from 'utils/encodeParams';
 
 export default function mail(options = {}) {
-  const { url, title, description, image } = options;
+  const {
+    url, title, description, image,
+  } = options;
 
   const params = encodeParams({
     share_url: url,

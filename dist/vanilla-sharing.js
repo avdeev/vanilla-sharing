@@ -521,7 +521,9 @@ function vk() {
   if (isVkParse) {
     params = (0, _encodeParams2.default)({ url: url });
   } else {
-    params = (0, _encodeParams2.default)({ url: url, title: title, description: description, image: image, noparse: true });
+    params = (0, _encodeParams2.default)({
+      url: url, title: title, description: description, image: image, noparse: true
+    });
   }
 
   return window.open('https://vk.com/share.php?' + params, '_blank', _config.WIN_PARAMS);
@@ -683,6 +685,12 @@ exports.default = fbbutton;
 
 var _config = __webpack_require__(1);
 
+var _encodeParams = __webpack_require__(0);
+
+var _encodeParams2 = _interopRequireDefault(_encodeParams);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function fbbutton() {
   var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var url = options.url;
@@ -692,7 +700,16 @@ function fbbutton() {
     throw new Error('url is not defined');
   }
 
-  return window.open('https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=' + url + '&display=popup&ref=plugin&src=share_button', '_blank', _config.WIN_PARAMS);
+  var params = (0, _encodeParams2.default)({
+    kid_directed_site: 0,
+    sdk: 'joey',
+    u: url,
+    display: 'popup',
+    ref: 'plugin',
+    src: 'share_button'
+  });
+
+  return window.open('https://www.facebook.com/sharer/sharer.php?' + params, '_blank', _config.WIN_PARAMS);
 }
 
 /***/ })

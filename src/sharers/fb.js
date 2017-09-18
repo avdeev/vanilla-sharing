@@ -2,7 +2,9 @@ import { WIN_PARAMS } from 'config';
 import encodeParams from 'utils/encodeParams';
 
 export default function fb(options = {}) {
-  const { fbAppId, description, title, url, image, redirectUri } = options;
+  const {
+    fbAppId, description, title, url, image, redirectUri,
+  } = options;
 
   if (!fbAppId) {
     throw new Error('fbAppId is not defined');
