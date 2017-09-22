@@ -5,7 +5,7 @@ import ok from 'sharers/ok';
 import telegram from 'sharers/telegram';
 import tw from 'sharers/tw';
 import viber from 'sharers/viber';
-import vk from 'sharers/vk';
+import { getUrl as getVkUrl, share as vk } from 'sharers/vk';
 import whatsapp from 'sharers/whatsapp';
 import linkedin from 'sharers/linkedin';
 import messenger from 'sharers/messenger';
@@ -20,6 +20,7 @@ export {
   telegram,
   tw,
   viber,
+  getVkUrl,
   vk,
   whatsapp,
   linkedin,

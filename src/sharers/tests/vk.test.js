@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-import vk from '../vk';
+import { share as vk } from '../vk';
 
 describe('vk', () => {
   beforeEach(() => {

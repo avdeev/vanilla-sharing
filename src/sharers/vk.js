@@ -1,7 +1,7 @@
 import { WIN_PARAMS, VK_MAX_LENGTH } from 'config';
 import encodeParams from 'utils/encodeParams';
 
-export default function vk(options = {}) {
+export function getUrl(options = {}) {
   const { url, image, isVkParse } = options;
   let { description, title } = options;
 
@@ -22,5 +22,9 @@ export default function vk(options = {}) {
     });
   }
 
-  return window.open(`https://vk.com/share.php?${params}`, '_blank', WIN_PARAMS);
+  return `https://vk.com/share.php?${params}`;
+}
+
+export function share(options = {}) {
+  return window.open(getUrl(options), '_blank', WIN_PARAMS);
 }
