@@ -137,7 +137,7 @@ function mobileShare(link) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.fbbutton = exports.line = exports.messenger = exports.linkedin = exports.whatsapp = exports.vk = exports.viber = exports.tw = exports.telegram = exports.ok = exports.mail = exports.gp = exports.fb = undefined;
+exports.fbbutton = exports.line = exports.messenger = exports.linkedin = exports.whatsapp = exports.vk = exports.getVkUrl = exports.viber = exports.tw = exports.telegram = exports.ok = exports.mail = exports.gp = exports.fb = undefined;
 
 var _fb = __webpack_require__(4);
 
@@ -169,8 +169,6 @@ var _viber2 = _interopRequireDefault(_viber);
 
 var _vk = __webpack_require__(12);
 
-var _vk2 = _interopRequireDefault(_vk);
-
 var _whatsapp = __webpack_require__(13);
 
 var _whatsapp2 = _interopRequireDefault(_whatsapp);
@@ -200,7 +198,8 @@ exports.ok = _ok2.default;
 exports.telegram = _telegram2.default;
 exports.tw = _tw2.default;
 exports.viber = _viber2.default;
-exports.vk = _vk2.default;
+exports.getVkUrl = _vk.getUrl;
+exports.vk = _vk.share;
 exports.whatsapp = _whatsapp2.default;
 exports.linkedin = _linkedin2.default;
 exports.messenger = _messenger2.default;
@@ -490,7 +489,8 @@ function isMobileSafari() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = vk;
+exports.getUrl = getUrl;
+exports.share = share;
 
 var _config = __webpack_require__(1);
 
@@ -500,7 +500,7 @@ var _encodeParams2 = _interopRequireDefault(_encodeParams);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function vk() {
+function getUrl() {
   var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var url = options.url,
       image = options.image,
@@ -526,7 +526,13 @@ function vk() {
     });
   }
 
-  return window.open('https://vk.com/share.php?' + params, '_blank', _config.WIN_PARAMS);
+  return 'https://vk.com/share.php?' + params;
+}
+
+function share() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+  return window.open(getUrl(options), '_blank', _config.WIN_PARAMS);
 }
 
 /***/ }),
