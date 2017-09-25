@@ -67,21 +67,21 @@
     "testRegex": "tests/.*\\.test\\.js$"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.0",
-    "babel-loader": "^7.1.2",
-    "babel-polyfill": "^6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.0",
+    "babel-loader": "7.1.2",
+    "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.6.0",
     "coveralls": "2.13.1",
-    "eslint": "^4.7.0",
-    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint": "4.7.2",
+    "eslint-config-airbnb-base": "12.0.0",
     "eslint-import-resolver-webpack": "0.8.3",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-import": "2.7.0",
     "faker": "4.1.0",
-    "jest": "^21.1.0",
-    "lint-staged": "^4.2.1",
+    "jest": "21.1.0",
+    "lint-staged": "4.2.3",
     "pre-commit": "1.2.2",
-    "rimraf": "^2.6.2",
-    "webpack": "^3.6.0"
+    "rimraf": "2.6.2",
+    "webpack": "3.6.0"
   }
 }
