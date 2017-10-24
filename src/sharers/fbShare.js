@@ -1,9 +1,9 @@
 import { WIN_PARAMS } from 'config';
 import encodeParams from 'utils/encodeParams';
 
-export default function fb(options = {}) {
+export default function fbShare(options = {}) {
   const {
-    fbAppId, description, title, url, image, redirectUri,
+    fbAppId, url, hashtag, quote, redirectUri,
   } = options;
 
   if (!fbAppId) {
@@ -14,11 +14,10 @@ export default function fb(options = {}) {
     app_id: fbAppId,
     display: 'popup',
     redirect_uri: redirectUri,
-    link: url,
-    name: title,
-    description,
-    picture: image,
+    href: url,
+    hashtag,
+    quote,
   });
 
-  return window.open(`https://www.facebook.com/dialog/feed?${params}`, '_blank', WIN_PARAMS);
+  return window.open(`https://www.facebook.com/dialog/share?${params}`, '_blank', WIN_PARAMS);
 }
