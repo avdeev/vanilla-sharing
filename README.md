@@ -50,12 +50,29 @@ vk({
 })
 ```
 
-### `fb(options)`
+### `fbShare(options)`
 
-Share to facebook.com.
+Share to facebook.com via the Share dialog.
+
+Documentation: https://developers.facebook.com/docs/sharing/reference/share-dialog
 
 ```js
-fb({
+fbShare({
+  url: string,
+  redirectUri: string,
+  hashtag: string,
+  quote: string,
+  fbAppId: string,
+})
+```
+### `fbFeed(options)`
+
+Share to facebook.com via the Feed dialog.
+
+Documentation: https://developers.facebook.com/docs/sharing/reference/feed-dialog
+
+```js
+fbFeed({
   url: string,
   title: string,
   description: string,

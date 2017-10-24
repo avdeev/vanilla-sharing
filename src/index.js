@@ -1,4 +1,5 @@
-import fb from 'sharers/fb';
+import fbFeed from 'sharers/fbFeed';
+import fbShare from 'sharers/fbShare';
 import gp from 'sharers/gp';
 import mail from 'sharers/mail';
 import ok from 'sharers/ok';
@@ -13,7 +14,8 @@ import line from 'sharers/line';
 import fbbutton from 'sharers/fbbutton';
 
 export {
-  fb,
+  fbFeed,
+  fbShare,
   gp,
   mail,
   ok,
