@@ -82,12 +82,12 @@ fbFeed({
 })
 ```
 
-### `fbbutton(options)`
+### `fbButton(options)`
 
 Share to facebook.com using facebook share button.
 
 ```js
-fbbutton({
+fbButton({
   url: string,
 })
 ```

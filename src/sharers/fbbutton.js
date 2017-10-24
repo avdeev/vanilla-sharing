@@ -1,7 +1,7 @@
 import { WIN_PARAMS } from 'config';
 import encodeParams from 'utils/encodeParams';
 
-export default function fbbutton(options = {}) {
+export default function fbButton(options = {}) {
   const { url } = options;
 
   if (!url) {

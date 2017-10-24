@@ -117,7 +117,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = mobileShare;
 
-var _isMobileSafari = __webpack_require__(12);
+var _isMobileSafari = __webpack_require__(13);
 
 var _isMobileSafari2 = _interopRequireDefault(_isMobileSafari);
 
@@ -137,7 +137,7 @@ function mobileShare(link) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.fbbutton = exports.line = exports.messenger = exports.linkedin = exports.whatsapp = exports.vk = exports.getVkUrl = exports.viber = exports.tw = exports.telegram = exports.ok = exports.mail = exports.gp = exports.fbShare = exports.fbFeed = undefined;
+exports.line = exports.messenger = exports.linkedin = exports.whatsapp = exports.vk = exports.getVkUrl = exports.viber = exports.tw = exports.telegram = exports.ok = exports.mail = exports.gp = exports.fbButton = exports.fbShare = exports.fbFeed = undefined;
 
 var _fbFeed = __webpack_require__(4);
 
@@ -147,56 +147,57 @@ var _fbShare = __webpack_require__(5);
 
 var _fbShare2 = _interopRequireDefault(_fbShare);
 
-var _gp = __webpack_require__(6);
+var _fbButton = __webpack_require__(6);
+
+var _fbButton2 = _interopRequireDefault(_fbButton);
+
+var _gp = __webpack_require__(7);
 
 var _gp2 = _interopRequireDefault(_gp);
 
-var _mail = __webpack_require__(7);
+var _mail = __webpack_require__(8);
 
 var _mail2 = _interopRequireDefault(_mail);
 
-var _ok = __webpack_require__(8);
+var _ok = __webpack_require__(9);
 
 var _ok2 = _interopRequireDefault(_ok);
 
-var _telegram = __webpack_require__(9);
+var _telegram = __webpack_require__(10);
 
 var _telegram2 = _interopRequireDefault(_telegram);
 
-var _tw = __webpack_require__(10);
+var _tw = __webpack_require__(11);
 
 var _tw2 = _interopRequireDefault(_tw);
 
-var _viber = __webpack_require__(11);
+var _viber = __webpack_require__(12);
 
 var _viber2 = _interopRequireDefault(_viber);
 
-var _vk = __webpack_require__(13);
+var _vk = __webpack_require__(14);
 
-var _whatsapp = __webpack_require__(14);
+var _whatsapp = __webpack_require__(15);
 
 var _whatsapp2 = _interopRequireDefault(_whatsapp);
 
-var _linkedin = __webpack_require__(15);
+var _linkedin = __webpack_require__(16);
 
 var _linkedin2 = _interopRequireDefault(_linkedin);
 
-var _messenger = __webpack_require__(16);
+var _messenger = __webpack_require__(17);
 
 var _messenger2 = _interopRequireDefault(_messenger);
 
-var _line = __webpack_require__(17);
+var _line = __webpack_require__(18);
 
 var _line2 = _interopRequireDefault(_line);
-
-var _fbbutton = __webpack_require__(18);
-
-var _fbbutton2 = _interopRequireDefault(_fbbutton);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.fbFeed = _fbFeed2.default;
 exports.fbShare = _fbShare2.default;
+exports.fbButton = _fbButton2.default;
 exports.gp = _gp2.default;
 exports.mail = _mail2.default;
 exports.ok = _ok2.default;
@@ -209,7 +210,8 @@ exports.whatsapp = _whatsapp2.default;
 exports.linkedin = _linkedin2.default;
 exports.messenger = _messenger2.default;
 exports.line = _line2.default;
-exports.fbbutton = _fbbutton2.default;
+
+// @FIXME
 
 /***/ }),
 /* 4 */
@@ -313,6 +315,47 @@ function fbShare() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = fbButton;
+
+var _config = __webpack_require__(1);
+
+var _encodeParams = __webpack_require__(0);
+
+var _encodeParams2 = _interopRequireDefault(_encodeParams);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function fbButton() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var url = options.url;
+
+
+  if (!url) {
+    throw new Error('url is not defined');
+  }
+
+  var params = (0, _encodeParams2.default)({
+    kid_directed_site: 0,
+    sdk: 'joey',
+    u: url,
+    display: 'popup',
+    ref: 'plugin',
+    src: 'share_button'
+  });
+
+  return window.open('https://www.facebook.com/sharer/sharer.php?' + params, '_blank', _config.WIN_PARAMS);
+}
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.default = gp;
 
 var _config = __webpack_require__(1);
@@ -334,7 +377,7 @@ function gp() {
 }
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -372,7 +415,7 @@ function mail() {
 }
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -407,7 +450,7 @@ function ok() {
 }
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -441,7 +484,7 @@ function telegram() {
 }
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -475,7 +518,7 @@ function tw() {
 }
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -515,7 +558,7 @@ function viber() {
 }
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -530,7 +573,7 @@ function isMobileSafari() {
 }
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -586,7 +629,7 @@ function share() {
 }
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -623,7 +666,7 @@ function whatsapp() {
 }
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -659,7 +702,7 @@ function linkedin() {
 }
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -695,7 +738,7 @@ function messenger() {
 }
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -725,47 +768,6 @@ function line() {
   }
 
   return window.open('https://line.me/R/msg/text/?' + params, '_blank', _config.WIN_PARAMS);
-}
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = fbbutton;
-
-var _config = __webpack_require__(1);
-
-var _encodeParams = __webpack_require__(0);
-
-var _encodeParams2 = _interopRequireDefault(_encodeParams);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function fbbutton() {
-  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var url = options.url;
-
-
-  if (!url) {
-    throw new Error('url is not defined');
-  }
-
-  var params = (0, _encodeParams2.default)({
-    kid_directed_site: 0,
-    sdk: 'joey',
-    u: url,
-    display: 'popup',
-    ref: 'plugin',
-    src: 'share_button'
-  });
-
-  return window.open('https://www.facebook.com/sharer/sharer.php?' + params, '_blank', _config.WIN_PARAMS);
 }
 
 /***/ })
