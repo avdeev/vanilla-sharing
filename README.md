@@ -74,9 +74,6 @@ Documentation: https://developers.facebook.com/docs/sharing/reference/feed-dialo
 ```js
 fbFeed({
   url: string,
-  title: string,
-  description: string,
-  image: string,
   redirectUri: string,
   fbAppId: string,
 })

@@ -3,7 +3,7 @@ import encodeParams from 'utils/encodeParams';
 
 export default function fbFeed(options = {}) {
   const {
-    fbAppId, description, title, url, image, redirectUri,
+    fbAppId, url, redirectUri,
   } = options;
 
   if (!fbAppId) {
@@ -15,9 +15,6 @@ export default function fbFeed(options = {}) {
     display: 'popup',
     redirect_uri: redirectUri,
     link: url,
-    name: title,
-    description,
-    picture: image,
   });
 
   return window.open(`https://www.facebook.com/dialog/feed?${params}`, '_blank', WIN_PARAMS);
