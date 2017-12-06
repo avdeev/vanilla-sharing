@@ -15,12 +15,13 @@
   "version": "3.0.1",
   "main": "dist/vanilla-sharing.js",
   "scripts": {
+    "size": "size-limit",
     "prebuild": "npm run build:clean",
     "build": "webpack",
     "build:clean": "rimraf ./dist",
     "lint": "eslint --ignore-path .gitignore . --ignore-pattern dist",
     "lint:staged": "lint-staged",
-    "pretest": "npm run test:clean && npm run lint",
+    "pretest": "npm run test:clean && npm run lint && npm run size",
     "test:clean": "rimraf ./coverage",
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
@@ -32,6 +33,12 @@
   "license": "MIT",
   "files": [
     "dist"
+  ],
+  "size-limit": [
+    {
+      "path": "dist/vanilla-sharing.js",
+      "limit": "1.5 KB"
+    }
   ],
   "lint-staged": {
     "*.js": "lint"
@@ -82,6 +89,7 @@
     "lint-staged": "5.0.0",
     "pre-commit": "1.2.2",
     "rimraf": "2.6.2",
+    "size-limit": "0.13.2",
     "webpack": "3.8.1"
   }
 }
