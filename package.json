@@ -75,21 +75,21 @@
   },
   "devDependencies": {
     "babel-core": "6.26.0",
-    "babel-eslint": "8.0.2",
+    "babel-eslint": "8.0.3",
     "babel-loader": "7.1.2",
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.6.1",
     "coveralls": "3.0.0",
-    "eslint": "4.11.0",
+    "eslint": "4.12.1",
     "eslint-config-airbnb-base": "12.1.0",
     "eslint-import-resolver-webpack": "0.8.3",
     "eslint-plugin-import": "2.8.0",
     "faker": "4.1.0",
     "jest": "21.2.1",
-    "lint-staged": "5.0.0",
+    "lint-staged": "6.0.0",
     "pre-commit": "1.2.2",
     "rimraf": "2.6.2",
     "size-limit": "0.13.2",
-    "webpack": "3.8.1"
+    "webpack": "3.10.0"
   }
 }
