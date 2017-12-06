@@ -236,10 +236,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function fbFeed() {
   var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var fbAppId = options.fbAppId,
-      description = options.description,
-      title = options.title,
       url = options.url,
-      image = options.image,
       redirectUri = options.redirectUri;
 
 
@@ -251,10 +248,7 @@ function fbFeed() {
     app_id: fbAppId,
     display: 'popup',
     redirect_uri: redirectUri,
-    link: url,
-    name: title,
-    description: description,
-    picture: image
+    link: url
   });
 
   return window.open('https://www.facebook.com/dialog/feed?' + params, '_blank', _config.WIN_PARAMS);
