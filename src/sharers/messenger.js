@@ -1,4 +1,4 @@
-import encodeParams from 'utils/encodeParams';
+import encodeParams from '../utils/encodeParams';
 
 export default function messenger(options = {}) {
   const { fbAppId, url } = options;

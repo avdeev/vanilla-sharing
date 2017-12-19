@@ -1,5 +1,5 @@
-import encodeParams from 'utils/encodeParams';
-import mobileShare from 'utils/mobileShare';
+import encodeParams from '../utils/encodeParams';
+import mobileShare from '../utils/mobileShare';
 
 export default function whatsapp(options = {}) {
   const { url, title } = options;

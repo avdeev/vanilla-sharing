@@ -1,4 +1,4 @@
-import { WIN_PARAMS } from 'config';
+import { WIN_PARAMS } from '../config';
 
 export default function line(options = {}) {
   const { title, url } = options;

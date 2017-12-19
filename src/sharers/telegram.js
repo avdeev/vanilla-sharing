@@ -1,5 +1,5 @@
-import { WIN_PARAMS } from 'config';
-import encodeParams from 'utils/encodeParams';
+import { WIN_PARAMS } from '../config';
+import encodeParams from '../utils/encodeParams';
 
 export default function telegram(options = {}) {
   const { url, title } = options;

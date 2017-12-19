@@ -1,5 +1,5 @@
-import { WIN_PARAMS } from 'config';
-import encodeParams from 'utils/encodeParams';
+import { WIN_PARAMS } from '../config';
+import encodeParams from '../utils/encodeParams';
 
 export default function gp(options = {}) {
   const { url } = options;
