@@ -3,7 +3,7 @@ import faker from 'faker';
 import mobileShare from '../../utils/mobileShare';
 import viber from '../viber';
 
-jest.mock('../utils/mobileShare');
+jest.mock('../../utils/mobileShare');
 
 describe('viber', () => {
   afterEach(() => {

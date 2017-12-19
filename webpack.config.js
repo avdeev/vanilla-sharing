@@ -9,9 +9,6 @@ const config = {
     library: 'VanillaSharing',
     libraryTarget: 'umd',
   },
-  resolve: {
-    modules: ['node_modules'],
-  },
   module: {
     rules: [{
       test: /\.js$/,
