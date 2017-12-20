@@ -39,8 +39,8 @@
   ],
   "size-limit": [
     {
-      "path": "dist/vanilla-sharing.js",
-      "limit": "1.5 KB"
+      "path": "dist/vanilla-sharing.umd.js",
+      "limit": "1.08 KB"
     }
   ],
   "lint-staged": {
