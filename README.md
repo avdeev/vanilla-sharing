@@ -21,7 +21,7 @@ npm install --save vanilla-sharing
 
 2. From unpkg CDN
 
-```
+```html
 <script src="https://unpkg.com/vanilla-sharing@3.0.2/dist/vanilla-sharing.js"></script>
 ```
 
@@ -37,7 +37,7 @@ vk(options);
 
 2. From unpkg CDN
 
-```
+```js
 VanillaSharing.vk(options);
 ```
 
