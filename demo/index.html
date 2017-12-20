@@ -32,9 +32,7 @@
     <li class="item" data-social="telegram">Share via Telegram message</li>
   </ul>
 
-  <script src="https://rawgit.com/avdeev/vanilla-sharing/master/dist/vanilla-sharing.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
+  <script src="https://unpkg.com/vanilla-sharing@3.0.2/dist/vanilla-sharing.js"></script>
   <script>
     var options = {
       url: 'https://github.com/avdeev/vanilla-sharing',
@@ -44,11 +42,14 @@
       fbAppId: '123'
     };
 
-    $('.item').on('click', function() {
-      var social = $(this).data('social');
-      VanillaSharing[social](options);
+    function clickHandler(e) {
+      VanillaSharing[e.target.dataset.social](options);
+    };
+
+    var elements = document.querySelectorAll('.item');
+    Array.prototype.forEach.call(elements, function(el){
+      el.addEventListener('click', clickHandler);
     });
   </script>
 </body>
-
 </html>
