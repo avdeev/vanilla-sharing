@@ -5,7 +5,6 @@ Small (1.5 KB) simple tool for sharing url, title, description and image to VK, 
 [DEMO](https://avdeev.github.io/vanilla-sharing/demo)
 
 [![Build Status](https://travis-ci.org/avdeev/vanilla-sharing.svg?branch=master)](https://travis-ci.org/avdeev/vanilla-sharing)
-[![Build status](https://ci.appveyor.com/api/projects/status/4mmgunpsan58m0ol?svg=true)](https://ci.appveyor.com/project/avdeev/vanilla-sharing)
 [![Coverage Status](https://coveralls.io/repos/github/avdeev/vanilla-sharing/badge.svg?branch=master)](https://coveralls.io/github/avdeev/vanilla-sharing?branch=master)
 [![npm](https://img.shields.io/npm/v/vanilla-sharing.svg)](https://www.npmjs.com/package/vanilla-sharing)
 [![npm](https://img.shields.io/npm/dm/vanilla-sharing.svg)](https://www.npmjs.com/package/vanilla-sharing)
@@ -14,19 +13,21 @@ Small (1.5 KB) simple tool for sharing url, title, description and image to VK, 
 
 # Installation
 
+1. From NPM
+
 ```sh
 npm install --save vanilla-sharing
 ```
 
+2. From unpkg CDN
+
+```
+<script src="https://unpkg.com/vanilla-sharing@3.0.2/dist/vanilla-sharing.js"></script>
+```
+
 # Usage
 
-1. From dist folder. Include file dist/vanilla-sharing.js to your project
-
-```
-VanillaSharing.vk(options);
-```
-
-2. From ES6 modules.
+1. From NPM
 
 ```js
 import { vk } from 'vanilla-sharing';
@@ -34,11 +35,17 @@ import { vk } from 'vanilla-sharing';
 vk(options);
 ```
 
+2. From unpkg CDN
+
+```
+VanillaSharing.vk(options);
+```
+
 # API
 
 ### `vk(options)`
 
-Share to vk.com.
+Share to vk.com
 
 ```js
 vk({
@@ -52,7 +59,7 @@ vk({
 
 ### `fbShare(options)`
 
-Share to facebook.com via the Share dialog.
+Share to facebook.com via the Share dialog
 
 Documentation: https://developers.facebook.com/docs/sharing/reference/share-dialog
 
@@ -67,7 +74,7 @@ fbShare({
 ```
 ### `fbFeed(options)`
 
-Share to facebook.com via the Feed dialog.
+Share to facebook.com via the Feed dialog
 
 Documentation: https://developers.facebook.com/docs/sharing/reference/feed-dialog
 
@@ -81,7 +88,7 @@ fbFeed({
 
 ### `fbButton(options)`
 
-Share to facebook.com using facebook share button.
+Share to facebook.com using facebook share button
 
 ```js
 fbButton({
@@ -91,7 +98,7 @@ fbButton({
 
 ### `tw(options)`
 
-Share to Twitter.
+Share to Twitter
 
 ```js
 tw({
@@ -102,7 +109,7 @@ tw({
 
 ### `ok(options)`
 
-Share to ok.ru.
+Share to ok.ru
 
 ```js
 ok({
@@ -113,7 +120,7 @@ ok({
 
 ### `mail(options)`
 
-Share to mail.ru.
+Share to mail.ru
 
 ```js
 mail({
@@ -126,7 +133,7 @@ mail({
 
 ### `telegram(options)`
 
-Share to Telegram.
+Share to Telegram
 
 ```js
 telegram({
@@ -137,7 +144,7 @@ telegram({
 
 ### `viber(options)`
 
-Share via a Viber message.
+Share via a Viber message
 [Viber Share Button docs](https://developers.viber.com/docs/tools/share-button/).
 
 ```js
@@ -149,7 +156,7 @@ viber({
 
 ### `whatsapp(options)`
 
-Share to Whatsapp.
+Share to Whatsapp
 Share method from [kriskbx/whatsapp-sharing](https://github.com/kriskbx/whatsapp-sharing).
 
 ```js
@@ -161,7 +168,7 @@ whatsapp({
 
 ### `gp(options)`
 
-Share to Google+.
+Share to Google+
 
 ```js
 gp({
@@ -171,7 +178,7 @@ gp({
 
 ### `linkedin(options)`
 
-Share to LinkedIn.
+Share to LinkedIn
 Share method from [Share on LinkedIn](https://developer.linkedin.com/docs/share-on-linkedin#).
 
 ```js
@@ -184,7 +191,7 @@ linkedin({
 
 ### `messenger(options)`
 
-Share to Facebook Messenger.
+Share to Facebook Messenger
 Share method from [Sharing for Messenger](https://developers.facebook.com/docs/sharing/messenger).
 
 ```js
@@ -196,7 +203,7 @@ messenger({
 
 ### `line(options)`
 
-Share to Line.
+Share to Line
 
 ```js
 line({
