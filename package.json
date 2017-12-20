@@ -13,14 +13,17 @@
   "homepage": "https://github.com/avdeev/vanilla-sharing",
   "bugs": "https://github.com/avdeev/vanilla-sharing/issues",
   "version": "3.0.2",
-  "main": "dist/vanilla-sharing.js",
+  "main": "dist/vanilla-sharing.cjs.js",
+  "module": "dist/vanilla-sharing.esm.js",
+  "browser": "dist/vanilla-sharing.umd.js",
   "scripts": {
+    "precommit": "lint-staged",
     "size": "size-limit",
     "prebuild": "npm run build:clean",
-    "build": "webpack",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
     "build:clean": "rimraf ./dist",
     "lint": "eslint --ignore-path .gitignore . --ignore-pattern dist",
-    "lint:staged": "lint-staged",
     "pretest": "npm run test:clean && npm run lint && npm run size",
     "test:clean": "rimraf ./coverage",
     "test": "jest --coverage",
@@ -43,10 +46,14 @@
   "lint-staged": {
     "*.js": "lint"
   },
-  "pre-commit": "lint:staged",
   "babel": {
     "presets": [
-      "env"
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ]
     ]
   },
   "eslintConfig": {
@@ -76,7 +83,6 @@
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-eslint": "8.0.3",
-    "babel-loader": "7.1.2",
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.6.1",
     "coveralls": "3.0.0",
@@ -85,11 +91,12 @@
     "eslint-import-resolver-webpack": "0.8.3",
     "eslint-plugin-import": "2.8.0",
     "faker": "4.1.0",
+    "husky": "0.14.3",
     "jest-cli": "22.0.3",
     "lint-staged": "6.0.0",
-    "pre-commit": "1.2.2",
     "rimraf": "2.6.2",
-    "size-limit": "0.13.2",
-    "webpack": "3.10.0"
+    "rollup": "0.50.0",
+    "rollup-plugin-babel": "3.0.3",
+    "size-limit": "0.13.2"
   }
 }
