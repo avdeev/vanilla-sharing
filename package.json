@@ -47,14 +47,23 @@
     "*.js": "lint"
   },
   "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "modules": false
-        }
-      ]
-    ]
+    "env": {
+      "test": {
+        "presets": [
+          "env"
+        ]
+      },
+      "development": {
+        "presets": [
+          [
+            "env",
+            {
+              "modules": false
+            }
+          ]
+        ]
+      }
+    }
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -71,7 +80,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!src/index.js",
+      "!src/main.js",
       "!src/**/*.test.{js,jsx}"
     ],
     "moduleDirectories": [
