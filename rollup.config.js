@@ -5,8 +5,7 @@ export default [
   {
     input: 'src/main.js',
     output: [
-      { file: pkg.main, format: 'cjs' },
-      { file: pkg.browser, format: 'umd' },
+      { file: pkg.main, format: 'umd' },
       { file: pkg.module, format: 'es' },
     ],
     name: 'VanillaSharing',
