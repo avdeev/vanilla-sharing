@@ -12,7 +12,7 @@
   ],
   "homepage": "https://github.com/avdeev/vanilla-sharing",
   "bugs": "https://github.com/avdeev/vanilla-sharing/issues",
-  "version": "3.0.3",
+  "version": "4.0.0",
   "main": "dist/vanilla-sharing.umd.js",
   "module": "dist/vanilla-sharing.esm.js",
   "scripts": {
