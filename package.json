@@ -36,6 +36,10 @@
     {
       "path": "dist/vanilla-sharing.umd.js",
       "limit": "1.08 KB"
+    },
+    {
+      "path": "dist/vanilla-sharing.esm.js",
+      "limit": "1.15 KB"
     }
   ],
   "lint-staged": {
