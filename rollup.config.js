@@ -5,10 +5,9 @@ export default [
   {
     input: 'src/main.js',
     output: [
-      { file: pkg.main, format: 'umd' },
+      { file: pkg.main, format: 'umd', name: 'VanillaSharing' },
       { file: pkg.module, format: 'es' },
     ],
-    name: 'VanillaSharing',
     plugins: [
       babel(),
     ],
