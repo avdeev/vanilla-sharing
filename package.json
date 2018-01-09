@@ -39,7 +39,7 @@
     },
     {
       "path": "dist/vanilla-sharing.esm.js",
-      "limit": "1.15 KB"
+      "limit": "1169 B"
     }
   ],
   "lint-staged": {
