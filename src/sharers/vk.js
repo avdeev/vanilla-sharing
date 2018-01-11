@@ -1,5 +1,7 @@
-import { WIN_PARAMS, VK_MAX_LENGTH } from '../config';
+import { WIN_PARAMS } from '../config';
 import encodeParams from '../utils/encodeParams';
+
+const VK_MAX_LENGTH = 80;
 
 export function getUrl(options = {}) {
   const { url, image, isVkParse } = options;

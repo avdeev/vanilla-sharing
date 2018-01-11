@@ -98,9 +98,9 @@
     "eslint-plugin-import": "2.8.0",
     "faker": "4.1.0",
     "husky": "0.14.3",
-    "jest-cli": "22.0.5",
+    "jest-cli": "22.0.6",
     "lint-staged": "6.0.0",
-    "rollup": "0.53.3",
+    "rollup": "0.53.4",
     "rollup-plugin-babel": "3.0.3",
     "size-limit": "0.13.2"
   }
