@@ -8,5 +8,5 @@ export default function whatsapp(options = {}) {
     text: [title, url].filter(item => item).join(' '),
   });
 
-  return mobileShare(`whatsapp://send?${params}`);
+  return mobileShare(`https://api.whatsapp.com/send?${params}`);
 }
