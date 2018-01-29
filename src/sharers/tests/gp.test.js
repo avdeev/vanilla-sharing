@@ -7,10 +7,6 @@ describe('gp', () => {
     window.open = jest.fn();
   });
 
-  afterEach(() => {
-    window.open.mockReset();
-  });
-
   it('should call without params', () => {
     gp();
 

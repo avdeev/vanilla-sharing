@@ -7,38 +7,34 @@ describe('whatsapp', () => {
     window.open = jest.fn();
   });
 
-  afterEach(() => {
-    window.open.mockReset();
-  });
-
   it('should call without params', () => {
     whatsapp();
 
-    expect(window.open.mock.calls[0][0]).toBe('https://api.whatsapp.com/send?text=');
+    expect(window.open.mock.calls[0][0]).toBe('https://api.whatsapp.com/send?');
   });
 
-  it('should call with url', () => {
-    const fixture = faker.internet.url();
+  it('should call with phone', () => {
+    const phone = faker.phone.phoneNumber();
 
-    whatsapp({ url: fixture });
+    whatsapp({ phone });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?phone=${encodeURIComponent(phone)}`);
   });
 
-  it('should call with title', () => {
-    const fixture = faker.lorem.sentence();
+  it('should call with text', () => {
+    const text = faker.lorem.sentence();
 
-    whatsapp({ title: fixture });
+    whatsapp({ text });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`);
   });
 
-  it('should call with title and url', () => {
-    const title = faker.lorem.sentence();
-    const url = faker.internet.url();
+  it('should call with text and phone', () => {
+    const phone = faker.phone.phoneNumber();
+    const text = faker.lorem.sentence();
 
-    whatsapp({ title, url });
+    whatsapp({ text, phone });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(`${title} ${url}`)}`);
+    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}&phone=${encodeURIComponent(phone)}`);
   });
 });

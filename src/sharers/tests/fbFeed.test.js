@@ -7,10 +7,6 @@ describe('fbFeed', () => {
     window.open = jest.fn();
   });
 
-  afterEach(() => {
-    window.open.mockReset();
-  });
-
   it('should throw without fbAppId', () => {
     expect(fbFeed).toThrow('fbAppId is not defined');
   });

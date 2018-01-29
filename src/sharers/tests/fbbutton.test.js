@@ -7,10 +7,6 @@ describe('fbButton', () => {
     window.open = jest.fn();
   });
 
-  afterEach(() => {
-    window.open.mockReset();
-  });
-
   it('should call without params', () => {
     expect(fbButton).toThrow('url is not defined');
   });

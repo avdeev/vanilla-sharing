@@ -35,11 +35,11 @@
   "size-limit": [
     {
       "path": "dist/vanilla-sharing.umd.js",
-      "limit": "1.08 KB"
+      "limit": "1.09 KB"
     },
     {
       "path": "dist/vanilla-sharing.esm.js",
-      "limit": "1169 B"
+      "limit": "1.15 KB"
     }
   ],
   "lint-staged": {

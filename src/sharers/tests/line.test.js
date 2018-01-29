@@ -7,10 +7,6 @@ describe('line', () => {
     window.open = jest.fn();
   });
 
-  afterEach(() => {
-    window.open.mockReset();
-  });
-
   it('should throw without url', () => {
     expect(line).toThrow('url is not defined');
   });

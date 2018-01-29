@@ -7,10 +7,6 @@ describe('messenger', () => {
     window.location.assign = jest.fn();
   });
 
-  afterEach(() => {
-    window.location.assign.mockReset();
-  });
-
   it('should throw without fbAppId', () => {
     expect(messenger).toThrow('fbAppId is not defined');
   });

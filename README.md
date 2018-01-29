@@ -157,12 +157,12 @@ viber({
 ### `whatsapp(options)`
 
 Share to Whatsapp
-Share method from [kriskbx/whatsapp-sharing](https://github.com/kriskbx/whatsapp-sharing).
+[WhatsApp FAQ - Using Click to Chat](https://faq.whatsapp.com/en/android/26000030/).
 
 ```js
 whatsapp({
-  url: string,
-  title: string,
+  text: string,
+  phone: string,
 })
 ```
 

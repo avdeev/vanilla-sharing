@@ -7,10 +7,6 @@ describe('fbShare', () => {
     window.open = jest.fn();
   });
 
-  afterEach(() => {
-    window.open.mockReset();
-  });
-
   it('should throw without fbAppId', () => {
     expect(fbShare).toThrow('fbAppId is not defined');
   });
