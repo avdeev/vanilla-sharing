@@ -1,19 +1,20 @@
 import faker from 'faker';
 
-import mobileShare from '../../utils/mobileShare';
 import whatsapp from '../whatsapp';
 
-jest.mock('../../utils/mobileShare');
-
 describe('whatsapp', () => {
+  beforeEach(() => {
+    window.open = jest.fn();
+  });
+
   afterEach(() => {
-    mobileShare.mockReset();
+    window.open.mockReset();
   });
 
   it('should call without params', () => {
     whatsapp();
 
-    expect(mobileShare.mock.calls[0][0]).toBe('https://api.whatsapp.com/send?text=');
+    expect(window.open.mock.calls[0][0]).toBe('https://api.whatsapp.com/send?text=');
   });
 
   it('should call with url', () => {
@@ -21,7 +22,7 @@ describe('whatsapp', () => {
 
     whatsapp({ url: fixture });
 
-    expect(mobileShare.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title', () => {
@@ -29,7 +30,7 @@ describe('whatsapp', () => {
 
     whatsapp({ title: fixture });
 
-    expect(mobileShare.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title and url', () => {
@@ -38,6 +39,6 @@ describe('whatsapp', () => {
 
     whatsapp({ title, url });
 
-    expect(mobileShare.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(`${title} ${url}`)}`);
+    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(`${title} ${url}`)}`);
   });
 });
