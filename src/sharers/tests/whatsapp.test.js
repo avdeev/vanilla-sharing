@@ -13,7 +13,7 @@ describe('whatsapp', () => {
   it('should call without params', () => {
     whatsapp();
 
-    expect(mobileShare.mock.calls[0][0]).toBe('whatsapp://send?text=');
+    expect(mobileShare.mock.calls[0][0]).toBe('https://api.whatsapp.com/send?text=');
   });
 
   it('should call with url', () => {
@@ -21,7 +21,7 @@ describe('whatsapp', () => {
 
     whatsapp({ url: fixture });
 
-    expect(mobileShare.mock.calls[0][0]).toBe(`whatsapp://send?text=${encodeURIComponent(fixture)}`);
+    expect(mobileShare.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title', () => {
@@ -29,7 +29,7 @@ describe('whatsapp', () => {
 
     whatsapp({ title: fixture });
 
-    expect(mobileShare.mock.calls[0][0]).toBe(`whatsapp://send?text=${encodeURIComponent(fixture)}`);
+    expect(mobileShare.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title and url', () => {
@@ -38,6 +38,6 @@ describe('whatsapp', () => {
 
     whatsapp({ title, url });
 
-    expect(mobileShare.mock.calls[0][0]).toBe(`whatsapp://send?text=${encodeURIComponent(`${title} ${url}`)}`);
+    expect(mobileShare.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(`${title} ${url}`)}`);
   });
 });
