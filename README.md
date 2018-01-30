@@ -17,13 +17,13 @@ TODO
 
 # Installation
 
-1. From NPM
+## From NPM
 
 ```sh
 npm install --save vanilla-sharing
 ```
 
-2. From unpkg CDN
+## From unpkg CDN (you can use other)
 
 ```html
 <script src="https://unpkg.com/vanilla-sharing"></script>
@@ -31,7 +31,7 @@ npm install --save vanilla-sharing
 
 # Usage
 
-1. From NPM
+## From NPM
 
 ```js
 import { fbButton } from 'vanilla-sharing';
@@ -41,7 +41,7 @@ fbButton({
 });
 ```
 
-2. From unpkg CDN
+## From CDN
 
 ```js
 VanillaSharing.fbButton({
@@ -93,6 +93,7 @@ fbButton({
 ### `messenger(options)`
 
 Share via Facebook Messenger
+
 Share method from [Sharing for Messenger](https://developers.facebook.com/docs/sharing/messenger).
 
 ```js
@@ -164,6 +165,7 @@ mail({
 ### `linkedin(options)`
 
 Share on LinkedIn
+
 Share method from [Share on LinkedIn](https://developer.linkedin.com/docs/share-on-linkedin#).
 
 ```js
@@ -177,6 +179,7 @@ linkedin({
 ### `whatsapp(options)`
 
 Share via Whatsapp
+
 [WhatsApp FAQ - Using Click to Chat](https://faq.whatsapp.com/en/android/26000030/).
 
 ```js
@@ -190,6 +193,7 @@ whatsapp({
 ### `viber(options)`
 
 Share via Viber
+
 [Viber Share Button docs](https://developers.viber.com/docs/tools/share-button/).
 
 ```js
