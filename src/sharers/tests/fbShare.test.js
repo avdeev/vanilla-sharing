@@ -34,12 +34,4 @@ describe('fbShare', () => {
 
     expect(window.open.mock.calls[0][0]).toBe(`https://www.facebook.com/dialog/share?app_id=123&display=popup&hashtag=${encodeURIComponent(fixture)}`);
   });
-
-  it('should call with quote and fbAppId', () => {
-    const fixture = faker.lorem.words(10);
-
-    fbShare({ quote: fixture, fbAppId: 123 });
-
-    expect(window.open.mock.calls[0][0]).toBe(`https://www.facebook.com/dialog/share?app_id=123&display=popup&quote=${encodeURIComponent(fixture)}`);
-  });
 });

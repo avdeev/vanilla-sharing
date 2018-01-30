@@ -22,19 +22,21 @@ describe('whatsapp', () => {
   });
 
   it('should call with text', () => {
-    const text = faker.lorem.sentence();
+    const title = faker.lorem.sentence();
+    const url = faker.internet.url();
 
-    whatsapp({ text });
+    whatsapp({ title, url });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`);
+    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(`${title} ${url}`)}`);
   });
 
   it('should call with text and phone', () => {
     const phone = faker.phone.phoneNumber();
-    const text = faker.lorem.sentence();
+    const title = faker.lorem.sentence();
+    const url = faker.internet.url();
 
-    whatsapp({ text, phone });
+    whatsapp({ title, url, phone });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}&phone=${encodeURIComponent(phone)}`);
+    expect(window.open.mock.calls[0][0]).toBe(`https://api.whatsapp.com/send?text=${encodeURIComponent(`${title} ${url}`)}&phone=${encodeURIComponent(phone)}`);
   });
 });

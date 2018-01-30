@@ -1,6 +1,6 @@
 # vanilla-sharing
 
-Small (1.1 KB) simple tool for sharing url, title, description and image to VK, Facebook (Dialog, Feed, Messenger, Button), OK, G+, Twitter, Mail, LinkedIn, Line.
+Small (1.1 KB) simple tool for sharing url, title, description and image to VK, Facebook (Feed, Dialog, Button, Messenger), Twitter, G+, VK, OK, Mail.ru, LinkedIn, Whatsapp, Viber, Telegram, Line.
 
 [DEMO](https://avdeev.github.io/vanilla-sharing/demo)
 
@@ -10,6 +10,10 @@ Small (1.1 KB) simple tool for sharing url, title, description and image to VK, 
 [![npm](https://img.shields.io/npm/dm/vanilla-sharing.svg)](https://www.npmjs.com/package/vanilla-sharing)
 [![David](https://david-dm.org/avdeev/vanilla-sharing.svg)](https://david-dm.org/avdeev/vanilla-sharing)
 [![David](https://david-dm.org/avdeev/vanilla-sharing/dev-status.svg)](https://david-dm.org/avdeev/vanilla-sharing?type=dev)
+
+# Motivation
+
+TODO
 
 # Installation
 
@@ -30,51 +34,26 @@ npm install --save vanilla-sharing
 1. From NPM
 
 ```js
-import { vk } from 'vanilla-sharing';
+import { fbButton } from 'vanilla-sharing';
 
-vk(options);
+fbButton({
+  url: 'https://alexey-avdeev.com/vanilla-sharing/',
+});
 ```
 
 2. From unpkg CDN
 
 ```js
-VanillaSharing.vk(options);
+VanillaSharing.fbButton({
+  url: 'https://alexey-avdeev.com/vanilla-sharing/',
+});
 ```
 
 # API
 
-### `vk(options)`
-
-Share to vk.com
-
-```js
-vk({
-  url: string,
-  title: string,
-  description: string,
-  image: string,
-  isVkParse: boolean,
-})
-```
-
-### `fbShare(options)`
-
-Share to facebook.com via the Share dialog
-
-Documentation: https://developers.facebook.com/docs/sharing/reference/share-dialog
-
-```js
-fbShare({
-  url: string,
-  redirectUri: string,
-  hashtag: string,
-  quote: string,
-  fbAppId: string,
-})
-```
 ### `fbFeed(options)`
 
-Share to facebook.com via the Feed dialog
+Share on facebook.com via the Feed dialog
 
 Documentation: https://developers.facebook.com/docs/sharing/reference/feed-dialog
 
@@ -86,9 +65,24 @@ fbFeed({
 })
 ```
 
+### `fbShare(options)`
+
+Share on facebook.com via the Share dialog
+
+Documentation: https://developers.facebook.com/docs/sharing/reference/share-dialog
+
+```js
+fbShare({
+  url: string,
+  redirectUri: string,
+  hashtag: string,
+  fbAppId: string,
+})
+```
+
 ### `fbButton(options)`
 
-Share to facebook.com using facebook share button
+Share on facebook.com using facebook share button
 
 ```js
 fbButton({
@@ -96,9 +90,21 @@ fbButton({
 })
 ```
 
+### `messenger(options)`
+
+Share via Facebook Messenger
+Share method from [Sharing for Messenger](https://developers.facebook.com/docs/sharing/messenger).
+
+```js
+messenger({
+  url: string,
+  fbAppId: string,
+})
+```
+
 ### `tw(options)`
 
-Share to Twitter
+Share on Twitter
 
 ```js
 tw({
@@ -107,9 +113,33 @@ tw({
 })
 ```
 
+### `gp(options)`
+
+Share on Google+
+
+```js
+gp({
+  url: string,
+})
+```
+
+### `vk(options)`
+
+Share on vk.com
+
+```js
+vk({
+  url: string,
+  title: string,
+  description: string,
+  image: string,
+  isVkParse: boolean,
+})
+```
+
 ### `ok(options)`
 
-Share to ok.ru
+Share on ok.ru
 
 ```js
 ok({
@@ -120,7 +150,7 @@ ok({
 
 ### `mail(options)`
 
-Share to mail.ru
+Share on Mail.ru
 
 ```js
 mail({
@@ -131,54 +161,9 @@ mail({
 })
 ```
 
-### `telegram(options)`
-
-Share to Telegram
-
-```js
-telegram({
-  url: string,
-  title: string,
-})
-```
-
-### `viber(options)`
-
-Share via a Viber message
-[Viber Share Button docs](https://developers.viber.com/docs/tools/share-button/).
-
-```js
-viber({
-  url: string,
-  title: string,
-})
-```
-
-### `whatsapp(options)`
-
-Share to Whatsapp
-[WhatsApp FAQ - Using Click to Chat](https://faq.whatsapp.com/en/android/26000030/).
-
-```js
-whatsapp({
-  text: string,
-  phone: string,
-})
-```
-
-### `gp(options)`
-
-Share to Google+
-
-```js
-gp({
-  url: string,
-})
-```
-
 ### `linkedin(options)`
 
-Share to LinkedIn
+Share on LinkedIn
 Share method from [Share on LinkedIn](https://developer.linkedin.com/docs/share-on-linkedin#).
 
 ```js
@@ -189,21 +174,45 @@ linkedin({
 })
 ```
 
-### `messenger(options)`
+### `whatsapp(options)`
 
-Share to Facebook Messenger
-Share method from [Sharing for Messenger](https://developers.facebook.com/docs/sharing/messenger).
+Share via Whatsapp
+[WhatsApp FAQ - Using Click to Chat](https://faq.whatsapp.com/en/android/26000030/).
 
 ```js
-messenger({
+whatsapp({
   url: string,
-  fbAppId: string,
+  title: string,
+  phone: string,
+})
+```
+
+### `viber(options)`
+
+Share via Viber
+[Viber Share Button docs](https://developers.viber.com/docs/tools/share-button/).
+
+```js
+viber({
+  url: string,
+  title: string,
+})
+```
+
+### `telegram(options)`
+
+Share via Telegram
+
+```js
+telegram({
+  url: string,
+  title: string,
 })
 ```
 
 ### `line(options)`
 
-Share to Line
+Share via Line
 
 ```js
 line({

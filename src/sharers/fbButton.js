@@ -9,7 +9,7 @@ export default function fbButton(options = {}) {
   }
 
   const params = encodeParams({
-    kid_directed_site: 0,
+    kid_directed_site: '0',
     sdk: 'joey',
     u: url,
     display: 'popup',

@@ -1,54 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>vanilla-sharing demo</title>
+  <meta name="description" content="Small (1.1 KB) simple tool for sharing url, title, description and image to VK, Facebook (Dialog, Feed, Messenger, Button), OK, G+, Twitter, Mail, LinkedIn, Line.">
+
+  <meta name="og:url" content="https://alexey-avdeev.com/vanilla-sharing/">
+  <meta name="og:image" content="https://dummyimage.com/1200x630/000/fff.jpg&text=vanilla-sharing">
 
   <style type="text/css">
-    .item {
-      margin-bottom: 2em;
-      text-decoration: underline;
-      cursor: pointer;
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    button {
+      margin-bottom: 15px;
     }
   </style>
 </head>
 
 <body>
-  <h1><a href="https://github.com/avdeev/vanilla-sharing">vanilla-sharing</a> demo</h1>
+  <h1><a href="https://alexey-avdeev.com/vanilla-sharing/">vanilla-sharing</a> demo</h1>
 
-  <ul>
-    <li class="item" data-social="fbFeed">Share on Facebook (Feed dialog)</li>
-    <li class="item" data-social="fbShare">Share on Facebook (Share dialog)</li>
-    <li class="item" data-social="fbButton">Share on Facebook (Share button)</li>
-    <li class="item" data-social="tw">Share on Twitter</li>
-    <li class="item" data-social="gp">Share on Google</li>
-    <li class="item" data-social="vk">Share on VK</li>
-    <li class="item" data-social="ok">Share on Odnoklassniki</li>
-    <li class="item" data-social="mail">Share on Mail.ru</li>
-    <li class="item" data-social="linkedin">Share on Linkedin</li>
-    <li class="item" data-social="messenger">Share via Messenger</li>
-    <li class="item" data-social="whatsapp">Share via Whatsapp message</li>
-    <li class="item" data-social="viber">Share via Viber message</li>
-    <li class="item" data-social="telegram">Share via Telegram message</li>
-  </ul>
+  <div class="buttons">
+    <button id="fbFeed" type="button">Share on Facebook (Feed dialog)</button>
+    <button id="fbShare" type="button">Share on Facebook (Share dialog)</button>
+    <button id="fbButton" type="button">Share on Facebook (Share button)</button>
+    <button id="messenger" type="button">Share via Messenger</button>
+
+    <button id="tw" type="button">Share on Twitter</button>
+    <button id="gp" type="button">Share on Google</button>
+    <button id="vk" type="button">Share on VK</button>
+    <button id="ok" type="button">Share on Odnoklassniki</button>
+    <button id="mail" type="button">Share on Mail.ru</button>
+    <button id="linkedin" type="button">Share on Linkedin</button>
+
+    <button id="whatsapp" type="button">Share via Whatsapp</button>
+    <button id="viber" type="button">Share via Viber</button>
+    <button id="telegram" type="button">Share via Telegram</button>
+    <button id="line" type="button">Share via Line</button>
+  </div>
 
   <script src="https://unpkg.com/vanilla-sharing"></script>
   <script>
-    var options = {
-      url: 'https://github.com/avdeev/vanilla-sharing',
-      title: 'vanilla-sharing demo',
-      description: 'vanilla-sharing is an awesome lib',
-      image: 'https://dummyimage.com/1200x630/000/fff.jpg&text=vanilla-sharing',
-      fbAppId: '123'
+    var META = {
+      URL: 'https://alexey-avdeev.com/vanilla-sharing/',
+      TITLE: 'vanilla-sharing demo',
+      DESCRIPTION: 'Small (1.1 KB) simple tool for sharing url, title, description and image to VK, Facebook (Dialog, Feed, Messenger, Button), OK, G+, Twitter, Mail, LinkedIn, Line.',
+      IMAGE: 'https://dummyimage.com/1200x630/000/fff.jpg&text=vanilla-sharing',
+      FB_APP_ID: '150778729046724',
     };
 
-    function clickHandler(e) {
-      VanillaSharing[e.target.dataset.social](options);
-    };
+    document.getElementById('fbFeed').addEventListener('click', function() {
+      VanillaSharing.fbFeed({
+        url: META.URL,
+        redirectUri: META.URL,
+        fbAppId: META.FB_APP_ID,
+      });
+    });
 
-    var elements = document.querySelectorAll('.item');
-    Array.prototype.forEach.call(elements, function(el){
-      el.addEventListener('click', clickHandler);
+    document.getElementById('fbShare').addEventListener('click', function() {
+      VanillaSharing.fbShare({
+        url: META.URL,
+        redirectUri: META.URL,
+        hashtag: '#vanilla-sharing',
+        fbAppId: META.FB_APP_ID,
+      });
+    });
+
+    document.getElementById('fbButton').addEventListener('click', function() {
+      VanillaSharing.fbButton({
+        url: META.URL,
+      });
+    });
+
+    document.getElementById('messenger').addEventListener('click', function() {
+      VanillaSharing.messenger({
+        url: META.URL,
+        fbAppId: META.FB_APP_ID,
+      });
+    });
+
+    document.getElementById('tw').addEventListener('click', function() {
+      VanillaSharing.tw({
+        url: META.URL,
+        title: META.TITLE,
+      });
+    });
+
+    document.getElementById('gp').addEventListener('click', function() {
+      VanillaSharing.gp({
+        url: META.URL,
+      });
+    });
+
+    document.getElementById('vk').addEventListener('click', function() {
+      VanillaSharing.vk({
+        url: META.URL,
+        title: META.TITLE,
+        description: META.DESCRIPTION,
+        image: META.IMAGE,
+        isVkParse: false,
+      });
+    });
+
+    document.getElementById('ok').addEventListener('click', function() {
+      VanillaSharing.ok({
+        url: META.URL,
+        title: META.TITLE,
+      });
+    });
+
+    document.getElementById('mail').addEventListener('click', function() {
+      VanillaSharing.mail({
+        url: META.URL,
+        title: META.TITLE,
+        description: META.DESCRIPTION,
+        image: META.IMAGE,
+      });
+    });
+
+    document.getElementById('linkedin').addEventListener('click', function() {
+      VanillaSharing.linkedin({
+        url: META.URL,
+        title: META.TITLE,
+        description: META.DESCRIPTION,
+      });
+    });
+
+    document.getElementById('whatsapp').addEventListener('click', function() {
+      VanillaSharing.whatsapp({
+        url: META.URL,
+        title: META.TITLE,
+      });
+    });
+
+    document.getElementById('viber').addEventListener('click', function() {
+      VanillaSharing.viber({
+        url: META.URL,
+        title: META.TITLE,
+      });
+    });
+
+    document.getElementById('telegram').addEventListener('click', function() {
+      VanillaSharing.telegram({
+        url: META.URL,
+        title: META.TITLE,
+      });
+    });
+
+    document.getElementById('line').addEventListener('click', function() {
+      VanillaSharing.line({
+        url: META.URL,
+        title: META.TITLE,
+      });
     });
   </script>
 </body>
