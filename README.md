@@ -114,6 +114,16 @@ tw({
 })
 ```
 
+### `reddit(options)`
+
+Share on Reddit
+
+```js
+reddit({
+  url: string
+})
+```
+
 ### `gp(options)`
 
 Share on Google+
