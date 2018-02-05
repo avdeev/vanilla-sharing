@@ -6,6 +6,7 @@ import mail from './sharers/mail';
 import ok from './sharers/ok';
 import telegram from './sharers/telegram';
 import tw from './sharers/tw';
+import reddit from './sharers/reddit';
 import viber from './sharers/viber';
 
 // @FIXME
@@ -25,6 +26,7 @@ export {
   ok,
   telegram,
   tw,
+  reddit,
   viber,
   getVkUrl,
   vk,

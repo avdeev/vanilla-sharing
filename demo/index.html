@@ -32,6 +32,7 @@
     <button id="messenger" type="button">Share via Messenger</button>
 
     <button id="tw" type="button">Share on Twitter</button>
+    <button id="reddit" type="button">Share on Reddit</button>
     <button id="gp" type="button">Share on Google</button>
     <button id="vk" type="button">Share on VK</button>
     <button id="ok" type="button">Share on Odnoklassniki</button>
@@ -88,6 +89,12 @@
       VanillaSharing.tw({
         url: META.URL,
         title: META.TITLE,
+      });
+    });
+
+    document.getElementById('reddit').addEventListener('click', function() {
+      VanillaSharing.reddit({
+        url: META.URL,
       });
     });
 
