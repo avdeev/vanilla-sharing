@@ -1,3 +1,5 @@
+<p align="center"><img src="logo/VSred2.png" alt="Vanilla Sharing" height="150px"></p>
+
 # vanilla-sharing
 
 Small (1.1 KB) simple tool for sharing url, title, description and image to VK, Facebook (Feed, Dialog, Button, Messenger), Twitter, G+, VK, OK, Mail.ru, LinkedIn, Whatsapp, Viber, Telegram, Line.
