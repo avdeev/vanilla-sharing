@@ -1,4 +1,4 @@
-<p align="center"><img src="logo/VSred2.png" alt="Vanilla Sharing" height="150px"></p>
+<p align="center"><img src="logo/VSred2.png" alt="Vanilla Sharing" height="200px"></p>
 
 # vanilla-sharing
 
