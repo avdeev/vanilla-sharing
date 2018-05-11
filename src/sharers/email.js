@@ -3,7 +3,7 @@ export default function email(options = {}) {
     url, title, description,
   } = options;
 
-  const body = `${title}\r\n${description}\r\n${url}`;
+  const body = `${title || ''}\r\n${description || ''}\r\n${url || ''}`;
   const uri = `mailto:?subject=&body=${encodeURIComponent(body)}`;
-  window.location.href = uri;
+  return window.location.assign(uri);
 }
