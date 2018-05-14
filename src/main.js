@@ -3,6 +3,7 @@ import fbShare from './sharers/fbShare';
 import fbButton from './sharers/fbButton';
 import gp from './sharers/gp';
 import mail from './sharers/mail';
+import email from './sharers/email';
 import ok from './sharers/ok';
 import telegram from './sharers/telegram';
 import tw from './sharers/tw';
@@ -23,6 +24,7 @@ export {
   fbButton,
   gp,
   mail,
+  email,
   ok,
   telegram,
   tw,
