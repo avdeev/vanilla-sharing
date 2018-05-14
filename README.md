@@ -174,6 +174,17 @@ mail({
 })
 ```
 
+### `email(options)`
+
+Share via user's email
+
+```js
+mail({
+  url: string,
+  title: string,
+  description: string
+})
+
 ### `linkedin(options)`
 
 Share on LinkedIn

@@ -37,6 +37,7 @@
     <button id="vk" type="button">Share on VK</button>
     <button id="ok" type="button">Share on Odnoklassniki</button>
     <button id="mail" type="button">Share on Mail.ru</button>
+    <button id="email" type="button">Share via users's email</button>
     <button id="linkedin" type="button">Share on Linkedin</button>
 
     <button id="whatsapp" type="button">Share via Whatsapp</button>
@@ -123,6 +124,15 @@
 
     document.getElementById('mail').addEventListener('click', function() {
       VanillaSharing.mail({
+        url: META.URL,
+        title: META.TITLE,
+        description: META.DESCRIPTION,
+        image: META.IMAGE,
+      });
+    });
+
+    document.getElementById('email').addEventListener('click', function() {
+      VanillaSharing.email({
         url: META.URL,
         title: META.TITLE,
         description: META.DESCRIPTION,
