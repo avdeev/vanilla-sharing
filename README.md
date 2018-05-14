@@ -184,6 +184,7 @@ mail({
   title: string,
   description: string
 })
+```
 
 ### `linkedin(options)`
 
