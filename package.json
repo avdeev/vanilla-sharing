@@ -90,7 +90,7 @@
   },
   "devDependencies": {
     "babel-eslint": "8.2.3",
-    "babel-preset-env": "1.6.1",
+    "babel-preset-env": "1.7.0",
     "coveralls": "3.0.1",
     "eslint": "4.19.1",
     "eslint-config-airbnb-base": "12.1.0",
@@ -102,6 +102,6 @@
     "lint-staged": "7.1.0",
     "rollup": "0.58.2",
     "rollup-plugin-babel": "3.0.4",
-    "size-limit": "0.17.0"
+    "size-limit": "0.18.0"
   }
 }
