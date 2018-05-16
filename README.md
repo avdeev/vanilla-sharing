@@ -179,7 +179,7 @@ mail({
 Share via user's email
 
 ```js
-mail({
+email({
   url: string,
   title: string,
   description: string
