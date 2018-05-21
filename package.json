@@ -89,20 +89,20 @@
     "testRegex": "tests/.*\\.test\\.js$"
   },
   "devDependencies": {
-    "babel-eslint": "8.2.3",
-    "babel-preset-env": "1.7.0",
-    "coveralls": "3.0.1",
-    "eslint": "4.19.1",
-    "eslint-config-airbnb-base": "12.1.0",
-    "eslint-import-resolver-webpack": "0.9.0",
-    "eslint-plugin-import": "2.11.0",
-    "faker": "4.1.0",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-import-resolver-webpack": "^0.10.0",
+    "eslint-plugin-import": "^2.12.0",
+    "faker": "^4.1.0",
     "hoek": "~4.2.1",
-    "husky": "0.14.3",
-    "jest-cli": "22.4.3",
-    "lint-staged": "7.1.0",
-    "rollup": "0.58.2",
-    "rollup-plugin-babel": "3.0.4",
-    "size-limit": "0.18.0"
+    "husky": "^0.14.3",
+    "jest-cli": "^22.4.4",
+    "lint-staged": "^7.1.2",
+    "rollup": "^0.59.1",
+    "rollup-plugin-babel": "^3.0.4",
+    "size-limit": "^0.18.0"
   }
 }
