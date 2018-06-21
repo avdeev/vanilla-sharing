@@ -10,7 +10,7 @@ describe('tumblr', () => {
   it('should call without params', () => {
     tumblr();
 
-    expect(window.open.mock.calls[0][0]).toBe('https://www.tumblr.com/widgets/share/tool?');
+    expect(window.open.mock.calls[0][0]).toBe('https://www.tumblr.com/widgets/share/tool?posttype=link');
   });
 
   it('should call with url', () => {
@@ -18,6 +18,6 @@ describe('tumblr', () => {
 
     tumblr({ url: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://www.tumblr.com/widgets/share/tool?canonicalUrl=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(`https://www.tumblr.com/widgets/share/tool?canonicalUrl=${encodeURIComponent(fixture)}&posttype=link`);
   });
 });
