@@ -130,7 +130,7 @@ reddit({
 
 ### `pinterest(options)`
 
-Share on Pinterest
+[Share on Pinterest](https://developers.pinterest.com/docs/widgets/save/?)
 
 ```js
 pinterest({
@@ -142,7 +142,7 @@ pinterest({
 
 ### `tumblr(options)`
 
-Share on Tumblr
+[Share on Tumblr](https://www.tumblr.com/docs/en/share_button)
 
 ```js
 tumblr({
