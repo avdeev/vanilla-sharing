@@ -8,6 +8,8 @@ import ok from './sharers/ok';
 import telegram from './sharers/telegram';
 import tw from './sharers/tw';
 import reddit from './sharers/reddit';
+import pinterest from './sharers/pinterest';
+import tumblr from './sharers/tumblr';
 import viber from './sharers/viber';
 
 // @FIXME
@@ -29,6 +31,8 @@ export {
   telegram,
   tw,
   reddit,
+  pinterest,
+  tumblr,
   viber,
   getVkUrl,
   vk,
