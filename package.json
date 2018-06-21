@@ -15,6 +15,7 @@
   "version": "5.3.0",
   "main": "dist/vanilla-sharing.umd.js",
   "module": "dist/vanilla-sharing.esm.js",
+  "types": "vanilla-sharing.d.ts",
   "scripts": {
     "precommit": "lint-staged",
     "size": "size-limit",
