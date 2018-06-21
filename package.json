@@ -16,7 +16,7 @@
   "main": "dist/vanilla-sharing.umd.js",
   "module": "dist/vanilla-sharing.esm.js",
   "scripts": {
-    "precommit": "lint-staged",
+    "precommit": "npm run lint --",
     "size": "size-limit",
     "build": "rollup -c",
     "dev": "rollup -c -w",
