@@ -113,6 +113,7 @@ Share on Twitter
 tw({
   url: string,
   title: string,
+  hashtags: array,
 })
 ```
 
@@ -122,7 +123,33 @@ Share on Reddit
 
 ```js
 reddit({
-  url: string
+  url: string,
+  title: string,
+})
+```
+
+### `pinterest(options)`
+
+Share on Pinterest
+
+```js
+pinterest({
+  url: string,
+  description: string,
+  media: image url string,
+})
+```
+
+### `tumblr(options)`
+
+Share on Tumblr
+
+```js
+tumblr({
+  url: string,
+  title: string,
+  caption: string,
+  tags: array,
 })
 ```
 
