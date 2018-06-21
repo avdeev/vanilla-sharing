@@ -33,6 +33,8 @@
 
     <button id="tw" type="button">Share on Twitter</button>
     <button id="reddit" type="button">Share on Reddit</button>
+    <button id="pinterest" type="button">Share on Pinterest</button>
+    <button id="tumblr" type="button">Share on Tumblr</button>
     <button id="gp" type="button">Share on Google</button>
     <button id="vk" type="button">Share on VK</button>
     <button id="ok" type="button">Share on Odnoklassniki</button>
@@ -51,7 +53,7 @@
     var META = {
       URL: 'https://alexey-avdeev.com/vanilla-sharing/',
       TITLE: 'vanilla-sharing demo',
-      DESCRIPTION: 'Small (1.1 KB) simple tool for sharing url, title, description and image to VK, Facebook (Dialog, Feed, Messenger, Button), OK, G+, Twitter, Mail, LinkedIn, Line.',
+      DESCRIPTION: 'Small (1.4 KB) simple tool for sharing url, title, description and image to VK, Facebook (Dialog, Feed, Messenger, Button), OK, G+, Twitter, Mail, LinkedIn, Line.',
       IMAGE: 'https://dummyimage.com/1200x630/000/fff.jpg&text=vanilla-sharing',
       FB_APP_ID: '150778729046724',
     };
@@ -90,12 +92,31 @@
       VanillaSharing.tw({
         url: META.URL,
         title: META.TITLE,
+        hashtags: ['vanilla-sharing', 'minimal-size'],
       });
     });
 
     document.getElementById('reddit').addEventListener('click', function() {
       VanillaSharing.reddit({
         url: META.URL,
+        title: META.TITLE,
+      });
+    });
+
+    document.getElementById('pinterest').addEventListener('click', function() {
+      VanillaSharing.pinterest({
+        url: META.URL,
+        description: META.DESCRIPTION,
+        media: META.IMAGE,
+      });
+    });
+
+    document.getElementById('tumblr').addEventListener('click', function() {
+      VanillaSharing.tumblr({
+        url: META.URL,
+        title: META.TITLE,
+        caption: META.DESCRIPTION,
+        tags: ['vanilla-sharing', 'minimal-size'],
       });
     });
 
