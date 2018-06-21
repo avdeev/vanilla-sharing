@@ -100,7 +100,7 @@
     "husky": "^0.14.3",
     "jest-cli": "^23.1.0",
     "lint-staged": "^7.2.0",
-    "rollup": "^0.60.7",
+    "rollup": "^0.61.1",
     "rollup-plugin-babel": "^3.0.4",
     "size-limit": "^0.18.2"
   }
