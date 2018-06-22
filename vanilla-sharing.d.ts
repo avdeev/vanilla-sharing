@@ -8,7 +8,6 @@ export function email(...args: any[]): any;
 export function fbButton(...args: any[]): any;
 export function fbFeed(...args: any[]): any;
 export function fbShare(...args: any[]): any;
-export function getVkUrl(...args: any[]): any;
 export function gp(...args: any[]): any;
 export function line(...args: any[]): any;
 export function linkedin(...args: any[]): any;
