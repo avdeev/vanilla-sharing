@@ -15,13 +15,15 @@
   "version": "5.3.0",
   "main": "dist/vanilla-sharing.umd.js",
   "module": "dist/vanilla-sharing.esm.js",
+  "types": "vanilla-sharing.d.ts",
   "scripts": {
     "precommit": "lint-staged",
     "size": "size-limit",
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "lint": "eslint --ignore-path .gitignore .",
-    "test": "npm run lint && npm run build && npm run size && jest --coverage",
+    "typescript-test": "tsc --project typing-tests",
+    "test": "npm run lint && npm run typescript-test && npm run build && npm run size && jest --coverage",
     "test:watch": "jest --watchAll",
     "prepare": "npm run test",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
@@ -102,6 +104,7 @@
     "lint-staged": "^7.2.0",
     "rollup": "^0.61.1",
     "rollup-plugin-babel": "^3.0.4",
-    "size-limit": "^0.18.2"
+    "size-limit": "^0.18.2",
+    "typescript": "^2.9.2"
   }
 }

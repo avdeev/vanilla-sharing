@@ -1,0 +1,12 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "module": "commonjs",
+    "noEmit": true,
+    "noImplicitAny": true
+  },
+  "files": [
+    "../vanilla-sharing.d.ts",
+    "./vanilla-sharing-tests.ts"
+  ]
+}
