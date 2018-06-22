@@ -1,14 +1,22 @@
 {
   "name": "vanilla-sharing",
-  "description": "Small simple tool for sharing url, title, description and image to VK, Facebook, OK, G+, Twitter, email, and Mail",
+  "description": "Small (1.5 KB) simple tool for sharing url, title, description and image to VK, Facebook (Feed, Dialog, Button, Messenger), Twitter, Reddit, Pinterest, Tumblr, G+, VK, OK, Mail.ru, LinkedIn, Whatsapp, Viber, Telegram, Line.",
   "keywords": [
     "sharing",
-    "vk",
+    "social-buttons",
+    "vkontakte",
+    "mailru",
+    "odnoklassniki",
     "facebook",
-    "g+",
-    "twiiter",
-    "socials",
-    "mail"
+    "twitter",
+    "messenger",
+    "linkedin",
+    "whatsapp-sharing",
+    "vanilla-sharing",
+    "reddit",
+    "tumblr",
+    "telegram",
+    "whatsapp"
   ],
   "homepage": "https://github.com/avdeev/vanilla-sharing",
   "bugs": "https://github.com/avdeev/vanilla-sharing/issues",
