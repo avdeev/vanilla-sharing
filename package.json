@@ -99,20 +99,20 @@
     "testRegex": "tests/.*\\.test\\.js$"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^8.2.5",
     "babel-preset-env": "^1.7.0",
     "coveralls": "^3.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-import-resolver-webpack": "^0.10.0",
-    "eslint-plugin-import": "^2.12.0",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "eslint-plugin-import": "^2.13.0",
     "faker": "^4.1.0",
     "husky": "^0.14.3",
-    "jest-cli": "^23.1.0",
+    "jest-cli": "^23.2.0",
     "lint-staged": "^7.2.0",
-    "rollup": "^0.61.1",
-    "rollup-plugin-babel": "^3.0.4",
-    "size-limit": "^0.18.2",
+    "rollup": "^0.61.2",
+    "rollup-plugin-babel": "^3.0.5",
+    "size-limit": "^0.18.3",
     "typescript": "^2.9.2"
   }
 }
