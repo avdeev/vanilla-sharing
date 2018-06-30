@@ -10,13 +10,13 @@ describe('email', () => {
 
   it('should call without params', () => {
     email();
-    expect(window.location.assign).toBeCalledWith('mailto:?subject=&body=%0D%0A%0D%0A');
+    expect(window.location.assign).toBeCalledWith('mailto:?body=%0D%0A%0D%0A');
   });
 
   it('should call with url', () => {
     const fixture = faker.internet.url();
     email({ url: fixture });
-    expect(window.location.assign).toBeCalledWith(`mailto:?subject=&body=%0D%0A%0D%0A${encodeURIComponent(fixture)}`);
+    expect(window.location.assign).toBeCalledWith(`mailto:?&body=%0D%0A%0D%0A${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title', () => {
@@ -24,7 +24,7 @@ describe('email', () => {
 
     email({ title: fixture });
 
-    expect(window.location.assign).toBeCalledWith(`mailto:?subject=&body=${encodeURIComponent(fixture)}%0D%0A%0D%0A`);
+    expect(window.location.assign).toBeCalledWith(`mailto:?body=${encodeURIComponent(fixture)}%0D%0A%0D%0A`);
   });
 
   it('should call with description', () => {
@@ -32,6 +32,6 @@ describe('email', () => {
 
     email({ description: fixture });
 
-    expect(window.location.assign).toBeCalledWith(`mailto:?subject=&body=%0D%0A${encodeURIComponent(fixture)}%0D%0A`);
+    expect(window.location.assign).toBeCalledWith(`mailto:?body=%0D%0A${encodeURIComponent(fixture)}%0D%0A`);
   });
 });
