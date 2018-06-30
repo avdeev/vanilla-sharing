@@ -16,7 +16,7 @@ describe('email', () => {
   it('should call with url', () => {
     const fixture = faker.internet.url();
     email({ url: fixture });
-    expect(window.location.assign).toBeCalledWith(`mailto:?&body=%0D%0A%0D%0A${encodeURIComponent(fixture)}`);
+    expect(window.location.assign).toBeCalledWith(`mailto:?body=%0D%0A%0D%0A${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title', () => {
