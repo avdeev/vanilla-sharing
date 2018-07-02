@@ -4,6 +4,6 @@ export default function email(options = {}) {
   } = options;
 
   const body = `${title || ''}\r\n${description || ''}\r\n${url || ''}`;
-  const uri = `mailto:?subject=&body=${encodeURIComponent(body)}`;
+  const uri = `mailto:?body=${encodeURIComponent(body)}`;
   return window.location.assign(uri);
 }
