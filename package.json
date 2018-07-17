@@ -99,7 +99,7 @@
     "testRegex": "tests/.*\\.test\\.js$"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.5",
+    "babel-eslint": "^8.2.6",
     "babel-preset-env": "^1.7.0",
     "coveralls": "^3.0.2",
     "eslint": "^4.19.1",
@@ -108,11 +108,11 @@
     "eslint-plugin-import": "^2.13.0",
     "faker": "^4.1.0",
     "husky": "^0.14.3",
-    "jest-cli": "^23.3.0",
+    "jest-cli": "^23.4.1",
     "lint-staged": "^7.2.0",
     "rollup": "^0.62.0",
     "rollup-plugin-babel": "^3.0.7",
-    "size-limit": "^0.18.4",
+    "size-limit": "^0.18.5",
     "typescript": "^2.9.2"
   }
 }
