@@ -87,6 +87,7 @@
     }
   },
   "jest": {
+    "testURL": "http://localhost/",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/main.js",
@@ -108,7 +109,7 @@
     "eslint-plugin-import": "^2.13.0",
     "faker": "^4.1.0",
     "husky": "^0.14.3",
-    "jest-cli": "^23.4.1",
+    "jest-cli": "^23.4.2",
     "lint-staged": "^7.2.0",
     "rollup": "^0.62.0",
     "rollup-plugin-babel": "^3.0.7",
