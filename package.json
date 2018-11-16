@@ -108,12 +108,12 @@
     "eslint-import-resolver-webpack": "^0.10.1",
     "eslint-plugin-import": "^2.14.0",
     "faker": "^4.1.0",
-    "husky": "^1.1.2",
+    "husky": "^1.1.4",
     "jest-cli": "^23.6.0",
-    "lint-staged": "^8.0.3",
+    "lint-staged": "^8.0.4",
     "rollup": "^0.66.6",
     "rollup-plugin-babel": "^3.0.7",
     "size-limit": "^0.21.0",
-    "typescript": "^3.1.4"
+    "typescript": "^3.1.6"
   }
 }
