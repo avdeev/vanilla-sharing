@@ -110,7 +110,7 @@
     "faker": "^4.1.0",
     "husky": "^1.1.4",
     "jest-cli": "^23.6.0",
-    "lint-staged": "^8.0.4",
+    "lint-staged": "^8.0.5",
     "rollup": "^0.66.6",
     "rollup-plugin-babel": "^3.0.7",
     "size-limit": "^0.21.0",
