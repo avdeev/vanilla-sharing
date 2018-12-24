@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-import fbButton from '../fbButton';
+import { fbButton } from '../fbButton';
 
 describe('fbButton', () => {
   beforeEach(() => {

@@ -1,7 +1,7 @@
 import { WIN_PARAMS } from '../config';
 import encodeParams from '../utils/encodeParams';
 
-export default function tw(options = {}) {
+export function getTwUrl(options = {}) {
   const { title, url, hashtags = [] } = options;
 
   const params = encodeParams({
@@ -10,5 +10,9 @@ export default function tw(options = {}) {
     hashtags: hashtags.join(','),
   });
 
-  return window.open(`https://twitter.com/intent/tweet?${params}`, '_blank', WIN_PARAMS);
+  return `https://twitter.com/intent/tweet?${params}`;
+}
+
+export function tw(options = {}) {
+  return window.open(getTwUrl(options), '_blank', WIN_PARAMS);
 }

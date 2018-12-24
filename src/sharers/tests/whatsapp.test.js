@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-import whatsapp from '../whatsapp';
+import { whatsapp } from '../whatsapp';
 
 describe('whatsapp', () => {
   beforeEach(() => {

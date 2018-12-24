@@ -1,7 +1,7 @@
 import faker from 'faker';
 
 import mobileShare from '../../utils/mobileShare';
-import viber from '../viber';
+import { viber } from '../viber';
 
 jest.mock('../../utils/mobileShare');
 

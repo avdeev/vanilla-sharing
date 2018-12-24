@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-import ok from '../ok';
+import { ok } from '../ok';
 
 describe('ok', () => {
   beforeEach(() => {

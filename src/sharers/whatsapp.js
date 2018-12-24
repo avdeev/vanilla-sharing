@@ -1,7 +1,7 @@
 import { WIN_PARAMS } from '../config';
 import encodeParams from '../utils/encodeParams';
 
-export default function whatsapp(options = {}) {
+export function getWhatsappUrl(options = {}) {
   const { phone, title, url } = options;
 
   const params = encodeParams({
@@ -9,5 +9,9 @@ export default function whatsapp(options = {}) {
     phone,
   });
 
-  return window.open(`https://api.whatsapp.com/send?${params}`, '_blank', WIN_PARAMS);
+  return `https://api.whatsapp.com/send?${params}`;
+}
+
+export function whatsapp(options = {}) {
+  return window.open(getWhatsappUrl(options), '_blank', WIN_PARAMS);
 }

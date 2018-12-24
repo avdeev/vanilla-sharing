@@ -1,7 +1,7 @@
 import { WIN_PARAMS } from '../config';
 import encodeParams from '../utils/encodeParams';
 
-export default function ok(options = {}) {
+export function getOkUrl(options = {}) {
   const { url, title } = options;
 
   const params = encodeParams({
@@ -11,4 +11,8 @@ export default function ok(options = {}) {
   });
 
   return window.open(`https://ok.ru/dk?${params}`, '_blank', WIN_PARAMS);
+}
+
+export function ok(options = {}) {
+  return window.open(getOkUrl(options), '_blank', WIN_PARAMS);
 }

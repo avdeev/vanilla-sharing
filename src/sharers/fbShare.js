@@ -1,7 +1,7 @@
 import { WIN_PARAMS } from '../config';
 import encodeParams from '../utils/encodeParams';
 
-export default function fbShare(options = {}) {
+export function getFbShareUrl(options = {}) {
   const {
     fbAppId, url, hashtag, redirectUri,
   } = options;
@@ -18,5 +18,9 @@ export default function fbShare(options = {}) {
     hashtag,
   });
 
-  return window.open(`https://www.facebook.com/dialog/share?${params}`, '_blank', WIN_PARAMS);
+  return `https://www.facebook.com/dialog/share?${params}`;
+}
+
+export function fbShare(options = {}) {
+  return window.open(getFbShareUrl(options), '_blank', WIN_PARAMS);
 }

@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-import telegram from '../telegram';
+import { telegram } from '../telegram';
 
 describe('telegram', () => {
   beforeEach(() => {

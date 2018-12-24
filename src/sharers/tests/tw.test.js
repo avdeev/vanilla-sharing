@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-import tw from '../tw';
+import { tw } from '../tw';
 
 describe('tw', () => {
   beforeEach(() => {

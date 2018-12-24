@@ -3,7 +3,7 @@ import encodeParams from '../utils/encodeParams';
 
 const VK_MAX_LENGTH = 80;
 
-export function getUrl(options = {}) {
+export function getVkUrl(options = {}) {
   const { url, image, isVkParse } = options;
   let { description, title } = options;
 
@@ -27,6 +27,6 @@ export function getUrl(options = {}) {
   return `https://vk.com/share.php?${params}`;
 }
 
-export function share(options = {}) {
-  return window.open(getUrl(options), '_blank', WIN_PARAMS);
+export function vk(options = {}) {
+  return window.open(getVkUrl(options), '_blank', WIN_PARAMS);
 }

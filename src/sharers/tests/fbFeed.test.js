@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-import fbFeed from '../fbFeed';
+import { fbFeed } from '../fbFeed';
 
 describe('fbFeed', () => {
   beforeEach(() => {

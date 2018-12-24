@@ -1,7 +1,7 @@
 import { WIN_PARAMS } from '../config';
 import encodeParams from '../utils/encodeParams';
 
-export default function fbButton(options = {}) {
+export function getFbButtonUrl(options = {}) {
   const { url } = options;
 
   if (!url) {
@@ -17,5 +17,9 @@ export default function fbButton(options = {}) {
     src: 'share_button',
   });
 
-  return window.open(`https://www.facebook.com/sharer/sharer.php?${params}`, '_blank', WIN_PARAMS);
+  return `https://www.facebook.com/sharer/sharer.php?${params}`;
+}
+
+export function fbButton(options = {}) {
+  return window.open(getFbButtonUrl(options), '_blank', WIN_PARAMS);
 }

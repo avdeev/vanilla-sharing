@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-import fbShare from '../fbShare';
+import { fbShare } from '../fbShare';
 
 describe('fbShare', () => {
   beforeEach(() => {
