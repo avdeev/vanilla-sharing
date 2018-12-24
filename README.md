@@ -68,6 +68,8 @@ fbFeed({
 })
 ```
 
+You can use `getFbFeedUrl(options)` for getting URL.
+
 ### `fbShare(options)`
 
 Share on facebook.com via the Share dialog
@@ -83,6 +85,8 @@ fbShare({
 })
 ```
 
+You can use `getFbShareUrl(options)` for getting URL.
+
 ### `fbButton(options)`
 
 Share on facebook.com using facebook share button
@@ -92,6 +96,8 @@ fbButton({
   url: string,
 })
 ```
+
+You can use `getFbButtonUrl(options)` for getting URL.
 
 ### `messenger(options)`
 
@@ -117,6 +123,8 @@ tw({
   hashtags: array,
 })
 ```
+
+You can use `getTwUrl(options)` for getting URL.
 
 ### `reddit(options)`
 
@@ -178,6 +186,8 @@ vk({
 })
 ```
 
+You can use `getVkUrl(options)` for getting URL.
+
 ### `ok(options)`
 
 Share on ok.ru
@@ -188,6 +198,8 @@ ok({
   title: string,
 })
 ```
+
+You can use `getOkUrl(options)` for getting URL.
 
 ### `mail(options)`
 
@@ -242,6 +254,8 @@ whatsapp({
 })
 ```
 
+You can use `getWhatsappUrl(options)` for getting URL.
+
 ### `viber(options)`
 
 Share via Viber
@@ -255,6 +269,8 @@ viber({
 })
 ```
 
+You can use `getViberUrl(options)` for getting URL.
+
 ### `telegram(options)`
 
 Share via Telegram
@@ -265,6 +281,8 @@ telegram({
   title: string,
 })
 ```
+
+You can use `getTelegramUrl(options)` for getting URL.
 
 ### `line(options)`
 

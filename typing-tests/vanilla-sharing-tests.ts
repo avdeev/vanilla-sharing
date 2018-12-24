@@ -10,10 +10,7 @@ const META: any = {
 };
 
 let window: any;
-
-window = VanillaSharing.email();
-
-window = VanillaSharing.fbButton();
+let url: string;
 
 window = VanillaSharing.fbFeed({
   url: META.URL,
@@ -21,32 +18,45 @@ window = VanillaSharing.fbFeed({
   fbAppId: META.FB_APP_ID,
 });
 
+url = VanillaSharing.getFbFeedUrl({
+  url: META.URL,
+  redirectUri: META.URL,
+  fbAppId: META.FB_APP_ID,
+});
+
 window = VanillaSharing.fbShare();
+url = VanillaSharing.getFbShareUrl();
 
-window = VanillaSharing.gp();
-
-window = VanillaSharing.line();
-
-window = VanillaSharing.linkedin();
-
-window = VanillaSharing.mail();
+window = VanillaSharing.fbButton();
+url = VanillaSharing.getFbButtonUrl();
 
 window = VanillaSharing.messenger();
 
-window = VanillaSharing.ok();
-
-window = VanillaSharing.pinterest();
-
-window = VanillaSharing.reddit();
-
-window = VanillaSharing.telegram();
-
-window = VanillaSharing.tumblr();
-
+window = VanillaSharing.tw();
 window = VanillaSharing.tw();
 
-window = VanillaSharing.viber();
+window = VanillaSharing.reddit();
+window = VanillaSharing.pinterest();
+window = VanillaSharing.tumblr();
+window = VanillaSharing.gp();
 
 window = VanillaSharing.vk();
+url = VanillaSharing.getVkUrl();
+
+window = VanillaSharing.ok();
+url = VanillaSharing.getOkUrl();
+
+window = VanillaSharing.mail();
+window = VanillaSharing.email();
+window = VanillaSharing.linkedin();
 
 window = VanillaSharing.whatsapp();
+window = VanillaSharing.whatsapp();
+
+window = VanillaSharing.viber();
+url = VanillaSharing.getViberUrl();
+
+window = VanillaSharing.telegram();
+url = VanillaSharing.getTelegramUrl();
+
+window = VanillaSharing.line();
