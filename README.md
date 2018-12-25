@@ -192,10 +192,13 @@ You can use `getVkUrl(options)` for getting URL.
 
 Share on ok.ru
 
+[Like/Share button](https://apiok.ru/en/ext/like)
+
 ```js
 ok({
   url: string,
   title: string,
+  image: string,
 })
 ```
 

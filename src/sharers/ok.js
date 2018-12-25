@@ -2,15 +2,15 @@ import { WIN_PARAMS } from '../config';
 import encodeParams from '../utils/encodeParams';
 
 export function getOkUrl(options = {}) {
-  const { url, title } = options;
+  const { url, title, image } = options;
 
   const params = encodeParams({
-    'st.cmd': 'addShare',
-    'st._surl': url,
+    url,
     title,
+    imageUrl: image,
   });
 
-  return window.open(`https://ok.ru/dk?${params}`, '_blank', WIN_PARAMS);
+  return `https://connect.ok.ru/offer?${params}`;
 }
 
 export function ok(options = {}) {

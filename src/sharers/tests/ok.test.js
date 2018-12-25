@@ -10,7 +10,7 @@ describe('ok', () => {
   it('should call without params', () => {
     ok();
 
-    expect(window.open.mock.calls[0][0]).toBe('https://ok.ru/dk?st.cmd=addShare');
+    expect(window.open.mock.calls[0][0]).toBe('https://connect.ok.ru/offer?');
   });
 
   it('should call with url', () => {
@@ -18,7 +18,7 @@ describe('ok', () => {
 
     ok({ url: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://ok.ru/dk?st.cmd=addShare&st._surl=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(`https://connect.ok.ru/offer?url=${encodeURIComponent(fixture)}`);
   });
 
   it('should call with title', () => {
@@ -26,6 +26,14 @@ describe('ok', () => {
 
     ok({ title: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://ok.ru/dk?st.cmd=addShare&title=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(`https://connect.ok.ru/offer?title=${encodeURIComponent(fixture)}`);
+  });
+
+  it('should call with image', () => {
+    const fixture = faker.image.imageUrl();
+
+    ok({ image: fixture });
+
+    expect(window.open.mock.calls[0][0]).toBe(`https://connect.ok.ru/offer?imageUrl=${encodeURIComponent(fixture)}`);
   });
 });

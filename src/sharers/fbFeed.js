@@ -17,7 +17,7 @@ export function getFbFeedUrl(options = {}) {
     link: url,
   });
 
-  return window.open(`https://www.facebook.com/dialog/feed?${params}`, '_blank', WIN_PARAMS);
+  return `https://www.facebook.com/dialog/feed?${params}`;
 }
 
 export function fbFeed(options = {}) {
