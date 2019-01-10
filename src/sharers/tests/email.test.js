@@ -34,4 +34,13 @@ describe('email', () => {
 
     expect(window.location.assign).toBeCalledWith(`mailto:?body=%0D%0A${encodeURIComponent(fixture)}%0D%0A`);
   });
+
+  it('should call with description and subject', () => {
+    const fixture = faker.lorem.sentences();
+    const subject = faker.lorem.sentence();
+
+    email({ description: fixture, subject });
+
+    expect(window.location.assign).toBeCalledWith(`mailto:?subject=${encodeURIComponent(subject)}&body=%0D%0A${encodeURIComponent(fixture)}%0D%0A`);
+  });
 });

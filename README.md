@@ -225,7 +225,8 @@ Share via user's email
 email({
   url: string,
   title: string,
-  description: string
+  description: string,
+  subject: string,
 })
 ```
 

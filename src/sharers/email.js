@@ -1,9 +1,12 @@
+import encodeParams from '../utils/encodeParams';
+
 export default function email(options = {}) {
   const {
-    url, title, description,
+    url, title, description, subject,
   } = options;
-
-  const body = `${title || ''}\r\n${description || ''}\r\n${url || ''}`;
-  const uri = `mailto:?body=${encodeURIComponent(body)}`;
-  return window.location.assign(uri);
+  const params = encodeParams({
+    subject,
+    body: `${title || ''}\r\n${description || ''}\r\n${url || ''}`,
+  });
+  return window.location.assign(`mailto:?${params}`);
 }
