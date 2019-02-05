@@ -2,7 +2,7 @@
 
 # vanilla-sharing
 
-Small (1.5 KB) simple tool for sharing url, title, description and image to VK, Facebook (Feed, Dialog, Button, Messenger), Twitter, Reddit, Pinterest, Tumblr, G+, VK, OK, Mail.ru, LinkedIn, Whatsapp, Viber, Telegram, Line.
+Small (1.6 KB) simple tool for sharing url, title, description and image to VK, Facebook (Feed, Dialog, Button, Messenger), Twitter, Reddit, Pinterest, Tumblr, G+, VK, OK, Mail.ru, LinkedIn, Whatsapp, Viber, Telegram, Line.
 
 [DEMO](https://avdeev.github.io/vanilla-sharing/demo)
 
