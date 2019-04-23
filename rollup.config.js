@@ -9,7 +9,9 @@ export default [
       { file: pkg.module, format: 'es' },
     ],
     plugins: [
-      babel(),
+      babel({
+        exclude: ['node_modules/**'],
+      }),
     ],
   },
 ];
