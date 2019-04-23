@@ -16,7 +16,7 @@ Small (1.5 KB) simple tool for sharing url, title, description and image to VK, 
 
 # Motivation
 
-TODO
+Adding sharings to a project is digging in the documentation of the corresponding social networks. With this set of small functions, we have already done everything for you. Just take them and use!
 
 # Installation
 
