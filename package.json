@@ -45,17 +45,16 @@
   "size-limit": [
     {
       "path": "dist/vanilla-sharing.umd.js",
-      "limit": "1.4 KB"
+      "limit": "1.5 KB"
     },
     {
       "path": "dist/vanilla-sharing.esm.js",
-      "limit": "1.5 KB"
+      "limit": "1.6 KB"
     }
   ],
   "lint-staged": {
     "*.js": "npm run lint -- "
   },
-  "browserslist": "> 0.25%, not dead",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb-base",

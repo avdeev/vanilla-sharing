@@ -3,6 +3,7 @@ module.exports = {
     [
       '@babel/preset-env',
       {
+        forceAllTransforms: true,
         targets: {
           node: 'current',
         },
