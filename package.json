@@ -87,7 +87,7 @@
     "eslint": "6.0.0",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-import-resolver-webpack": "0.11.1",
-    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-import": "2.18.0",
     "faker": "4.1.0",
     "husky": "2.5.0",
     "jest": "24.8.0",
