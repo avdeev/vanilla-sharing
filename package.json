@@ -25,7 +25,6 @@
   "module": "dist/vanilla-sharing.esm.js",
   "types": "vanilla-sharing.d.ts",
   "scripts": {
-    "precommit": "lint-staged",
     "size": "size-limit",
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -97,5 +96,10 @@
     "rollup-plugin-babel": "4.3.3",
     "size-limit": "1.3.7",
     "typescript": "3.5.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
