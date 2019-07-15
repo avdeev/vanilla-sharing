@@ -83,7 +83,7 @@
     "@babel/core": "7.5.0",
     "@babel/preset-env": "7.5.0",
     "babel-eslint": "10.0.2",
-    "coveralls": "3.0.4",
+    "coveralls": "3.0.5",
     "eslint": "6.0.1",
     "eslint-config-airbnb-base": "13.2.0",
     "eslint-import-resolver-webpack": "0.11.1",
