@@ -5,7 +5,7 @@ export function getWhatsappUrl(options = {}) {
   const { phone, title, url } = options;
 
   const params = encodeParams({
-    text: [title, url].filter(item => item).join(' '),
+    text: [title, url].filter((item) => item).join(' '),
     phone,
   });
 

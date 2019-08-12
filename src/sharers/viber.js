@@ -8,7 +8,7 @@ export function getViberUrl(options = {}) {
   }
 
   const params = encodeParams({
-    text: [title, url].filter(item => item).join(' '),
+    text: [title, url].filter((item) => item).join(' '),
   });
 
   return `viber://forward?${params}`;
