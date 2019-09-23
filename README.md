@@ -223,6 +223,7 @@ Share via user's email
 
 ```js
 email({
+  to: string,
   url: string,
   title: string,
   description: string,
