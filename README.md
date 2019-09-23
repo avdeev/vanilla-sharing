@@ -230,6 +230,8 @@ email({
 })
 ```
 
+You can use `getEmailUrl(options)` for getting URL.
+
 ### `linkedin(options)`
 
 Share on LinkedIn

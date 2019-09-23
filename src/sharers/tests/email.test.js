@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-import email from '../email';
+import { email } from '../email';
 
 describe('email', () => {
   beforeEach(() => {
@@ -11,6 +11,12 @@ describe('email', () => {
   it('should call without params', () => {
     email();
     expect(window.location.assign).toBeCalledWith('mailto:?body=%0D%0A%0D%0A');
+  });
+
+  it('should call with to', () => {
+    const fixture = faker.internet.email();
+    email({ to: fixture });
+    expect(window.location.assign).toBeCalledWith(`mailto:${fixture}?body=%0D%0A%0D%0A`);
   });
 
   it('should call with url', () => {

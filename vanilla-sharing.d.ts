@@ -30,7 +30,10 @@ export function ok(...args: any[]): any;
 export function getOkUrl(...args: any[]): string;
 
 export function mail(...args: any[]): any;
+
 export function email(...args: any[]): any;
+export function getEmailUrl(...args: any[]): any;
+
 export function linkedin(...args: any[]): any;
 
 export function whatsapp(...args: any[]): any;

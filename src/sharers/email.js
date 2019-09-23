@@ -1,12 +1,18 @@
 import encodeParams from '../utils/encodeParams';
 
-export default function email(options = {}) {
+export function getEmailUrl(options = {}) {
   const {
-    url, title, description, subject,
+    to, url, title, description, subject,
   } = options;
+
   const params = encodeParams({
     subject,
     body: `${title || ''}\r\n${description || ''}\r\n${url || ''}`,
   });
-  return window.location.assign(`mailto:?${params}`);
+
+  return `mailto:${to || ''}?${params}`;
+}
+
+export function email(options = {}) {
+  return window.location.assign(getEmailUrl(options));
 }

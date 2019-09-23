@@ -3,7 +3,7 @@ import { fbShare, getFbShareUrl } from './sharers/fbShare';
 import { fbButton, getFbButtonUrl } from './sharers/fbButton';
 import gp from './sharers/gp';
 import mail from './sharers/mail';
-import email from './sharers/email';
+import { email, getEmailUrl } from './sharers/email';
 import { ok, getOkUrl } from './sharers/ok';
 import { telegram, getTelegramUrl } from './sharers/telegram';
 import { tw, getTwUrl } from './sharers/tw';
@@ -31,7 +31,7 @@ export {
   vk, getVkUrl,
   ok, getOkUrl,
   mail,
-  email,
+  email, getEmailUrl,
   linkedin,
 
   whatsapp, getWhatsappUrl,
