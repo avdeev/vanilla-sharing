@@ -80,8 +80,8 @@
     "testRegex": "tests/.*\\.test\\.js$"
   },
   "devDependencies": {
-    "@babel/core": "7.6.0",
-    "@babel/preset-env": "7.6.0",
+    "@babel/core": "7.6.2",
+    "@babel/preset-env": "7.6.2",
     "@size-limit/preset-small-lib": "2.1.6",
     "babel-eslint": "10.0.3",
     "coveralls": "3.0.6",
