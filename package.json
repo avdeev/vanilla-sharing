@@ -95,7 +95,7 @@
     "lint-staged": "9.4.2",
     "rollup": "1.26.5",
     "rollup-plugin-babel": "4.3.3",
-    "typescript": "3.6.4"
+    "typescript": "3.7.2"
   },
   "husky": {
     "hooks": {
