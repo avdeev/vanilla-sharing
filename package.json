@@ -90,7 +90,7 @@
     "eslint-import-resolver-webpack": "0.11.1",
     "eslint-plugin-import": "2.18.2",
     "faker": "4.1.0",
-    "husky": "3.0.9",
+    "husky": "3.1.0",
     "jest": "24.9.0",
     "lint-staged": "9.4.2",
     "rollup": "1.26.5",
