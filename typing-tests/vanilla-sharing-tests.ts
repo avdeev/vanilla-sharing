@@ -33,12 +33,11 @@ url = VanillaSharing.getFbButtonUrl();
 window = VanillaSharing.messenger();
 
 window = VanillaSharing.tw();
-window = VanillaSharing.tw();
+url = VanillaSharing.getTwUrl();
 
 window = VanillaSharing.reddit();
 window = VanillaSharing.pinterest();
 window = VanillaSharing.tumblr();
-window = VanillaSharing.gp();
 
 window = VanillaSharing.vk();
 url = VanillaSharing.getVkUrl();
