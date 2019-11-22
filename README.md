@@ -162,16 +162,6 @@ tumblr({
 })
 ```
 
-### `gp(options)`
-
-Share on Google+
-
-```js
-gp({
-  url: string,
-})
-```
-
 ### `vk(options)`
 
 Share on vk.com

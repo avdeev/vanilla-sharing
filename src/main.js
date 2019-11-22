@@ -1,7 +1,6 @@
 import { fbFeed, getFbFeedUrl } from './sharers/fbFeed';
 import { fbShare, getFbShareUrl } from './sharers/fbShare';
 import { fbButton, getFbButtonUrl } from './sharers/fbButton';
-import gp from './sharers/gp';
 import mail from './sharers/mail';
 import { email, getEmailUrl } from './sharers/email';
 import { ok, getOkUrl } from './sharers/ok';
@@ -27,7 +26,6 @@ export {
   reddit,
   pinterest,
   tumblr,
-  gp,
   vk, getVkUrl,
   ok, getOkUrl,
   mail,
