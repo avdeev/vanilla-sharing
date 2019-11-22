@@ -21,7 +21,6 @@ export function getTwUrl(...args: any[]): string;
 export function reddit(...args: any[]): any;
 export function pinterest(...args: any[]): any;
 export function tumblr(...args: any[]): any;
-export function gp(...args: any[]): any;
 
 export function vk(...args: any[]): any;
 export function getVkUrl(...args: any[]): string;

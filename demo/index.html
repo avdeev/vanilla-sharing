@@ -35,7 +35,6 @@
     <button id="reddit" type="button">Share on Reddit</button>
     <button id="pinterest" type="button">Share on Pinterest</button>
     <button id="tumblr" type="button">Share on Tumblr</button>
-    <button id="gp" type="button">Share on Google</button>
     <button id="vk" type="button">Share on VK</button>
     <button id="ok" type="button">Share on Odnoklassniki</button>
     <button id="mail" type="button">Share on Mail.ru</button>
@@ -117,12 +116,6 @@
         title: META.TITLE,
         caption: META.DESCRIPTION,
         tags: ['vanilla-sharing', 'minimal-size'],
-      });
-    });
-
-    document.getElementById('gp').addEventListener('click', function() {
-      VanillaSharing.gp({
-        url: META.URL,
       });
     });
 
