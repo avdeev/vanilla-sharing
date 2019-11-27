@@ -32,8 +32,7 @@
     "typescript-test": "tsc --project typing-tests",
     "test": "npm run lint && npm run typescript-test && npm run build && npm run size && jest --coverage",
     "test:watch": "jest --watchAll",
-    "prepare": "npm run test",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "prepare": "npm run test"
   },
   "repository": "git@github.com:avdeev/vanilla-sharing.git",
   "author": "Alexey Avdeev <aad.jerry@gmail.com>",
@@ -69,9 +68,9 @@
   "jest": {
     "testURL": "http://localhost/",
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
+      "src/**/*.js",
       "!src/main.js",
-      "!src/**/*.test.{js,jsx}"
+      "!src/**/*.test.js"
     ],
     "moduleDirectories": [
       "node_modules",
@@ -84,7 +83,6 @@
     "@babel/preset-env": "7.7.4",
     "@size-limit/preset-small-lib": "2.2.1",
     "babel-eslint": "10.0.3",
-    "coveralls": "3.0.8",
     "eslint": "6.7.1",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-import-resolver-webpack": "0.11.1",
