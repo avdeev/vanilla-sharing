@@ -6,7 +6,7 @@ Small (1.5 KB) simple tool for sharing url, title, description and image to VK, 
 
 [DEMO](https://avdeev.github.io/vanilla-sharing/demo)
 
-[![Build Status](https://travis-ci.org/avdeev/vanilla-sharing.svg?branch=master)](https://travis-ci.org/avdeev/vanilla-sharing)
+[![Build Status](https://github.com/avdeev/vanilla-sharing/workflows/Node%20CI/badge.svg)](https://github.com/avdeev/vanilla-sharing/actions?query=workflow%3A%22Node+CI%22)
 [![bundlephobia](https://badgen.net/bundlephobia/minzip/vanilla-sharing)](https://bundlephobia.com/result?p=vanilla-sharing)
 [![Coverage Status](https://coveralls.io/repos/github/avdeev/vanilla-sharing/badge.svg?branch=master)](https://coveralls.io/github/avdeev/vanilla-sharing?branch=master)
 [![npm](https://img.shields.io/npm/v/vanilla-sharing.svg)](https://www.npmjs.com/package/vanilla-sharing)
