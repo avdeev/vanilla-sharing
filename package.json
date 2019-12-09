@@ -79,8 +79,8 @@
     "testRegex": "tests/.*\\.test\\.js$"
   },
   "devDependencies": {
-    "@babel/core": "7.7.4",
-    "@babel/preset-env": "7.7.4",
+    "@babel/core": "7.7.5",
+    "@babel/preset-env": "7.7.6",
     "@size-limit/preset-small-lib": "2.2.2",
     "babel-eslint": "10.0.3",
     "eslint": "6.7.2",
