@@ -3,8 +3,15 @@ import faker from 'faker';
 import messenger from '../messenger';
 
 describe('messenger', () => {
+  const { location } = window;
+
   beforeEach(() => {
-    window.location.assign = jest.fn();
+    delete window.location;
+    window.location = { assign: jest.fn() };
+  });
+
+  afterAll(() => {
+    window.location = location;
   });
 
   it('should throw without fbAppId', () => {

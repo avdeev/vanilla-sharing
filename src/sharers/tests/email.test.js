@@ -3,9 +3,15 @@ import faker from 'faker';
 import { email } from '../email';
 
 describe('email', () => {
+  const { location } = window;
+
   beforeEach(() => {
-    window.open = jest.fn();
-    window.location.assign = jest.fn();
+    delete window.location;
+    window.location = { assign: jest.fn() };
+  });
+
+  afterAll(() => {
+    window.location = location;
   });
 
   it('should call without params', () => {
