@@ -4,9 +4,19 @@ import isMobileSafari from '../isMobileSafari';
 jest.mock('../isMobileSafari');
 
 describe('mobileShare()', () => {
+  const { open, location } = window;
+
   beforeEach(() => {
+    delete window.open;
     window.open = jest.fn();
-    window.location.assign = jest.fn();
+
+    delete window.location;
+    window.location = { assign: jest.fn() };
+  });
+
+  afterAll(() => {
+    window.open = open;
+    window.location = location;
   });
 
   it('must call window.location.assign if isMobileSafari() returns false', () => {
