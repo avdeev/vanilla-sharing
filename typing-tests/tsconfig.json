@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "lib": ["ES6"],
     "module": "commonjs",
     "noEmit": true,
     "noImplicitAny": true
