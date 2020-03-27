@@ -93,7 +93,7 @@
     "lint-staged": "10.0.8",
     "rollup": "2.1.0",
     "rollup-plugin-babel": "4.4.0",
-    "size-limit": "4.4.1",
+    "size-limit": "4.4.2",
     "typescript": "3.8.3"
   },
   "husky": {
