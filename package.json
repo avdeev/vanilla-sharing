@@ -89,7 +89,7 @@
     "eslint-plugin-import": "2.20.2",
     "faker": "4.1.0",
     "husky": "4.2.3",
-    "jest": "25.1.0",
+    "jest": "25.2.4",
     "lint-staged": "10.0.10",
     "rollup": "2.3.0",
     "rollup-plugin-babel": "4.4.0",
