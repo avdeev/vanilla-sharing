@@ -84,7 +84,7 @@
     "@size-limit/preset-small-lib": "4.5.0",
     "babel-eslint": "10.1.0",
     "eslint": "7.2.0",
-    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-config-airbnb-base": "14.2.0",
     "eslint-import-resolver-webpack": "0.12.1",
     "eslint-plugin-import": "2.21.2",
     "faker": "4.1.0",
