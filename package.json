@@ -91,7 +91,7 @@
     "husky": "4.2.5",
     "jest": "26.1.0",
     "lint-staged": "10.2.11",
-    "rollup": "2.18.0",
+    "rollup": "2.19.0",
     "rollup-plugin-babel": "4.4.0",
     "size-limit": "4.5.3",
     "typescript": "3.9.5"
