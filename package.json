@@ -81,6 +81,7 @@
   "devDependencies": {
     "@babel/core": "7.10.4",
     "@babel/preset-env": "7.10.4",
+    "@rollup/plugin-babel": "^5.0.4",
     "@size-limit/preset-small-lib": "4.5.3",
     "babel-eslint": "10.1.0",
     "eslint": "7.4.0",
@@ -92,7 +93,6 @@
     "jest": "26.1.0",
     "lint-staged": "10.2.11",
     "rollup": "2.19.0",
-    "rollup-plugin-babel": "4.4.0",
     "size-limit": "4.5.3",
     "typescript": "3.9.6"
   },
