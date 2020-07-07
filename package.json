@@ -31,8 +31,7 @@
     "lint": "eslint --ignore-path .gitignore .",
     "typescript-test": "tsc --project typing-tests",
     "test": "npm run lint && npm run typescript-test && npm run build && npm run size && jest --coverage",
-    "test:watch": "jest --watchAll",
-    "prepare": "npm run test"
+    "test:watch": "jest --watchAll"
   },
   "repository": "git@github.com:avdeev/vanilla-sharing.git",
   "author": "Alexey Avdeev <aad.jerry@gmail.com>",
