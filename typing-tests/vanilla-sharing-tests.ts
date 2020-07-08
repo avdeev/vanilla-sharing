@@ -1,5 +1,23 @@
 /// <reference path="../vanilla-sharing.d.ts" />
-import VanillaSharing = require('../vanilla-sharing');
+
+import { fbFeed, getFbFeedUrl,
+  fbShare, getFbShareUrl,
+  fbButton, getFbButtonUrl,
+  mail,
+  email, getEmailUrl,
+  ok, getOkUrl,
+  telegram, getTelegramUrl,
+  tw, getTwUrl,
+  reddit,
+  pinterest,
+  tumblr,
+  viber, getViberUrl,
+  vk, getVkUrl,
+  whatsapp, getWhatsappUrl,
+  linkedin,
+  messenger,
+  line
+} from '../vanilla-sharing';
 
 const META: any = {
   URL: 'https://alexey-avdeev.com/vanilla-sharing/',
@@ -12,50 +30,53 @@ const META: any = {
 let window: any;
 let url: string;
 
-window = VanillaSharing.fbFeed({
+window = fbFeed({
   url: META.URL,
   redirectUri: META.URL,
   fbAppId: META.FB_APP_ID,
 });
 
-url = VanillaSharing.getFbFeedUrl({
+url = getFbFeedUrl({
   url: META.URL,
   redirectUri: META.URL,
   fbAppId: META.FB_APP_ID,
 });
 
-window = VanillaSharing.fbShare();
-url = VanillaSharing.getFbShareUrl();
+window = fbShare();
+url = getFbShareUrl();
 
-window = VanillaSharing.fbButton();
-url = VanillaSharing.getFbButtonUrl();
+window = fbButton();
+url = getFbButtonUrl();
 
-window = VanillaSharing.messenger();
+window = messenger();
 
-window = VanillaSharing.tw();
-url = VanillaSharing.getTwUrl();
+window = tw();
+url = getTwUrl();
 
-window = VanillaSharing.reddit();
-window = VanillaSharing.pinterest();
-window = VanillaSharing.tumblr();
+window = reddit();
+window = pinterest();
+window = tumblr();
 
-window = VanillaSharing.vk();
-url = VanillaSharing.getVkUrl();
+window = vk();
+url = getVkUrl();
 
-window = VanillaSharing.ok();
-url = VanillaSharing.getOkUrl();
+window = ok();
+url = getOkUrl();
 
-window = VanillaSharing.mail();
-window = VanillaSharing.email();
-window = VanillaSharing.linkedin();
+window = mail();
 
-window = VanillaSharing.whatsapp();
-window = VanillaSharing.whatsapp();
+window = email();
+url = getEmailUrl();
 
-window = VanillaSharing.viber();
-url = VanillaSharing.getViberUrl();
+window = linkedin();
 
-window = VanillaSharing.telegram();
-url = VanillaSharing.getTelegramUrl();
+window = whatsapp();
+url = getWhatsappUrl();
 
-window = VanillaSharing.line();
+window = viber();
+url = getViberUrl();
+
+window = telegram();
+url = getTelegramUrl();
+
+window = line();

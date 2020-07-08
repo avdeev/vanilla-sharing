@@ -1,10 +1,7 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "lib": ["ES6"],
-    "module": "commonjs",
+    "lib": ["DOM"],
     "noEmit": true,
-    "noImplicitAny": true
   },
   "files": [
     "../vanilla-sharing.d.ts",
