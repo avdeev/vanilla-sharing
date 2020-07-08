@@ -4,44 +4,44 @@
 
 export as namespace VanillaSharing;
 
-export function fbFeed(...args: any[]): any;
+export function fbFeed(...args: any[]): Window;
 export function getFbFeedUrl(...args: any[]): string;
 
-export function fbShare(...args: any[]): any;
+export function fbShare(...args: any[]): Window;
 export function getFbShareUrl(...args: any[]): string;
 
-export function fbButton(...args: any[]): any;
+export function fbButton(...args: any[]): Window;
 export function getFbButtonUrl(...args: any[]): string;
 
-export function messenger(...args: any[]): any;
+export function messenger(...args: any[]): Window;
 
-export function tw(...args: any[]): any;
+export function tw(...args: any[]): Window;
 export function getTwUrl(...args: any[]): string;
 
-export function reddit(...args: any[]): any;
-export function pinterest(...args: any[]): any;
-export function tumblr(...args: any[]): any;
+export function reddit(...args: any[]): Window;
+export function pinterest(...args: any[]): Window;
+export function tumblr(...args: any[]): Window;
 
-export function vk(...args: any[]): any;
+export function vk(...args: any[]): Window;
 export function getVkUrl(...args: any[]): string;
 
-export function ok(...args: any[]): any;
+export function ok(...args: any[]): Window;
 export function getOkUrl(...args: any[]): string;
 
-export function mail(...args: any[]): any;
+export function mail(...args: any[]): Window;
 
-export function email(...args: any[]): any;
-export function getEmailUrl(...args: any[]): any;
+export function email(...args: any[]): Window;
+export function getEmailUrl(...args: any[]): string;
 
-export function linkedin(...args: any[]): any;
+export function linkedin(...args: any[]): Window;
 
-export function whatsapp(...args: any[]): any;
+export function whatsapp(...args: any[]): Window;
 export function getWhatsappUrl(...args: any[]): string;
 
-export function viber(...args: any[]): any;
+export function viber(...args: any[]): Window;
 export function getViberUrl(...args: any[]): string;
 
-export function telegram(...args: any[]): any;
+export function telegram(...args: any[]): Window;
 export function getTelegramUrl(...args: any[]): string;
 
-export function line(...args: any[]): any;
+export function line(...args: any[]): Window;
