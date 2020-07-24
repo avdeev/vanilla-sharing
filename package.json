@@ -25,6 +25,7 @@
   "module": "dist/vanilla-sharing.esm.js",
   "types": "vanilla-sharing.d.ts",
   "scripts": {
+    "prepublishOnly": "npm test",
     "size": "size-limit",
     "build": "rollup -c",
     "dev": "rollup -c -w",
