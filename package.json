@@ -90,7 +90,7 @@
     "eslint-plugin-import": "2.22.0",
     "faker": "5.1.0",
     "husky": "4.3.0",
-    "jest": "26.4.0",
+    "jest": "26.4.2",
     "lint-staged": "10.4.0",
     "rollup": "2.27.0",
     "size-limit": "4.5.5",
