@@ -43,11 +43,13 @@
   "size-limit": [
     {
       "path": "dist/vanilla-sharing.umd.js",
-      "limit": "1.5 KB"
+      "import": "{ fbFeed, getFbFeedUrl, fbShare, getFbShareUrl, fbButton, getFbButtonUrl, messenger, tw, getTwUrl, reddit, pinterest, tumblr, vk, getVkUrl, ok, getOkUrl, mail, email, getEmailUrl, linkedin, whatsapp, getWhatsappUrl, viber, getViberUrl, telegram, getTelegramUrl, line }",
+      "limit": "1.6 KB"
     },
     {
       "path": "dist/vanilla-sharing.esm.js",
-      "limit": "1.6 KB"
+      "import": "{ fbFeed, getFbFeedUrl, fbShare, getFbShareUrl, fbButton, getFbButtonUrl, messenger, tw, getTwUrl, reddit, pinterest, tumblr, vk, getVkUrl, ok, getOkUrl, mail, email, getEmailUrl, linkedin, whatsapp, getWhatsappUrl, viber, getViberUrl, telegram, getTelegramUrl, line }",
+      "limit": "1.4 KB"
     }
   ],
   "lint-staged": {
