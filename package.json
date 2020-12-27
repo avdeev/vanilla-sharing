@@ -24,7 +24,7 @@
   "main": "./dist/vanilla-sharing.umd.js",
   "module": "./dist/vanilla-sharing.esm.js",
   "exports": {
-    ".": "./dist/vanilla-sharing.esm.js"
+    ".": "./dist/vanilla-sharing.umd.js"
   },
   "types": "vanilla-sharing.d.ts",
   "scripts": {
@@ -41,7 +41,8 @@
   "author": "Alexey Avdeev <aad.jerry@gmail.com>",
   "license": "MIT",
   "files": [
-    "dist"
+    "dist",
+    "vanilla-sharing.d.ts"
   ],
   "size-limit": [
     {
