@@ -3,7 +3,7 @@ import encodeParams from '../utils/encodeParams';
 
 export function getFbShareUrl(options = {}) {
   const {
-    fbAppId, url, hashtag, redirectUri,
+    fbAppId, url, hashtag, redirectUri, quote,
   } = options;
 
   if (!fbAppId) {
@@ -16,6 +16,7 @@ export function getFbShareUrl(options = {}) {
     redirect_uri: redirectUri,
     href: url,
     hashtag,
+    quote,
   });
 
   return `https://www.facebook.com/dialog/share?${params}`;
