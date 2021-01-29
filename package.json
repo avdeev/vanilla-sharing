@@ -87,7 +87,7 @@
   "devDependencies": {
     "@babel/core": "7.12.10",
     "@babel/preset-env": "7.12.11",
-    "@rollup/plugin-babel": "5.2.2",
+    "@rollup/plugin-babel": "5.2.3",
     "@size-limit/preset-small-lib": "4.9.1",
     "babel-eslint": "10.1.0",
     "eslint": "7.17.0",
