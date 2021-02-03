@@ -20,7 +20,7 @@
   ],
   "homepage": "https://github.com/avdeev/vanilla-sharing",
   "bugs": "https://github.com/avdeev/vanilla-sharing/issues",
-  "version": "6.0.6",
+  "version": "6.1.0",
   "main": "./dist/vanilla-sharing.umd.js",
   "module": "./dist/vanilla-sharing.esm.js",
   "exports": {
