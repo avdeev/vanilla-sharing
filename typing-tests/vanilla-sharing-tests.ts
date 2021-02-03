@@ -1,6 +1,9 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable no-unused-vars */
 /// <reference path="../vanilla-sharing.d.ts" />
 
-import { fbFeed, getFbFeedUrl,
+import {
+  fbFeed, getFbFeedUrl,
   fbShare, getFbShareUrl,
   fbButton, getFbButtonUrl,
   mail,
@@ -16,7 +19,7 @@ import { fbFeed, getFbFeedUrl,
   whatsapp, getWhatsappUrl,
   linkedin,
   messenger,
-  line
+  line,
 } from '../vanilla-sharing';
 
 const META: any = {

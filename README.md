@@ -82,6 +82,7 @@ fbShare({
   redirectUri: string,
   hashtag: string,
   fbAppId: string,
+  quote: string,
 })
 ```
 
