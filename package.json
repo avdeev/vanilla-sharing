@@ -24,7 +24,8 @@
   "main": "./dist/vanilla-sharing.umd.js",
   "module": "./dist/vanilla-sharing.esm.js",
   "exports": {
-    ".": "./dist/vanilla-sharing.umd.js"
+    ".": "./dist/vanilla-sharing.umd.js",
+    "./package.json": "./package.json"
   },
   "types": "vanilla-sharing.d.ts",
   "scripts": {
