@@ -91,7 +91,7 @@
     "@rollup/plugin-babel": "5.2.2",
     "@size-limit/preset-small-lib": "4.9.1",
     "babel-eslint": "10.1.0",
-    "eslint": "7.17.0",
+    "eslint": "7.19.0",
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-import-resolver-webpack": "0.13.0",
     "eslint-plugin-import": "2.22.1",
