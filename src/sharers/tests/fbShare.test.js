@@ -12,7 +12,7 @@ describe('fbShare', () => {
   });
 
   it('should call with fbAppId', () => {
-    const fixture = faker.random.number();
+    const fixture = faker.datatype.number();
 
     fbShare({ fbAppId: fixture });
 
