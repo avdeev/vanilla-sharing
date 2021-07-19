@@ -84,7 +84,8 @@
       "node_modules",
       "src"
     ],
-    "testRegex": "tests/.*\\.test\\.js$"
+    "testRegex": "tests/.*\\.test\\.js$",
+    "testEnvironment": "jsdom"
   },
   "devDependencies": {
     "@babel/core": "7.14.6",
@@ -98,7 +99,7 @@
     "eslint-plugin-import": "2.23.4",
     "faker": "5.5.3",
     "husky": "7.0.1",
-    "jest": "26.6.3",
+    "jest": "27.0.6",
     "lint-staged": "11.0.1",
     "rollup": "2.53.2",
     "size-limit": "5.0.1",
