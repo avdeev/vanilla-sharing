@@ -101,7 +101,7 @@
     "husky": "7.0.1",
     "jest": "27.0.6",
     "lint-staged": "11.0.1",
-    "rollup": "2.53.2",
+    "rollup": "2.56.3",
     "size-limit": "5.0.1",
     "typescript": "4.3.5"
   }
