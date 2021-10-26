@@ -50,19 +50,19 @@
     {
       "path": "dist/vanilla-sharing.umd.js",
       "import": "{ fbFeed, getFbFeedUrl, fbShare, getFbShareUrl, fbButton, getFbButtonUrl, messenger, tw, getTwUrl, reddit, pinterest, tumblr, vk, getVkUrl, ok, getOkUrl, mail, email, getEmailUrl, linkedin, whatsapp, getWhatsappUrl, viber, getViberUrl, telegram, getTelegramUrl, line }",
-      "limit": "1.6 KB"
+      "limit": "1.9 KB"
     },
     {
       "path": "dist/vanilla-sharing.esm.js",
       "import": "{ fbFeed, getFbFeedUrl, fbShare, getFbShareUrl, fbButton, getFbButtonUrl, messenger, tw, getTwUrl, reddit, pinterest, tumblr, vk, getVkUrl, ok, getOkUrl, mail, email, getEmailUrl, linkedin, whatsapp, getWhatsappUrl, viber, getViberUrl, telegram, getTelegramUrl, line }",
-      "limit": "1.4 KB"
+      "limit": "1.5 KB"
     }
   ],
   "lint-staged": {
     "*.js": "npm run lint -- "
   },
   "eslintConfig": {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "extends": "airbnb-base",
     "env": {
       "browser": true,
@@ -89,20 +89,21 @@
   },
   "devDependencies": {
     "@babel/core": "7.15.8",
+    "@babel/eslint-parser": "^7.15.8",
     "@babel/preset-env": "7.15.8",
     "@rollup/plugin-babel": "5.3.0",
-    "@size-limit/preset-small-lib": "6.0.0",
-    "babel-eslint": "10.1.0",
-    "eslint": "7.32.0",
+    "@size-limit/preset-small-lib": "6.0.3",
+    "@types/estree": "0.0.47",
+    "eslint": "8.1.0",
     "eslint-config-airbnb-base": "14.2.1",
-    "eslint-import-resolver-webpack": "0.13.1",
-    "eslint-plugin-import": "2.24.2",
+    "eslint-import-resolver-webpack": "0.13.2",
+    "eslint-plugin-import": "2.25.2",
     "faker": "5.5.3",
-    "husky": "7.0.2",
-    "jest": "27.2.5",
-    "lint-staged": "11.2.2",
-    "rollup": "2.58.0",
-    "size-limit": "6.0.0",
-    "typescript": "4.4.3"
+    "husky": "7.0.4",
+    "jest": "27.3.1",
+    "lint-staged": "11.2.5",
+    "rollup": "2.58.3",
+    "size-limit": "6.0.3",
+    "typescript": "4.4.4"
   }
 }
