@@ -2,7 +2,7 @@
 
 # vanilla-sharing
 
-Small (1.5 KB) simple tool for sharing url, title, description and image to VK, Facebook (Feed, Dialog, Button, Messenger), Twitter, Reddit, Pinterest, Tumblr, VK, OK, Mail.ru, LinkedIn, Whatsapp, Viber, Telegram, Line.
+Small (1.7 KB) simple tool for sharing url, title, description and image to VK, Facebook (Feed, Dialog, Button, Messenger), Twitter, Reddit, Pinterest, Tumblr, VK, OK, Mail.ru, LinkedIn, Whatsapp, Viber, Telegram, Line.
 
 [DEMO](https://avdeev.github.io/vanilla-sharing/demo)
 
@@ -11,8 +11,6 @@ Small (1.5 KB) simple tool for sharing url, title, description and image to VK, 
 [![Coverage Status](https://coveralls.io/repos/github/avdeev/vanilla-sharing/badge.svg?branch=master)](https://coveralls.io/github/avdeev/vanilla-sharing?branch=master)
 [![npm](https://img.shields.io/npm/v/vanilla-sharing.svg)](https://www.npmjs.com/package/vanilla-sharing)
 [![npm](https://img.shields.io/npm/dm/vanilla-sharing.svg)](https://www.npmjs.com/package/vanilla-sharing)
-[![David](https://david-dm.org/avdeev/vanilla-sharing.svg)](https://david-dm.org/avdeev/vanilla-sharing)
-[![David](https://david-dm.org/avdeev/vanilla-sharing/dev-status.svg)](https://david-dm.org/avdeev/vanilla-sharing?type=dev)
 
 # Motivation
 
