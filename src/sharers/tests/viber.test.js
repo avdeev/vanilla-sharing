@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 import mobileShare from '../../utils/mobileShare';
 import { viber } from '../viber';
