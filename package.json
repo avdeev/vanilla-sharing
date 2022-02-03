@@ -93,7 +93,7 @@
     "@babel/preset-env": "7.16.11",
     "@faker-js/faker": "6.0.0-alpha.5",
     "@rollup/plugin-babel": "5.3.0",
-    "@size-limit/preset-small-lib": "7.0.5",
+    "@size-limit/preset-small-lib": "7.0.8",
     "@types/estree": "0.0.50",
     "eslint": "8.8.0",
     "eslint-config-airbnb-base": "15.0.0",
