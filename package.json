@@ -100,7 +100,7 @@
     "eslint-import-resolver-webpack": "0.13.2",
     "eslint-plugin-import": "2.25.4",
     "husky": "7.0.4",
-    "jest": "27.4.7",
+    "jest": "27.5.1",
     "lint-staged": "12.3.3",
     "rollup": "2.67.0",
     "size-limit": "7.0.5",
