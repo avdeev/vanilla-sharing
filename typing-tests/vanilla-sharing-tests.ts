@@ -1,5 +1,3 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable no-unused-vars */
 /// <reference path="../vanilla-sharing.d.ts" />
 
 import {
@@ -22,7 +20,7 @@ import {
   line,
 } from '../vanilla-sharing';
 
-const META: any = {
+const META = {
   URL: 'https://alexey-avdeev.com/vanilla-sharing/',
   TITLE: 'vanilla-sharing demo',
   DESCRIPTION: 'Small (1.5 KB) simple tool for sharing url, title, description and image to VK, Facebook (Dialog, Feed, Messenger, Button), OK, G+, Twitter, Mail, LinkedIn, Line.',
@@ -30,7 +28,7 @@ const META: any = {
   FB_APP_ID: '150778729046724',
 };
 
-let window: any;
+let window: Window;
 let url: string;
 
 window = fbFeed({
