@@ -14,7 +14,7 @@ describe('whatsapp', () => {
   });
 
   it('should call with phone', () => {
-    const phone = faker.phone.phoneNumber();
+    const phone = faker.phone.number();
 
     whatsapp({ phone });
 
@@ -31,7 +31,7 @@ describe('whatsapp', () => {
   });
 
   it('should call with text and phone', () => {
-    const phone = faker.phone.phoneNumber();
+    const phone = faker.phone.number();
     const title = faker.lorem.sentence();
     const url = faker.internet.url();
 

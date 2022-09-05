@@ -70,7 +70,11 @@
       "es6": true
     },
     "settings": {
-      "import/resolver": "webpack"
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
+      }
     }
   },
   "jest": {
@@ -88,22 +92,22 @@
     "testEnvironment": "jsdom"
   },
   "devDependencies": {
-    "@babel/core": "7.18.0",
-    "@babel/eslint-parser": "7.17.0",
-    "@babel/preset-env": "7.18.0",
-    "@faker-js/faker": "6.3.1",
+    "@babel/core": "7.19.0",
+    "@babel/eslint-parser": "7.18.9",
+    "@babel/preset-env": "7.19.0",
+    "@faker-js/faker": "7.5.0",
     "@rollup/plugin-babel": "5.3.1",
     "@size-limit/preset-small-lib": "7.0.8",
-    "@types/estree": "0.0.51",
-    "eslint": "8.16.0",
+    "@types/estree": "0.0.52",
+    "eslint": "8.23.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-import-resolver-webpack": "0.13.2",
     "eslint-plugin-import": "2.26.0",
     "husky": "8.0.1",
     "jest": "27.5.1",
-    "lint-staged": "12.4.1",
-    "rollup": "2.74.1",
+    "lint-staged": "12.5.0",
+    "rollup": "2.79.0",
     "size-limit": "7.0.8",
-    "typescript": "4.6.4"
+    "typescript": "4.8.2"
   }
 }
