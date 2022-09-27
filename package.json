@@ -108,6 +108,6 @@
     "lint-staged": "12.5.0",
     "rollup": "2.79.0",
     "size-limit": "7.0.8",
-    "typescript": "4.8.2"
+    "typescript": "4.8.4"
   }
 }
