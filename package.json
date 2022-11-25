@@ -96,7 +96,7 @@
     "@babel/eslint-parser": "7.19.1",
     "@babel/preset-env": "7.19.4",
     "@faker-js/faker": "7.6.0",
-    "@rollup/plugin-babel": "5.3.1",
+    "@rollup/plugin-babel": "6.0.3",
     "@size-limit/preset-small-lib": "7.0.8",
     "@types/estree": "0.0.52",
     "eslint": "8.26.0",
