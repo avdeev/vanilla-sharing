@@ -92,9 +92,9 @@
     "testEnvironment": "jsdom"
   },
   "devDependencies": {
-    "@babel/core": "7.20.7",
-    "@babel/eslint-parser": "7.19.1",
-    "@babel/preset-env": "7.20.2",
+    "@babel/core": "7.22.8",
+    "@babel/eslint-parser": "7.22.7",
+    "@babel/preset-env": "7.22.7",
     "@faker-js/faker": "7.6.0",
     "@rollup/plugin-babel": "6.0.3",
     "@size-limit/preset-small-lib": "7.0.8",
