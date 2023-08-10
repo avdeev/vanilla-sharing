@@ -12,11 +12,13 @@ describe('fbFeed', () => {
   });
 
   it('should call with fbAppId', () => {
-    const fixture = faker.datatype.number();
+    const fixture = faker.number.int();
 
     fbFeed({ fbAppId: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://www.facebook.com/dialog/feed?app_id=${fixture}&display=popup`);
+    expect(window.open.mock.calls[0][0]).toBe(
+      `https://www.facebook.com/dialog/feed?app_id=${fixture}&display=popup`
+    );
   });
 
   it('should call with url and fbAppId', () => {
@@ -24,6 +26,10 @@ describe('fbFeed', () => {
 
     fbFeed({ url: fixture, fbAppId: 123 });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://www.facebook.com/dialog/feed?app_id=123&display=popup&link=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(
+      `https://www.facebook.com/dialog/feed?app_id=123&display=popup&link=${encodeURIComponent(
+        fixture
+      )}`
+    );
   });
 });

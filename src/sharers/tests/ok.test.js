@@ -18,7 +18,9 @@ describe('ok', () => {
 
     ok({ url: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://connect.ok.ru/offer?url=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(
+      `https://connect.ok.ru/offer?url=${encodeURIComponent(fixture)}`,
+    );
   });
 
   it('should call with title', () => {
@@ -26,14 +28,18 @@ describe('ok', () => {
 
     ok({ title: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://connect.ok.ru/offer?title=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(
+      `https://connect.ok.ru/offer?title=${encodeURIComponent(fixture)}`,
+    );
   });
 
   it('should call with image', () => {
-    const fixture = faker.image.imageUrl();
+    const fixture = faker.image.url();
 
     ok({ image: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://connect.ok.ru/offer?imageUrl=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(
+      `https://connect.ok.ru/offer?imageUrl=${encodeURIComponent(fixture)}`,
+    );
   });
 });

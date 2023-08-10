@@ -19,11 +19,13 @@ describe('messenger', () => {
   });
 
   it('should call with fbAppId', () => {
-    const fixture = faker.datatype.number();
+    const fixture = faker.number.int();
 
     messenger({ fbAppId: fixture });
 
-    expect(window.location.assign.mock.calls[0][0]).toBe(`fb-messenger://share?app_id=${fixture}`);
+    expect(window.location.assign.mock.calls[0][0]).toBe(
+      `fb-messenger://share?app_id=${fixture}`,
+    );
   });
 
   it('should call with url and fbAppId', () => {
@@ -31,6 +33,8 @@ describe('messenger', () => {
 
     messenger({ url: fixture, fbAppId: 123 });
 
-    expect(window.location.assign.mock.calls[0][0]).toBe(`fb-messenger://share?app_id=123&link=${encodeURIComponent(fixture)}`);
+    expect(window.location.assign.mock.calls[0][0]).toBe(
+      `fb-messenger://share?app_id=123&link=${encodeURIComponent(fixture)}`,
+    );
   });
 });

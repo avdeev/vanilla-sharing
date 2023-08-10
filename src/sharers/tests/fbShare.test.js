@@ -12,11 +12,13 @@ describe('fbShare', () => {
   });
 
   it('should call with fbAppId', () => {
-    const fixture = faker.datatype.number();
+    const fixture = faker.number.int();
 
     fbShare({ fbAppId: fixture });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://www.facebook.com/dialog/share?app_id=${fixture}&display=popup`);
+    expect(window.open.mock.calls[0][0]).toBe(
+      `https://www.facebook.com/dialog/share?app_id=${fixture}&display=popup`,
+    );
   });
 
   it('should call with url and fbAppId', () => {
@@ -24,7 +26,11 @@ describe('fbShare', () => {
 
     fbShare({ url: fixture, fbAppId: 123 });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://www.facebook.com/dialog/share?app_id=123&display=popup&href=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(
+      `https://www.facebook.com/dialog/share?app_id=123&display=popup&href=${encodeURIComponent(
+        fixture,
+      )}`,
+    );
   });
 
   it('should call with hashtag and fbAppId', () => {
@@ -32,6 +38,10 @@ describe('fbShare', () => {
 
     fbShare({ hashtag: fixture, fbAppId: 123 });
 
-    expect(window.open.mock.calls[0][0]).toBe(`https://www.facebook.com/dialog/share?app_id=123&display=popup&hashtag=${encodeURIComponent(fixture)}`);
+    expect(window.open.mock.calls[0][0]).toBe(
+      `https://www.facebook.com/dialog/share?app_id=123&display=popup&hashtag=${encodeURIComponent(
+        fixture,
+      )}`,
+    );
   });
 });
