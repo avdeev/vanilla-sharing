@@ -108,7 +108,7 @@
     "@faker-js/faker": "8.1.0",
     "@rollup/plugin-babel": "6.0.3",
     "@size-limit/preset-small-lib": "8.2.6",
-    "@types/node": "20.8.7",
+    "@types/node": "20.11.5",
     "eslint": "8.50.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-import-resolver-webpack": "0.13.8",
