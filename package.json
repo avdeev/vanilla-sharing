@@ -104,7 +104,7 @@
   "devDependencies": {
     "@babel/core": "7.22.17",
     "@babel/eslint-parser": "7.22.15",
-    "@babel/preset-env": "7.23.9",
+    "@babel/preset-env": "7.24.5",
     "@faker-js/faker": "8.3.1",
     "@rollup/plugin-babel": "6.0.3",
     "@size-limit/preset-small-lib": "8.2.6",
